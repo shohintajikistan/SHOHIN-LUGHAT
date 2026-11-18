@@ -45,7 +45,7 @@ private val categories = listOf(
     "Тиҷорат", "Сафар", "Саломатӣ", "Табиат", "Технология", "Ҷомеа"
 )
 
-class MainActivity : ComponentActivity() { : ComponentActivity() {
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { ShohinDictionaryApp() }
