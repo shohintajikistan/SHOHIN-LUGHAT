@@ -56,20 +56,31 @@ class MainActivity : ComponentActivity() {
 fun ShohinDictionaryApp() {
     val context = LocalContext.current
     var words by remember { mutableStateOf(emptyList<Word>()) }
+    var isLoading by remember { mutableStateOf(true) }
+    var loadError by remember { mutableStateOf(false) }
+    val preferences = remember { context.getSharedPreferences("shohin_lughat", 0) }
+    var favorites by remember {
+        mutableStateOf(preferences.getStringSet("favorites", emptySet())?.toSet() ?: emptySet())
+    }
     LaunchedEffect(Unit) {
-        words = withContext(Dispatchers.IO) {
-            val raw = context.assets.open("dictionary/words.json").bufferedReader().use { it.readText() }
-            val array = JSONArray(raw)
-            List(array.length()) { index ->
-                val item = array.getJSONObject(index)
-                Word(item.getString("en"), item.getString("tg"), item.getString("category"), item.optString("example", ""))
+        try {
+            words = withContext(Dispatchers.IO) {
+                val raw = context.assets.open("dictionary/words.json").bufferedReader().use { it.readText() }
+                val array = JSONArray(raw)
+                List(array.length()) { index ->
+                    val item = array.getJSONObject(index)
+                    Word(item.getString("en"), item.getString("tg"), item.getString("category"), item.optString("example", ""))
+                }
             }
+        } catch (_: Exception) {
+            loadError = true
+        } finally {
+            isLoading = false
         }
     }
     var query by remember { mutableStateOf("") }
     var englishFirst by remember { mutableStateOf(true) }
     var selectedCategory by remember { mutableStateOf("Ҳама") }
-    var favorites by remember { mutableStateOf(setOf<String>()) }
     var showFavorites by remember { mutableStateOf(false) }
 
     val filtered = words.filter { word ->
@@ -208,7 +219,21 @@ fun ShohinDictionaryApp() {
                 Text("${filtered.size} натиҷа", color = Gold, fontSize = 12.sp)
             }
 
-            LazyColumn(
+            if (isLoading) {
+                Box(
+                    modifier = Modifier.weight(1f).fillMaxWidth(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator(color = Gold)
+                }
+            } else if (loadError) {
+                Box(
+                    modifier = Modifier.weight(1f).fillMaxWidth().padding(24.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("Луғатро бор кардан нашуд. Барномаро аз нав кушоед.", color = Ivory)
+                }
+            } else LazyColumn(
                 modifier = Modifier.weight(1f),
                 contentPadding = PaddingValues(start = 20.dp, end = 20.dp, bottom = 20.dp),
                 verticalArrangement = Arrangement.spacedBy(9.dp)
@@ -236,7 +261,9 @@ fun ShohinDictionaryApp() {
                                 Text(word.category, color = Muted, fontSize = 10.sp, modifier = Modifier.padding(top = 5.dp))
                             }
                             IconButton(onClick = {
-                                favorites = if (favorites.contains(word.en)) favorites - word.en else favorites + word.en
+                                val updated = if (favorites.contains(word.en)) favorites - word.en else favorites + word.en
+                                favorites = updated
+                                preferences.edit().putStringSet("favorites", updated).apply()
                             }) {
                                 Icon(
                                     if (favorites.contains(word.en)) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
