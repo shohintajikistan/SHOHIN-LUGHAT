@@ -1,6 +1,10 @@
 package tj.shohin.lughat
 
 import android.os.Bundle
+import org.json.JSONArray
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import androidx.compose.ui.platform.LocalContext
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -41,61 +45,7 @@ private val categories = listOf(
     "Тиҷорат", "Сафар", "Саломатӣ", "Табиат", "Технология", "Ҷомеа"
 )
 
-private val words = listOf(
-    Word("hello", "салом", "Муошират", "Hello, my friend. — Салом, дӯсти ман."),
-    Word("goodbye", "хайр", "Муошират"),
-    Word("please", "лутфан", "Муошират"),
-    Word("thank you", "ташаккур", "Муошират"),
-    Word("sorry", "бахшиш", "Муошират"),
-    Word("yes", "ҳа", "Муошират"),
-    Word("no", "не", "Муошират"),
-    Word("friend", "дӯст", "Муошират"),
-    Word("family", "оила", "Оила"),
-    Word("mother", "модар", "Оила"),
-    Word("father", "падар", "Оила"),
-    Word("brother", "бародар", "Оила"),
-    Word("sister", "хоҳар", "Оила"),
-    Word("child", "кӯдак", "Оила"),
-    Word("food", "ғизо", "Ғизо"),
-    Word("water", "об", "Ғизо"),
-    Word("bread", "нон", "Ғизо"),
-    Word("milk", "шир", "Ғизо"),
-    Word("apple", "себ", "Ғизо"),
-    Word("tea", "чой", "Ғизо"),
-    Word("house", "хона", "Хона"),
-    Word("room", "ҳуҷра", "Хона"),
-    Word("door", "дар", "Хона"),
-    Word("window", "тиреза", "Хона"),
-    Word("book", "китоб", "Маориф"),
-    Word("school", "мактаб", "Маориф"),
-    Word("teacher", "омӯзгор", "Маориф"),
-    Word("student", "донишҷӯ", "Маориф"),
-    Word("learn", "омӯхтан", "Маориф"),
-    Word("work", "кор", "Кор"),
-    Word("job", "шуғл", "Кор"),
-    Word("money", "пул", "Тиҷорат"),
-    Word("price", "нарх", "Тиҷорат"),
-    Word("market", "бозор", "Тиҷорат"),
-    Word("travel", "сафар", "Сафар"),
-    Word("car", "мошин", "Сафар"),
-    Word("road", "роҳ", "Сафар"),
-    Word("airport", "фурудгоҳ", "Сафар"),
-    Word("health", "саломатӣ", "Саломатӣ"),
-    Word("doctor", "духтур", "Саломатӣ"),
-    Word("medicine", "дору", "Саломатӣ"),
-    Word("tree", "дарахт", "Табиат"),
-    Word("flower", "гул", "Табиат"),
-    Word("mountain", "кӯҳ", "Табиат"),
-    Word("river", "дарё", "Табиат"),
-    Word("computer", "компютер", "Технология"),
-    Word("phone", "телефон", "Технология"),
-    Word("internet", "интернет", "Технология"),
-    Word("city", "шаҳр", "Ҷомеа"),
-    Word("country", "кишвар", "Ҷомеа"),
-    Word("people", "мардум", "Ҷомеа")
-)
-
-class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity() { : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent { ShohinDictionaryApp() }
@@ -104,6 +54,18 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ShohinDictionaryApp() {
+    val context = LocalContext.current
+    var words by remember { mutableStateOf(emptyList<Word>()) }
+    LaunchedEffect(Unit) {
+        words = withContext(Dispatchers.IO) {
+            val raw = context.assets.open("dictionary/words.json").bufferedReader().use { it.readText() }
+            val array = JSONArray(raw)
+            List(array.length()) { index ->
+                val item = array.getJSONObject(index)
+                Word(item.getString("en"), item.getString("tg"), item.getString("category"), item.optString("example", ""))
+            }
+        }
+    }
     var query by remember { mutableStateOf("") }
     var englishFirst by remember { mutableStateOf(true) }
     var selectedCategory by remember { mutableStateOf("Ҳама") }
