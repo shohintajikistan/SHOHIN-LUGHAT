@@ -1,0 +1,1088 @@
+[
+  {
+    "en": "hello",
+    "tg": "салом",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "goodbye",
+    "tg": "хайр",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "please",
+    "tg": "лутфан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "thank you",
+    "tg": "ташаккур",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sorry",
+    "tg": "бахшиш",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "yes",
+    "tg": "ҳа",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "no",
+    "tg": "не",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "friend",
+    "tg": "дӯст",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "good morning",
+    "tg": "субҳ ба хайр",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "good evening",
+    "tg": "шом ба хайр",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "how are you",
+    "tg": "аҳволатон чӣ хел аст",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "welcome",
+    "tg": "хуш омадед",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "name",
+    "tg": "ном",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "question",
+    "tg": "савол",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "answer",
+    "tg": "ҷавоб",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "help",
+    "tg": "ёрӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "language",
+    "tg": "забон",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "word",
+    "tg": "калима",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "conversation",
+    "tg": "суҳбат",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "love",
+    "tg": "муҳаббат",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "family",
+    "tg": "оила",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "mother",
+    "tg": "модар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "father",
+    "tg": "падар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "brother",
+    "tg": "бародар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sister",
+    "tg": "хоҳар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "child",
+    "tg": "кӯдак",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "son",
+    "tg": "писар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "daughter",
+    "tg": "духтар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "husband",
+    "tg": "шавҳар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "wife",
+    "tg": "зан",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "grandmother",
+    "tg": "бибӣ",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "grandfather",
+    "tg": "бобо",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "uncle",
+    "tg": "амак",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "aunt",
+    "tg": "хола",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "parent",
+    "tg": "падару модар",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "relative",
+    "tg": "хеш",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "food",
+    "tg": "ғизо",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "water",
+    "tg": "об",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "bread",
+    "tg": "нон",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "milk",
+    "tg": "шир",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "apple",
+    "tg": "себ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "tea",
+    "tg": "чой",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "rice",
+    "tg": "биринҷ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "meat",
+    "tg": "гӯшт",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "fish",
+    "tg": "моҳӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "egg",
+    "tg": "тухм",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "cheese",
+    "tg": "панир",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sugar",
+    "tg": "шакар",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "salt",
+    "tg": "намак",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "fruit",
+    "tg": "мева",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "vegetable",
+    "tg": "сабзавот",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "house",
+    "tg": "хона",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "room",
+    "tg": "ҳуҷра",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "door",
+    "tg": "дар",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "window",
+    "tg": "тиреза",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "table",
+    "tg": "миз",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "chair",
+    "tg": "курсӣ",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "bed",
+    "tg": "кат",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "kitchen",
+    "tg": "ошхона",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "bathroom",
+    "tg": "ҳаммом",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "wall",
+    "tg": "девор",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "floor",
+    "tg": "фарш",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "roof",
+    "tg": "боми хона",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "key",
+    "tg": "калид",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "light",
+    "tg": "чароғ",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "garden",
+    "tg": "боғ",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "book",
+    "tg": "китоб",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "school",
+    "tg": "мактаб",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "teacher",
+    "tg": "омӯзгор",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "student",
+    "tg": "донишҷӯ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "learn",
+    "tg": "омӯхтан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "study",
+    "tg": "таҳсил кардан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "write",
+    "tg": "навиштан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "read",
+    "tg": "хондан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "letter",
+    "tg": "ҳарф",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "number",
+    "tg": "рақам",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "lesson",
+    "tg": "дарс",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "classroom",
+    "tg": "синфхона",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "exam",
+    "tg": "имтиҳон",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "knowledge",
+    "tg": "дониш",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "dictionary",
+    "tg": "луғат",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "work",
+    "tg": "кор",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "job",
+    "tg": "шуғл",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "office",
+    "tg": "идора",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "manager",
+    "tg": "роҳбар",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "worker",
+    "tg": "коргар",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "company",
+    "tg": "ширкат",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "meeting",
+    "tg": "ҷаласа",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "task",
+    "tg": "вазифа",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "salary",
+    "tg": "маош",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "business",
+    "tg": "тиҷорат",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "money",
+    "tg": "пул",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "price",
+    "tg": "нарх",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "market",
+    "tg": "бозор",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "shop",
+    "tg": "мағоза",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "buy",
+    "tg": "харидан",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sell",
+    "tg": "фурӯхтан",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "cheap",
+    "tg": "арзон",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "expensive",
+    "tg": "қимат",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "payment",
+    "tg": "пардохт",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "receipt",
+    "tg": "расид",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "customer",
+    "tg": "муштарӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "seller",
+    "tg": "фурӯшанда",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "bank",
+    "tg": "бонк",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "cash",
+    "tg": "пули нақд",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "discount",
+    "tg": "тахфиф",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "travel",
+    "tg": "сафар",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "car",
+    "tg": "мошин",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "road",
+    "tg": "роҳ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "airport",
+    "tg": "фурудгоҳ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "train",
+    "tg": "қатор",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "bus",
+    "tg": "автобус",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "ticket",
+    "tg": "чипта",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "hotel",
+    "tg": "меҳмонхона",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "station",
+    "tg": "истгоҳ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "map",
+    "tg": "харита",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "luggage",
+    "tg": "бор",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "passport",
+    "tg": "шиноснома",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "border",
+    "tg": "сарҳад",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "village",
+    "tg": "деҳа",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "journey",
+    "tg": "сафар",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "health",
+    "tg": "саломатӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "doctor",
+    "tg": "духтур",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "medicine",
+    "tg": "дору",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "hospital",
+    "tg": "беморхона",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "nurse",
+    "tg": "ҳамшира",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "pain",
+    "tg": "дард",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "fever",
+    "tg": "таб",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "headache",
+    "tg": "сардард",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "tooth",
+    "tg": "дандон",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "heart",
+    "tg": "дил",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "blood",
+    "tg": "хун",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sleep",
+    "tg": "хоб",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "healthy",
+    "tg": "солим",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "ill",
+    "tg": "бемор",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "emergency",
+    "tg": "ҳолати фавқулода",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "tree",
+    "tg": "дарахт",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "flower",
+    "tg": "гул",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "mountain",
+    "tg": "кӯҳ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "river",
+    "tg": "дарё",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sun",
+    "tg": "офтоб",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "moon",
+    "tg": "моҳ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "star",
+    "tg": "ситора",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "rain",
+    "tg": "борон",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "snow",
+    "tg": "барф",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "wind",
+    "tg": "шамол",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "earth",
+    "tg": "замин",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "sky",
+    "tg": "осмон",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "forest",
+    "tg": "ҷангал",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "lake",
+    "tg": "кӯл",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "animal",
+    "tg": "ҳайвон",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "computer",
+    "tg": "компютер",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "phone",
+    "tg": "телефон",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "internet",
+    "tg": "интернет",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "website",
+    "tg": "сомона",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "software",
+    "tg": "нармафзор",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "file",
+    "tg": "парванда",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "keyboard",
+    "tg": "клавиатура",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "screen",
+    "tg": "экран",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "password",
+    "tg": "рамз",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "message",
+    "tg": "паём",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "email",
+    "tg": "почтаи электронӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "camera",
+    "tg": "камера",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "application",
+    "tg": "барнома",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "download",
+    "tg": "зеркашӣ кардан",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "search",
+    "tg": "ҷустуҷӯ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "city",
+    "tg": "шаҳр",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "country",
+    "tg": "кишвар",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "people",
+    "tg": "мардум",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "community",
+    "tg": "ҷомеа",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "government",
+    "tg": "ҳукумат",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "law",
+    "tg": "қонун",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "rule",
+    "tg": "қоида",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "freedom",
+    "tg": "озодӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "peace",
+    "tg": "сулҳ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "war",
+    "tg": "ҷанг",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "history",
+    "tg": "таърих",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "culture",
+    "tg": "фарҳанг",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "religion",
+    "tg": "дин",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "news",
+    "tg": "хабар",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  },
+  {
+    "en": "world",
+    "tg": "ҷаҳон",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 001"
+  }
+]
