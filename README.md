@@ -7,7 +7,7 @@
 - English → Tajik and Tajik → English search
 - 12 thematic categories
 - Offline search; no API, server, or remote database at runtime
-- Favorites and recent search history
+- Favorites saved on the device
 - Premium Emerald, Gold, Ivory, and Midnight visual identity
 
 ## Dictionary quality rules
@@ -31,4 +31,4 @@ The bundled dictionary will use UTF-8 JSON records with these fields:
 Every push to `main` starts the GitHub Actions workflow. The debug APK is uploaded as an Actions artifact.
 
 ## Current development stage
-The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. The first editorial batch contains 181 unique English headwords. The 20,000-entry dictionary is not yet complete; entries will be added in reviewed batches. GitHub Actions validates the JSON and copies it into the APK before building.
+The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. The bundled dictionary currently contains **891 unique English headwords** across the 12 categories. Favorites are saved locally on the device. The 20,000-entry target is not yet complete; 19,109 additional reviewed entries are required. The current editorial batches are manually assembled and still need native-speaker review before being described as fully verified. GitHub Actions validates the JSON and copies it into the APK before building.
