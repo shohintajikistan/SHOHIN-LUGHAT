@@ -31,4 +31,4 @@ The bundled dictionary will use UTF-8 JSON records with these fields:
 Every push to `main` starts the GitHub Actions workflow. The debug APK is uploaded as an Actions artifact.
 
 ## Current development stage
-The native Android foundation and first interface are in place. The app currently contains 50 starter entries. The 20,000-entry dictionary is a separate content milestone and is not yet complete.
+The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. The first editorial batch contains 181 unique English headwords. The 20,000-entry dictionary is not yet complete; entries will be added in reviewed batches. GitHub Actions validates the JSON and copies it into the APK before building.
