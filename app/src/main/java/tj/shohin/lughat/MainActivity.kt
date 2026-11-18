@@ -15,7 +15,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDownUp
+import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Search
@@ -134,7 +134,7 @@ fun ShohinDictionaryApp() {
                                 onClick = { englishFirst = !englishFirst },
                                 modifier = Modifier.background(Emerald, CircleShape).size(42.dp)
                             ) {
-                                Icon(Icons.Default.ArrowDownUp, contentDescription = "Change direction", tint = Gold)
+                                Icon(Icons.Default.SwapVert, contentDescription = "Change direction", tint = Gold)
                             }
                             Column(horizontalAlignment = Alignment.End) {
                                 Text(if (englishFirst) "Тоҷикӣ" else "English", color = Ivory, fontSize = 18.sp, fontWeight = FontWeight.Bold)
