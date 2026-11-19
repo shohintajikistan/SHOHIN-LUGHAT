@@ -12952,5 +12952,1211 @@
     "tg": "пешрафтаи навтарин",
     "category": "Технология",
     "source": "SHOHIN editorial batch 004"
+  },
+  {
+    "en": "dairy",
+    "tg": "маҳсулоти ширӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dairy farm",
+    "tg": "фермаи ширӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dairy product",
+    "tg": "маҳсулоти ширӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dam",
+    "tg": "сарбанди об",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "damp",
+    "tg": "нам; тар",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dampen",
+    "tg": "нам кардан",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dampness",
+    "tg": "намӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dashboard",
+    "tg": "панели идоракунӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "data analysis",
+    "tg": "таҳлили маълумот",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "data entry",
+    "tg": "воридкунии маълумот",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "data processing",
+    "tg": "коркарди маълумот",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "database management",
+    "tg": "идоракунии пойгоҳи додаҳо",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dataset",
+    "tg": "маҷмӯи маълумот",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dawn",
+    "tg": "субҳидам",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "daylight",
+    "tg": "рӯшноии рӯз",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "daytime",
+    "tg": "вақти рӯз",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deaf",
+    "tg": "кар; ношунаво",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deafness",
+    "tg": "карӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dealer",
+    "tg": "фурӯшанда; дилер",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dealing",
+    "tg": "муомила; муносибат",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dean",
+    "tg": "декан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dear",
+    "tg": "азиз",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "death",
+    "tg": "марг",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "death rate",
+    "tg": "сатҳи фавт",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "debateable",
+    "tg": "баҳснок",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "debris",
+    "tg": "пораҳо; харобаҳо",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "debut",
+    "tg": "нахустнамоиш",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decade",
+    "tg": "даҳсола",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decay",
+    "tg": "пӯсидан; фаношавӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deceased",
+    "tg": "марҳум",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decent",
+    "tg": "шоиста; муносиб",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decentralize",
+    "tg": "ғайримарказӣ кардан",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decentralization",
+    "tg": "ғайримарказикунонӣ",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deception",
+    "tg": "фиреб",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deceptive",
+    "tg": "фиребанда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decisive",
+    "tg": "қатъӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "decisively",
+    "tg": "қатъиян",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "declaration",
+    "tg": "эъломия",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "declare",
+    "tg": "эълон кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dedicate",
+    "tg": "бахшидан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dedication",
+    "tg": "фидокорӣ; бахшидан",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deduce",
+    "tg": "хулоса баровардан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deduction",
+    "tg": "хулосабарорӣ; тарҳкунӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deed",
+    "tg": "амал; санади моликият",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deem",
+    "tg": "ҳисобидан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "default",
+    "tg": "пешфарз; иҷро накардани қарз",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "defect",
+    "tg": "нуқсон; камбудӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "defective",
+    "tg": "нуқсондор",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "defender",
+    "tg": "ҳимоятгар",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "defensive",
+    "tg": "мудофиавӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deficiency",
+    "tg": "норасоӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deficient",
+    "tg": "камбудидор",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deficit",
+    "tg": "каср; камбудӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "definitive",
+    "tg": "ниҳоӣ; қатъӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "definitively",
+    "tg": "ба таври қатъӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "defy",
+    "tg": "саркашӣ кардан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delegate",
+    "tg": "намоянда; вогузор кардан",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delegation",
+    "tg": "ҳайати намояндагон",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deliberate",
+    "tg": "қасдан; бодиққат фикр кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deliberately",
+    "tg": "қасдан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deliberation",
+    "tg": "машварат; андешаи амиқ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delicate",
+    "tg": "нозук",
+    "category": "Хона",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delicately",
+    "tg": "бо нозукӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delight",
+    "tg": "хурсандӣ; шод кардан",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delighted",
+    "tg": "хушҳол",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "delightful",
+    "tg": "дилписанд",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "democracy",
+    "tg": "демократия",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "democratic",
+    "tg": "демократӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "democratically",
+    "tg": "ба таври демократӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "demographic",
+    "tg": "демографӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "demographic change",
+    "tg": "тағйироти демографӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "demography",
+    "tg": "демография",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "denial",
+    "tg": "инкор",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "density",
+    "tg": "зичӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dental",
+    "tg": "дандонпизишкӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dentistry",
+    "tg": "дандонпизишкӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "departure lounge",
+    "tg": "толори интизории парвоз",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dependence",
+    "tg": "вобастагӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "depict",
+    "tg": "тасвир кардан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "depiction",
+    "tg": "тасвир",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deploy",
+    "tg": "ҷойгир кардан; ба кор андохтан",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deployment",
+    "tg": "ҷойгиркунӣ; татбиқ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deposit account",
+    "tg": "суратҳисоби амонатӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "depression",
+    "tg": "афсурдагӣ; пастравӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "depressive",
+    "tg": "афсурда",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deprivation",
+    "tg": "маҳрумият",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deprive",
+    "tg": "маҳрум кардан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "derive",
+    "tg": "ҳосил кардан; баровардан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "derived",
+    "tg": "ҳосилшуда",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "derivation",
+    "tg": "ҳосилкунӣ; баромад",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "descend",
+    "tg": "поён фаромадан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "descent",
+    "tg": "фаромадан; насаб",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "desirable",
+    "tg": "матлуб",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "desirability",
+    "tg": "матлубият",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "desperately",
+    "tg": "ноумедона; сахт",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "desperation",
+    "tg": "ноумедӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "desperate",
+    "tg": "ноумед; шадид",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "destination country",
+    "tg": "кишвари таъинот",
+    "category": "Сафар",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "destined",
+    "tg": "тақдиршуда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "destroy",
+    "tg": "нобуд кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "destruction",
+    "tg": "нобудшавӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "destructive",
+    "tg": "харобиовар",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detached",
+    "tg": "ҷудошуда; бетафовут",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detachment",
+    "tg": "ҷудошавӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detain",
+    "tg": "боздошт кардан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detention",
+    "tg": "боздошт",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detect",
+    "tg": "ошкор кардан",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detection",
+    "tg": "ошкорсозӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detective",
+    "tg": "муфаттиш",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "detector",
+    "tg": "ошкоркунанда; детектор",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "determinant",
+    "tg": "омили муайянкунанда",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "determination",
+    "tg": "қатъият",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "determined",
+    "tg": "қатъӣ; устувор",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deterrent",
+    "tg": "омили боздоранда",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deterrence",
+    "tg": "боздорандагӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deteriorate",
+    "tg": "бад шудан",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "deterioration",
+    "tg": "бадшавӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "devastate",
+    "tg": "хароб кардан",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "devastating",
+    "tg": "харобиовар",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "devastation",
+    "tg": "харобӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "developer",
+    "tg": "таҳиягар",
+    "category": "Технология",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "developmental",
+    "tg": "инкишофӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "developmentally",
+    "tg": "аз ҷиҳати инкишоф",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diagnose",
+    "tg": "ташхис кардан",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diagnosis",
+    "tg": "ташхис",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diagnostic",
+    "tg": "ташхисӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diagnostically",
+    "tg": "бо усули ташхис",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diagram",
+    "tg": "нақша; диаграмма",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diary",
+    "tg": "рӯзнома",
+    "category": "Оила",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dictate",
+    "tg": "дикта кардан; амр додан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dictation",
+    "tg": "имло; диктант",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dictator",
+    "tg": "диктатор",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dictatorship",
+    "tg": "диктатура",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dictionary entry",
+    "tg": "мақолаи луғатӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dietary",
+    "tg": "ғизоӣ; парҳезӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dietary supplement",
+    "tg": "иловаи ғизоӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "differ",
+    "tg": "фарқ кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "differential",
+    "tg": "фарқкунанда; дифференсиалӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "differentiate",
+    "tg": "фарқ гузоштан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "differentiation",
+    "tg": "фарқгузорӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "differently",
+    "tg": "ба таври дигар",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diligence",
+    "tg": "саъю кӯшиши бодиққат",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diligent",
+    "tg": "бодиққат; меҳнатдӯст",
+    "category": "Кор",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diligently",
+    "tg": "бо ҷидду ҷаҳд",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dimension",
+    "tg": "андоза; ҷанба",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "dimensional",
+    "tg": "андозавӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diminish",
+    "tg": "кам шудан; кам кардан",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diminished",
+    "tg": "камшуда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diminishing",
+    "tg": "коҳишёбанда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diminution",
+    "tg": "коҳиш",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diploma",
+    "tg": "диплом",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diplomacy",
+    "tg": "дипломатия",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diplomat",
+    "tg": "дипломат",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diplomatic",
+    "tg": "дипломатӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "diplomatically",
+    "tg": "бо роҳи дипломатӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disability rights",
+    "tg": "ҳуқуқи маъюбон",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disabled",
+    "tg": "маъюб; дорои маъюбӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disadvantage",
+    "tg": "камбудӣ; нуқсон",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disadvantaged",
+    "tg": "камбизоат; маҳрум",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disagreement",
+    "tg": "ихтилоф",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disapproval",
+    "tg": "норозигӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disapprove",
+    "tg": "маъқул надонистан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disarm",
+    "tg": "яроқро супурдан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disarmament",
+    "tg": "безараргардонии силоҳ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disbelief",
+    "tg": "нобоварӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disclose",
+    "tg": "ошкор кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "disclosure",
+    "tg": "ошкорсозӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discomfort",
+    "tg": "нороҳатӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discomforting",
+    "tg": "нороҳаткунанда",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discontinue",
+    "tg": "қатъ кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discontinued",
+    "tg": "қатъшуда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discontinuity",
+    "tg": "нопайвастагӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discord",
+    "tg": "ихтилоф; номувофиқатӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discordant",
+    "tg": "номувофиқ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discourage",
+    "tg": "рӯҳафтода кардан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discouragement",
+    "tg": "рӯҳафтодагӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discourse",
+    "tg": "гуфтор; баҳс",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discretion",
+    "tg": "эҳтиёткорӣ; салоҳдид",
+    "category": "Муошират",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discretionary",
+    "tg": "ихтиёрӣ; вобаста ба салоҳдид",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminant",
+    "tg": "фарқкунанда",
+    "category": "Маориф",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminate",
+    "tg": "табъиз кардан; фарқ гузоштан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discrimination",
+    "tg": "табъиз",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory",
+    "tg": "табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory practice",
+    "tg": "амали табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory policy",
+    "tg": "сиёсати табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory treatment",
+    "tg": "муносибати табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory behavior",
+    "tg": "рафтори табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory act",
+    "tg": "амали табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory law",
+    "tg": "қонуни табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory rule",
+    "tg": "қоидаи табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory attitude",
+    "tg": "муносибати табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory language",
+    "tg": "забони табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory system",
+    "tg": "низоми табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory decision",
+    "tg": "қарори табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory measure",
+    "tg": "чораи табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory action",
+    "tg": "амали табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory conduct",
+    "tg": "рафтори табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory effect",
+    "tg": "таъсири табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory outcome",
+    "tg": "натиҷаи табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory practice code",
+    "tg": "меъёри амали табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
+  },
+  {
+    "en": "discriminatory policy framework",
+    "tg": "чаҳорчӯбаи сиёсати табъизомез",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial batch 005"
   }
 ]
