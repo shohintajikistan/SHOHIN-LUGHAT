@@ -169,7 +169,7 @@ $('conversationLesson').addEventListener('click',e=>{
  const s=e.target.closest('[data-conv-speak]');if(s&&'speechSynthesis'in window){speechSynthesis.cancel();const phrase=conversationData[Number(s.dataset.topicIndex)].items[Number(s.dataset.convSpeak)][0];const u=new SpeechSynthesisUtterance(phrase);u.lang='en-US';speechSynthesis.speak(u)}
  const cp=e.target.closest('[data-conv-copy]');if(cp){const phrase=conversationData[Number(cp.dataset.convCopy)].items[Number(cp.dataset.phrase)];const value=phrase[0]+' — '+phrase[1];if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>cp.textContent='Нусхабардорӣ шуд').catch(()=>alert(value));else alert(value)}
 });
-function showPage(page){currentPage=page;menuDone();['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);$('homeStories').hidden=page!=='home';const isDictionary=page==='lugat'||page==='home';$('words').hidden=!isDictionary;if(page==='conversation'){$('conversationSection').hidden=false;renderConversationTopics();}if(page==='stories'){$('storiesSection').hidden=false;renderStories();}if(page==='apps')$('myAppsSection').hidden=false;showFavs=false;if(isDictionary){$('sectionTitle').textContent=page==='home'?'Главное':'Луғат';$('q').value='';render()}else{$('sectionTitle').textContent=page==='conversation'?'Муошират':page==='stories'?'Ҳикояҳо':'БАРНОМАИ МО';$('count').textContent='SHOHIN TAJIKISTAN'}window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'})}
+function showPage(page){currentPage=page;menuDone();['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);$('homeStories').hidden=page!=='home';const isDictionary=page==='lugat';$('words').hidden=!isDictionary;$('sectionTitle').parentElement.hidden=!isDictionary;$('topSearch').hidden=!isDictionary;$('q').hidden=true;$('q').value='';if(page==='conversation'){$('conversationSection').hidden=false;renderConversationTopics();}if(page==='stories'){$('storiesSection').hidden=false;renderStories();}if(page==='apps')$('myAppsSection').hidden=false;showFavs=false;if(isDictionary){$('sectionTitle').textContent='Луғат';render()}else{$('words').innerHTML='';$('count').textContent=''}window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'})}
 $('homeOpen').addEventListener('click',()=>showPage('home'));
 $('lugatOpen').addEventListener('click',()=>showPage('lugat'));
 $('conversationOpen').addEventListener('click',()=>showPage('conversation'));
@@ -200,20 +200,18 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function setDirection(d){dir=d;render()}
 function render(){
  if(!$('conversationSection').hidden)return;
+ if(currentPage!=='lugat'){$('words').hidden=true;$('sectionTitle').parentElement.hidden=true;$('words').innerHTML='';return}
+ $('words').hidden=false;$('sectionTitle').parentElement.hidden=false;
  const rawQuery=$('q').value.trim();
  const q=rawQuery.toLocaleLowerCase();
- const hideHomeDictionary=currentPage==='home'&&!rawQuery;
- $('words').hidden=currentPage!=='lugat'&&hideHomeDictionary;
- $('sectionTitle').parentElement.hidden=hideHomeDictionary;
- if(hideHomeDictionary){$('words').innerHTML='';return}
  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
  $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word reveal"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
  revealWords();
 }
-$('searchToggle').click();setTimeout(()=> $('q').focus(),260)});
-$('q').addEventListener('input',render);renderHomeStories();
+});
+$('q').addEventListener('input',render);renderHomeStories();$('topSearch').hidden=true;
 $('clear').addEventListener('click',()=>{$('q').value='';showFavs=false;render()});
 $('q').addEventListener('input',()=>{const term=$('q').value.trim();const match=data.find(x=>x.en.toLowerCase()===term.toLowerCase()||x.tg.toLowerCase()===term.toLowerCase());if(match){historyWords=[match.en,...historyWords.filter(x=>x!==match.en)].slice(0,30);localStorage.setItem('shohin_lughat_history',JSON.stringify(historyWords))}}); 
 
