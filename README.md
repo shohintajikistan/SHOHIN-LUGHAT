@@ -31,4 +31,11 @@ The bundled dictionary will use UTF-8 JSON records with these fields:
 Every push to `main` starts the GitHub Actions workflow. The debug APK is uploaded as an Actions artifact.
 
 ## Current development stage
-The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. The bundled dictionary currently contains **2,342 unique English headwords** across the 12 categories. **17,658 additional entries** are still required to reach the 20,000 target. The editorial entries have not yet received independent native-speaker review and must not be described as fully verified. GitHub Actions validates the JSON and copies it into the APK before building.
+The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. The bundled dictionary currently contains **5,691 unique English headwords** across the 12 categories. **14,309 additional entries** are still required to reach the 20,000 target. The dataset combines editorial entries with sourced Wiktionary translations. Imported entries retain their source metadata; the dataset has not yet received a complete independent native-speaker review and must not be described as fully verified. GitHub Actions validates the JSON and copies it into the APK before building.
+
+
+## Data attribution
+
+A portion of the Tajik translations is derived from the English Wiktionary translation tables, extracted through the [Multilingualism dataset](https://github.com/MethodoxTech/Multilingualism) and filtered to exclude entries marked as machine-translated. Attribution: **Wiktionary contributors**, via **MethodoxTech/Multilingualism**. The imported source data is distributed under **CC BY-SA 4.0**; the combined dictionary data must retain compatible attribution and share-alike terms. Each imported record identifies this provenance in its `source` field. No machine-translated rows from that source were imported.
+
+See [DATA_LICENSE.md](DATA_LICENSE.md) for the data licence and attribution details.
