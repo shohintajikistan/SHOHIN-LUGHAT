@@ -20,12 +20,17 @@
 .policyBackdrop{display:none;position:fixed;inset:0;background:#000b;z-index:20;padding:18px;align-items:center;justify-content:center}
 .policyBackdrop.open{display:flex}.policyBox{width:min(650px,100%);max-height:85vh;overflow:auto;background:#0d3024;border:1px solid var(--gold);border-radius:20px;padding:22px;box-shadow:0 20px 60px #0009}
 .policyBox h2{color:var(--gold);margin:0 0 16px}.policyBox h3{color:#d9b45b;margin:18px 0 6px;font-size:15px}.policyBox p{color:#e8eee9;line-height:1.6}.policyClose{float:right;border:1px solid #315b47;background:#102b21;color:white;border-radius:10px;padding:8px 12px;cursor:pointer}
+.daily{margin-top:14px;padding:16px 18px;border:1px solid #9d7c36;border-radius:17px;background:linear-gradient(120deg,#123e2c,#0b281f)}
+.daily small{display:block;color:var(--gold);font-weight:800;letter-spacing:1.5px}.daily strong{display:block;font-size:20px;margin-top:6px}.daily span{display:block;color:#c5d7cb;margin-top:3px}
+.tools{display:flex;gap:6px;margin-top:8px}.tools button{border:1px solid #315b47;background:#102b21;color:var(--gold);border-radius:9px;padding:6px 10px;cursor:pointer;font-size:12px}
+.histList{display:grid;gap:6px}.histList button{background:#102b21;color:var(--ivory);border:1px solid #315b47;border-radius:10px;padding:10px;text-align:left}
 @media(max-width:600px){.hero{align-items:start;flex-direction:column}.words{grid-template-columns:1fr}.search button{padding:0 13px}.wrap{padding:18px 14px 36px}}
 </style></head>
 <body><main class="wrap">
-<header class="top"><div class="logo">♛</div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Открыть меню">☰</button><div class="menuPanel" id="menuPanel"><button id="privacyOpen">Политика конфиденциальности</button></div></div></header>
+<header class="top"><div class="logo">♛</div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Открыть меню">☰</button><div class="menuPanel" id="menuPanel"><button id="favoritesToggle">Избранные слова</button><button id="historyOpen">История поиска</button><button id="privacyOpen">Политика конфиденциальности</button></div></div></header>
 <section class="hero"><div><div class="eyebrow">DICTIONARY · ENGLISH ⇄ TAJIK</div><h1>SHOHIN LUGHAT</h1><p>Англо-таджикский и таджикско-английский словарь. Поиск по словам и переводам, нумерация каждого слова и избранное.</p></div><div class="pill">OFFLINE ANDROID APP</div></section>
 <section class="panel"><div class="switch"><button id="en" class="active" type="button">English → Тоҷикӣ</button><button id="tj" type="button">Тоҷикӣ → English</button></div><div class="search"><input id="q" autocomplete="off" placeholder="Введите слово для поиска..."><button id="clear" type="button">Очистить</button></div></section>
+<section class="daily" id="daily"><small>КАЛИМАИ РӮЗ · WORD OF THE DAY</small><strong id="dailyEn">—</strong><span id="dailyTg">—</span><div class="tools"><button id="dailySpeak">🔊 Произнести</button><button id="dailyCopy">Копировать</button></div></section>
 <div class="section"><strong id="sectionTitle">Словарь</strong><span id="count">Загрузка…</span></div><section class="words" id="words"><div class="state">Загружаем словарь…</div></section>
 <p class="note">Предварительная веб-версия. Android-приложение содержит словарь внутри APK и работает без интернета.</p>
 </main>
@@ -35,20 +40,31 @@
   <button class="policyClose" id="privacyClose">Закрыть ✕</button>
   <h2 id="policyTitle">Политика конфиденциальности</h2>
   <p><b>SHOHIN LUGHAT</b> — офлайн-словарь английского и таджикского языков. Веб-версия загружает словарь из файлов проекта, а Android-приложение хранит словарь внутри приложения. Поиск выполняется на устройстве.</p>
-  <h3>Сбор данных</h3><p>Приложение не собирает и не отправляет разработчику персональные данные, контакты или местоположение. Поисковые запросы используются только для поиска слов и не отправляются на сервер.</p>
-  <h3>Локальное хранение</h3><p>Избранные слова сохраняются локально на устройстве (в браузере — в localStorage, в Android-приложении — в локальных настройках приложения). Эти данные не передаются разработчику. Резервное копирование Android может зависеть от настроек устройства и системы.</p>
+  <h3>Сбор данных</h3><p>Приложение не собирает и не отправляет разработчику персональные данные, контакты или местоположение. Поисковые запросы и история поиска не отправляются на сервер.</p>
+  <h3>Локальное хранение</h3><p>Избранные слова и недавняя история поиска сохраняются локально на устройстве (в браузере — в localStorage, в Android-приложении — в локальных настройках приложения). Эти данные не передаются разработчику. Резервное копирование Android может зависеть от настроек устройства и системы.</p>
   <h3>Сторонние сервисы и реклама</h3><p>В текущей версии нет регистрации, рекламы, аналитики или сторонних сервисов сбора данных.</p>
   <h3>Удаление данных</h3><p>Избранные слова можно удалить из приложения или очистить данные приложения/браузера. Удаление приложения также удаляет локальные данные в соответствии с правилами Android.</p>
   <h3>Изменения политики</h3><p>Если функции приложения или правила обработки данных изменятся, эта политика будет обновлена.</p>
   <p><b>Разработчик:</b> SHOHIN TAJIKISTAN</p>
  </article>
 </div>
+<div class="policyBackdrop" id="historyBackdrop" role="dialog" aria-modal="true">
+ <article class="policyBox"><button class="policyClose" id="historyClose">Закрыть ✕</button><h2>История поиска</h2><div class="histList" id="historyItems"></div><button class="tools" id="historyClear">Очистить историю</button></article>
+</div>
 
 <script>
 let data=[],dir='en',favs=new Set(JSON.parse(localStorage.getItem('shohin_lughat_favs')||'[]')),showFavs=false;
+let historyWords=JSON.parse(localStorage.getItem('shohin_lughat_history')||'[]');
 const $=id=>document.getElementById(id);
 $('menuToggle').addEventListener('click',()=> $('menuPanel').classList.toggle('open'));
 $('privacyOpen').addEventListener('click',()=>{$('menuPanel').classList.remove('open');$('policyBackdrop').classList.add('open')});
+$('favoritesToggle').addEventListener('click',()=>{$('menuPanel').classList.remove('open');showFavs=!showFavs;render()});
+$('historyOpen').addEventListener('click',()=>{$('menuPanel').classList.remove('open');renderHistory();$('historyBackdrop').classList.add('open')});
+$('historyClose').addEventListener('click',()=> $('historyBackdrop').classList.remove('open'));
+$('historyBackdrop').addEventListener('click',e=>{if(e.target.id==='historyBackdrop')e.currentTarget.classList.remove('open')});
+$('historyClear').addEventListener('click',()=>{historyWords=[];localStorage.setItem('shohin_lughat_history','[]');renderHistory()});
+function renderHistory(){$('historyItems').innerHTML=historyWords.length?historyWords.map(w=>'<button type="button" data-history="'+esc(w)+'">'+esc(w)+'</button>').join(''):'<p>История пока пуста.</p>'}
+$('historyItems').addEventListener('click',e=>{const b=e.target.closest('[data-history]');if(!b)return;$('q').value=b.dataset.history;showFavs=false;$('historyBackdrop').classList.remove('open');render()});
 $('privacyClose').addEventListener('click',()=> $('policyBackdrop').classList.remove('open'));
 $('policyBackdrop').addEventListener('click',e=>{if(e.target.id==='policyBackdrop')e.currentTarget.classList.remove('open')});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -58,11 +74,19 @@ function render(){
  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
- $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
+ $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
 }
 $('en').addEventListener('click',()=>setDirection('en'));$('tj').addEventListener('click',()=>setDirection('tj'));$('q').addEventListener('input',render);
 $('clear').addEventListener('click',()=>{$('q').value='';showFavs=false;render()});
+$('q').addEventListener('input',()=>{const term=$('q').value.trim();const match=data.find(x=>x.en.toLowerCase()===term.toLowerCase()||x.tg.toLowerCase()===term.toLowerCase());if(match){historyWords=[match.en,...historyWords.filter(x=>x!==match.en)].slice(0,30);localStorage.setItem('shohin_lughat_history',JSON.stringify(historyWords))}}); 
+$('dailySpeak').addEventListener('click',()=>{if('speechSynthesis'in window){const u=new SpeechSynthesisUtterance($('dailyEn').textContent);u.lang='en-US';speechSynthesis.speak(u)}});
+$('dailyCopy').addEventListener('click',()=>{const text=$('dailyEn').textContent+' — '+$('dailyTg').textContent;navigator.clipboard?.writeText(text).then(()=>{$('dailyCopy').textContent='Скопировано'}).catch(()=>alert(text))});
 
-$('words').addEventListener('click',e=>{const b=e.target.closest('button[data-word]');if(!b)return;const w=b.dataset.word;favs.has(w)?favs.delete(w):favs.add(w);localStorage.setItem('shohin_lughat_favs',JSON.stringify([...favs]));render()});
-fetch('./dictionary/words.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(rows=>{if(!Array.isArray(rows))throw Error('Invalid dictionary');data=rows;render()}).catch(()=>{$('count').textContent='Ошибка';$('words').innerHTML='<div class="state">Не удалось загрузить словарь для веб-просмотра.</div>'});
+$('words').addEventListener('click',e=>{
+ const star=e.target.closest('button[data-word]');
+ if(star){const w=star.dataset.word;favs.has(w)?favs.delete(w):favs.add(w);localStorage.setItem('shohin_lughat_favs',JSON.stringify([...favs]));render();return}
+ const cp=e.target.closest('button[data-copy]');if(cp){const w=data.find(x=>x.en===cp.dataset.copy);const text=w? w.en+' — '+w.tg:cp.dataset.copy;if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>cp.textContent='Скопировано');else alert(text);return}
+ const sp=e.target.closest('button[data-speak]');if(sp&&'speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(sp.dataset.speak);u.lang='en-US';speechSynthesis.speak(u)}
+});
+fetch('./dictionary/words.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(rows=>{if(!Array.isArray(rows))throw Error('Invalid dictionary');data=rows;const day=(Math.floor(Date.now()/86400000))%Math.max(1,data.length);const w=data[day];if(w){$('dailyEn').textContent=w.en;$('dailyTg').textContent=w.tg}render()}).catch(()=>{$('count').textContent='Ошибка';$('words').innerHTML='<div class="state">Не удалось загрузить словарь для веб-просмотра.</div>'});
 </script></body></html>
