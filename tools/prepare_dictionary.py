@@ -6,9 +6,10 @@ import unicodedata
 from pathlib import Path
 
 groups_dir = Path("dictionary/groups")
-legacy = Path("dictionary/words.json")
+legacy = Path("dictionary/legacy_words.json")
 extra = Path("dictionary/additions.json")
 out = Path("app/src/main/assets/dictionary/words.json")
+web_out = Path("dictionary/words.json")
 
 def norm(value):
     return " ".join(unicodedata.normalize("NFC", value).casefold().split())
@@ -84,6 +85,8 @@ for item in batch:
 
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+web_out.parent.mkdir(parents=True, exist_ok=True)
+web_out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Frozen group files: {len(group_files)}")
 print(f"Frozen group entries: {sum(len(json.loads(p.read_text(encoding='utf-8'))) for p in group_files)}")
 print(f"Legacy entries added: {len(words) - added - sum(len(json.loads(p.read_text(encoding='utf-8'))) for p in group_files)}")
@@ -91,3 +94,4 @@ print(f"Supplemental candidates: {len(batch)}")
 print(f"New unique supplemental entries added: {added}")
 print(f"Duplicates skipped: {skipped}")
 print(f"Total offline entries: {len(words)}")
+print(f"Web dictionary generated: {web_out}")
