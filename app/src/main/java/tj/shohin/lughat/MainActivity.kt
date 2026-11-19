@@ -57,46 +57,161 @@ private data class ConversationTopic(val title: String, val englishTitle: String
 
 private val conversationTopics = listOf(
     ConversationTopic("Шиносоӣ", "Introductions", listOf(
-        "Hello!" to "Салом!", "What is your name?" to "Номи шумо чист?", "My name is Ali." to "Номи ман Алӣ аст.",
-        "Where are you from?" to "Шумо аз куҷо ҳастед?", "I am from Tajikistan." to "Ман аз Тоҷикистон ҳастам.",
-        "Nice to meet you." to "Аз шиносоӣ бо шумо шодам.", "How are you?" to "Шумо чӣ хел ҳастед?"
+        "Hello!" to "Салом!",
+        "My name is Farid." to "Номи ман Фарид аст.",
+        "Where are you from?" to "Шумо аз куҷо ҳастед?",
+        "Nice to meet you." to "Аз шиносоӣ бо шумо шодам."
     )),
     ConversationTopic("Оила", "Family", listOf(
-        "This is my family." to "Ин оилаи ман аст.", "I have two brothers." to "Ман ду бародар дорам.",
-        "Do you have children?" to "Шумо фарзанд доред?", "My parents live here." to "Падару модари ман дар ин ҷо зиндагӣ мекунанд.",
-        "I love my family." to "Ман оилаи худро дӯст медорам."
+        "How many people are in your family?" to "Дар оилаи шумо чанд нафар ҳаст?",
+        "I have two sisters." to "Ман ду хоҳар дорам.",
+        "My parents live here." to "Падару модари ман дар ин ҷо зиндагӣ мекунанд.",
+        "Do you have children?" to "Шумо фарзанд доред?"
+    )),
+    ConversationTopic("Дӯстӣ", "Friendship", listOf(
+        "Would you like to be friends?" to "Мехоҳед дӯст шавем?",
+        "You can count on me." to "Шумо метавонед ба ман такя кунед.",
+        "Let's keep in touch." to "Биёед дар тамос бошем.",
+        "Thank you for your friendship." to "Барои дӯстиятон ташаккур."
     )),
     ConversationTopic("Дар мағоза", "At the shop", listOf(
-        "How much is this?" to "Ин чанд пул аст?", "I would like to buy this." to "Ман мехоҳам инро харам.",
-        "Do you have a smaller size?" to "Андозаи хурдтар доред?", "Can I pay by card?" to "Метавонам бо корт пардохт кунам?",
-        "It is too expensive." to "Ин хеле қимат аст."
+        "How much does this cost?" to "Ин чанд пул аст?",
+        "Can I try it on?" to "Метавонам онро пӯшида бинам?",
+        "Do you have another colour?" to "Ранги дигар доред?",
+        "Could I have a receipt?" to "Метавонам расид гирам?"
     )),
     ConversationTopic("Дар кор", "At work", listOf(
-        "Where do you work?" to "Шумо дар куҷо кор мекунед?", "I work in an office." to "Ман дар идора кор мекунам.",
-        "I need some help." to "Ба ман каме ёрӣ лозим аст.", "Let's discuss this later." to "Биёед инро баъд муҳокима кунем.",
-        "I have finished my work." to "Ман корамро анҷом додам."
+        "What time does your shift begin?" to "Навбати кори шумо соати чанд оғоз мешавад?",
+        "I have a meeting at ten." to "Ман соати даҳ маҷлис дорам.",
+        "Could you help me with this task?" to "Метавонед дар ин вазифа ба ман ёрӣ диҳед?",
+        "The report is ready." to "Ҳисобот омода аст."
     )),
     ConversationTopic("Дар мактаб", "At school", listOf(
-        "What is the homework?" to "Вазифаи хонагӣ чист?", "I do not understand." to "Ман намефаҳмам.",
-        "Could you repeat that, please?" to "Лутфан, инро такрор мекунед?", "May I ask a question?" to "Метавонам савол диҳам?",
-        "I am learning English." to "Ман забони англисиро меомӯзам."
+        "Which subject do you like most?" to "Кадом фанро бештар дӯст медоред?",
+        "Please explain this rule again." to "Лутфан, ин қоидаро боз фаҳмонед.",
+        "When is the next lesson?" to "Дарси навбатӣ кай мешавад?",
+        "We have an exam tomorrow." to "Мо пагоҳ имтиҳон дорем."
+    )),
+    ConversationTopic("Дар донишгоҳ", "At university", listOf(
+        "What are you studying?" to "Шумо чӣ мехонед?",
+        "I study computer science." to "Ман илми компютериро меомӯзам.",
+        "Where is the library?" to "Китобхона дар куҷост?",
+        "Have you finished your assignment?" to "Супориши худро тамом кардед?"
     )),
     ConversationTopic("Сафар", "Travel", listOf(
-        "Where is the bus station?" to "Истгоҳи автобус дар куҷост?", "I need a ticket to Dushanbe." to "Ба ман чипта ба Душанбе лозим аст.",
-        "What time does the train leave?" to "Қатор соати чанд меравад?", "Where can I find a taxi?" to "Дар куҷо таксӣ ёфта метавонам?",
-        "Please help me." to "Лутфан, ба ман ёрӣ диҳед."
+        "I would like to book a room." to "Ман мехоҳам ҳуҷра фармоиш диҳам.",
+        "When does the bus leave?" to "Автобус кай меравад?",
+        "Could you show me the way?" to "Метавонед роҳро нишон диҳед?",
+        "I have lost my passport." to "Ман шиносномаи худро гум кардам."
+    )),
+    ConversationTopic("Фурудгоҳ", "At the airport", listOf(
+        "Where is the check-in desk?" to "Ҷойи бақайдгирӣ дар куҷост?",
+        "Here is my passport." to "Ин шиносномаи ман аст.",
+        "Has the flight been delayed?" to "Парвоз ба таъхир афтодааст?",
+        "Where can I collect my luggage?" to "Бағоҷамро аз куҷо гирифта метавонам?"
+    )),
+    ConversationTopic("Дар меҳмонхона", "At a hotel", listOf(
+        "I have a reservation." to "Ман ҳуҷра фармоиш додаам.",
+        "Is Wi-Fi available?" to "Wi-Fi ҳаст?",
+        "Could I have an extra towel?" to "Метавонед як дастмоли иловагӣ диҳед?",
+        "What time is check-out?" to "Соати баромадан чанд аст?"
     )),
     ConversationTopic("Дар тарабхона", "At a restaurant", listOf(
-        "A table for two, please." to "Лутфан, барои ду нафар як миз.", "Can I see the menu?" to "Метавонам менюро бинам?",
-        "I would like some water." to "Ман каме об мехоҳам.", "What do you recommend?" to "Шумо чӣ тавсия медиҳед?",
-        "The food is delicious." to "Таом болаззат аст."
+        "Could I see the menu, please?" to "Лутфан, менюро нишон диҳед.",
+        "What is today's special?" to "Таоми махсуси имрӯз чист?",
+        "I would like a glass of water." to "Ман як истакон об мехоҳам.",
+        "Could we have the bill?" to "Метавонем ҳисобро гирем?"
+    )),
+    ConversationTopic("Дар беморхона", "At the hospital", listOf(
+        "I need to see a doctor." to "Ман бояд ба духтур муроҷиат кунам.",
+        "Where does it hurt?" to "Дар куҷоятон дард мекунад?",
+        "I have had a headache since yesterday." to "Аз дирӯз сарам дард мекунад.",
+        "Please call an ambulance." to "Лутфан, ёрии таъҷилиро даъват кунед."
+    )),
+    ConversationTopic("Дар дорухона", "At the pharmacy", listOf(
+        "Do you have this medicine?" to "Ин доруро доред?",
+        "How should I take it?" to "Ман онро чӣ тавр истеъмол кунам?",
+        "Is it available without a prescription?" to "Он бе дорухат фурӯхта мешавад?",
+        "Please read the instructions." to "Лутфан, дастурамалро хонед."
+    )),
+    ConversationTopic("Муоширати телефонӣ", "Phone conversations", listOf(
+        "May I speak to Mr Smith?" to "Метавонам бо ҷаноби Смит суҳбат кунам?",
+        "Who is calling, please?" to "Лутфан, кӣ занг мезанад?",
+        "Could you call me back later?" to "Метавонед баъдтар ба ман занг занед?",
+        "I will send you a message." to "Ман ба шумо паём мефиристам."
+    )),
+    ConversationTopic("Интернет ва технология", "Internet and technology", listOf(
+        "What is the Wi-Fi password?" to "Рамзи Wi-Fi чист?",
+        "My phone battery is low." to "Батареяи телефонам кам мондааст.",
+        "Please send me the link." to "Лутфан, пайвандро ба ман фиристед.",
+        "I cannot connect to the internet." to "Ман ба интернет пайваст шуда наметавонам."
+    )),
+    ConversationTopic("Вақт ва нақшаҳо", "Time and plans", listOf(
+        "Are you free this evening?" to "Имшаб вақти холӣ доред?",
+        "Let's meet at six." to "Биёед соати шаш вохӯрем.",
+        "I may be a little late." to "Шояд каме дер кунам.",
+        "What are your plans for tomorrow?" to "Нақшаҳои шумо барои пагоҳ чист?"
+    )),
+    ConversationTopic("Обу ҳаво", "Weather", listOf(
+        "It looks like rain." to "Ба назар мерасад, ки борон меборад.",
+        "The weather is lovely today." to "Имрӯз ҳаво хеле хуб аст.",
+        "It is getting colder." to "Ҳаво хунуктар шуда истодааст.",
+        "Do not forget your umbrella." to "Чатрро фаромӯш накунед."
+    )),
+    ConversationTopic("Варзиш", "Sports", listOf(
+        "Do you play football?" to "Шумо футбол бозӣ мекунед?",
+        "Our team won the match." to "Дастаи мо бозиро бурд.",
+        "I go jogging every morning." to "Ман ҳар саҳар медавам.",
+        "Would you like to join us?" to "Мехоҳед ба мо ҳамроҳ шавед?"
+    )),
+    ConversationTopic("Харидани либос", "Buying clothes", listOf(
+        "What size do you wear?" to "Шумо кадом андоза мепӯшед?",
+        "This jacket fits me well." to "Ин куртка ба ман мувофиқ аст.",
+        "Do you have it in blue?" to "Инро бо ранги кабуд доред?",
+        "Can I exchange it?" to "Метавонам онро иваз кунам?"
+    )),
+    ConversationTopic("Ҷустуҷӯи хона", "Finding a home", listOf(
+        "I am looking for a flat to rent." to "Ман барои иҷора хона меҷӯям.",
+        "How much is the monthly rent?" to "Иҷораи моҳона чанд пул аст?",
+        "Are utilities included?" to "Пардохти хизматрасониҳо дохил аст?",
+        "When can I see the apartment?" to "Кай метавонам хонаро бинам?"
+    )),
+    ConversationTopic("Мусоҳибаи корӣ", "Job interview", listOf(
+        "Thank you for inviting me." to "Барои даъват кардан ташаккур.",
+        "Tell me about your experience." to "Дар бораи таҷрибаи худ нақл кунед.",
+        "I am willing to learn." to "Ман барои омӯхтан омодаам.",
+        "What are the working hours?" to "Соатҳои корӣ чӣ гунаанд?"
+    )),
+    ConversationTopic("Муоширати расмӣ", "Formal conversation", listOf(
+        "Could you please clarify this point?" to "Лутфан, ин нуктаро равшан карда метавонед?",
+        "I appreciate your time." to "Ман вақти шуморо қадр мекунам.",
+        "Please accept my apologies." to "Лутфан, узри маро қабул кунед.",
+        "I look forward to your reply." to "Ман мунтazири ҷавоби шумо ҳастам."
+    )),
+    ConversationTopic("Ҳалли мушкилот", "Solving a problem", listOf(
+        "There seems to be a problem." to "Ба назар мерасад, ки мушкилӣ вуҷуд дорад.",
+        "Let us find a solution." to "Биёед роҳи ҳалро пайдо кунем.",
+        "Could you explain what happened?" to "Метавонед фаҳмонед, ки чӣ рӯй дод?",
+        "We can solve this together." to "Мо метавонем инро якҷоя ҳал кунем."
     )),
     ConversationTopic("Муоширати ҳаррӯза", "Daily conversation", listOf(
-        "Good morning!" to "Субҳ ба хайр!", "What are you doing?" to "Шумо чӣ кор карда истодаед?",
-        "I am on my way." to "Ман дар роҳ ҳастам.", "Please wait a moment." to "Лутфан, як лаҳза интизор шавед.",
-        "I agree with you." to "Ман бо шумо розӣ ҳастам.", "See you tomorrow." to "То пагоҳ!"
+        "What have you been doing lately?" to "Вақтҳои охир чӣ кор карда истодаед?",
+        "I am glad to see you." to "Аз дидани шумо шодам.",
+        "Could you speak more slowly?" to "Метавонед каме оҳистатар гап занед?",
+        "Have a nice day!" to "Рӯзи хуб дошта бошед!"
     ))
 )
+
+private data class ClassicStory(val title: String, val author: String, val english: String, val tajik: String)
+
+private val classicStories = listOf(
+    ClassicStory("The Happy Prince", "Oscar Wilde", "High above the city stood a statue called the Happy Prince. A little Swallow helped the Prince give the gold and jewels from the statue to poor people. The bird stayed with him through the cold winter. Their kindness was remembered by the people.", "Дар баландии шаҳр ҳайкале меистод, ки онро Шоҳзодаи Хушбахт меномиданд. Парастуи хурде ба Шоҳзода ёрӣ дод, то тилло ва ҷавоҳироти ҳайкалро ба одамони камбағал диҳад. Парранда тамоми зимистон назди ӯ монд. Меҳрубонии онҳо дар ёди мардум боқӣ монд."),
+    ClassicStory("A Christmas Carol", "Charles Dickens", "Ebenezer Scrooge cared only about money and disliked Christmas. Three mysterious visitors showed him his past, present and possible future. He understood that he had become lonely and unkind. The next morning he changed his behaviour, helped a poor family and shared happiness.", "Эбенезер Скруҷ танҳо дар бораи пул фикр мекард ва Мавлуди Исоро дӯст намедошт. Се меҳмони асроромез гузаштаи ӯ, замони ҳозира ва ояндаи эҳтимолиро нишон доданд. Ӯ фаҳмид, ки танҳо ва бераҳм шудааст. Субҳи дигар рафторашро дигар кард, ба оилаи камбағал ёрӣ дод ва хушбахтиро тақсим намуд."),
+    ClassicStory("Alice in Wonderland", "Lewis Carroll", "Alice followed a White Rabbit and fell into a strange underground world. There she met talking animals and unusual characters, including the Cheshire Cat and the Mad Hatter. Her journey was full of puzzles and surprises. Alice learned to stay curious and brave.", "Алис аз паси Харгӯши Сафед рафт ва ба ҷаҳони аҷиби зеризаминӣ афтод. Дар он ҷо бо ҳайвоноти сухангӯ ва қаҳрамонҳои ғайриодӣ, аз ҷумла Гурбаи Чешир ва Кулоҳдӯзи Девона вохӯрд. Сафари ӯ пур аз муаммо ва ҳайрат буд. Алис ҷасур ва кунҷков монданро омӯхт."),
+    ClassicStory("The Jungle Book", "Rudyard Kipling", "Mowgli grew up in the jungle among wolves. Baloo the bear taught him the laws of the jungle, and Bagheera the panther protected him. The tiger Shere Khan was dangerous, so Mowgli had to be brave and clever. With his friends, he faced many challenges.", "Маугли дар ҷангал дар байни гургҳо калон шуд. Хирс Балу ба ӯ қонунҳои ҷангалро меомӯхт ва пантера Багира ӯро муҳофизат мекард. Паланг Шер-Хон хатарнок буд, бинобар ин Маугли бояд ҷасуру доно мешуд. Ӯ бо дӯстонаш бо мушкилоти зиёд рӯ ба рӯ шуд."),
+    ClassicStory("Treasure Island", "Robert Louis Stevenson", "Jim Hawkins found a map showing a hidden treasure. He sailed to a distant island, but some sailors planned a mutiny. The clever Long John Silver was among them. Jim used courage and good judgement to survive. After many adventures, he returned home with an unforgettable story.", "Ҷим Ҳокинс харитаеро ёфт, ки ганҷи пинҳоншударо нишон медод. Ӯ ба ҷазираи дур шино кард, аммо баъзе маллоҳон исён омода мекарданд. Лонг Ҷон Силвери маккор низ дар байни онҳо буд. Ҷим бо ҷасорат ва ақли солим зинда монд. Пас аз саргузаштҳои зиёд ӯ бо қиссаи фаромӯшнашаванда ба хона баргашт.")
+)
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,6 +252,8 @@ fun ShohinDictionaryApp() {
     var menuExpanded by remember { mutableStateOf(false) }
     var showPrivacy by remember { mutableStateOf(false) }
     var showConversation by remember { mutableStateOf(false) }
+    var showStories by remember { mutableStateOf(false) }
+    var selectedStory by remember { mutableIntStateOf(-1) }
     var selectedConversation by remember { mutableIntStateOf(-1) }
     var showHistory by remember { mutableStateOf(false) }
     var searchHistory by remember {
@@ -205,8 +322,8 @@ fun ShohinDictionaryApp() {
                         ) {
                             DropdownMenuItem(text = { Text("Главное", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
                             DropdownMenuItem(text = { Text("Луғат", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
-                            DropdownMenuItem(text = { Text("Муошират", color = Ivory) }, onClick = { menuExpanded = false; selectedConversation = -1; showConversation = true })
-                            DropdownMenuItem(text = { Text("Ҳикояҳо", color = Ivory) }, onClick = { menuExpanded = false; Toast.makeText(context, "Ҳикояҳо дар навсозии оянда илова мешаванд", Toast.LENGTH_SHORT).show() })
+                            DropdownMenuItem(text = { Text("Муошират", color = Ivory) }, onClick = { menuExpanded = false; selectedConversation = -1; showConversation = true; showStories = false })
+                            DropdownMenuItem(text = { Text("Ҳикояҳо", color = Ivory) }, onClick = { menuExpanded = false; selectedStory = -1; showStories = true; showConversation = false })
                             DropdownMenuItem(text = { Text("Политика использования", color = Ivory) }, onClick = { menuExpanded = false; Toast.makeText(context, "SHOHIN LUGHAT барои омӯзиши забон пешбинӣ шудааст.", Toast.LENGTH_LONG).show() })
                             DropdownMenuItem(text = { Text("Политика конфиденциальности", color = Ivory) }, onClick = { menuExpanded = false; showPrivacy = true })
                             DropdownMenuItem(text = { Text("БАРНОМАИ МО", color = Gold, fontWeight = FontWeight.Bold) }, onClick = { menuExpanded = false; Toast.makeText(context, "SHOHIN TAJIKISTAN — таҳиягари барномаҳои омӯзишӣ ва муфид. Дар оянда барномаҳои нави мо дар ин бахш муаррифӣ мешаванд.", Toast.LENGTH_LONG).show() })
@@ -459,6 +576,47 @@ fun ShohinDictionaryApp() {
                     }
                 },
                 confirmButton = { TextButton(onClick = { showConversation = false }) { Text("Пӯшидан", color = Gold) } }
+            )
+        }
+
+
+        if (showStories) {
+            AlertDialog(
+                onDismissRequest = { showStories = false },
+                containerColor = SurfaceDark,
+                title = { Text(if (selectedStory < 0) "Ҳикояҳои англисӣ" else classicStories[selectedStory].title, color = Gold, fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(modifier = Modifier.heightIn(max = 500.dp).verticalScroll(rememberScrollState())) {
+                        if (selectedStory < 0) {
+                            Text("Ҳикояҳои омӯзишӣ аз асарҳои классикии нависандагони Британия. Матнҳо бозгӯии кӯтоҳшуда барои омӯзиши забон мебошанд.", color = Muted)
+                            Spacer(Modifier.height(10.dp))
+                            classicStories.forEachIndexed { index, story ->
+                                Card(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp).clickable { selectedStory = index },
+                                    colors = CardDefaults.cardColors(containerColor = Midnight),
+                                    shape = RoundedCornerShape(12.dp)
+                                ) {
+                                    Column(Modifier.padding(13.dp)) {
+                                        Text(story.title, color = Ivory, fontWeight = FontWeight.Bold)
+                                        Text(story.author, color = Gold, fontSize = 12.sp)
+                                    }
+                                }
+                            }
+                        } else {
+                            TextButton(onClick = { selectedStory = -1 }) { Text("← Ҳамаи ҳикояҳо", color = Gold) }
+                            val story = classicStories[selectedStory]
+                            Text(story.author, color = Gold, fontSize = 12.sp)
+                            Text("English", color = Gold, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 10.dp))
+                            Text(story.english, color = Ivory, lineHeight = 21.sp)
+                            Text("Тоҷикӣ", color = Gold, fontWeight = FontWeight.Bold, modifier = Modifier.padding(top = 16.dp))
+                            Text(story.tajik, color = Ivory, lineHeight = 21.sp)
+                            TextButton(onClick = {
+                                if (ttsReady) { speech.language = Locale.UK; speech.speak(story.english, TextToSpeech.QUEUE_FLUSH, null, "story_$selectedStory") }
+                            }) { Icon(Icons.Default.VolumeUp, contentDescription = null, tint = Gold); Spacer(Modifier.width(5.dp)); Text("Шунидан", color = Gold) }
+                        }
+                    }
+                },
+                confirmButton = { TextButton(onClick = { showStories = false }) { Text("Пӯшидан", color = Gold) } }
             )
         }
 
