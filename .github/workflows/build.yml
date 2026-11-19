@@ -1,4 +1,4 @@
-name: Build SHOHIN LUGHAT APK
+name: Prepare SHOHIN LUGHAT dictionary data
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -30,18 +30,19 @@ jobs:
       - name: Prepare complete offline dictionary
         run: python3 tools/prepare_dictionary.py
 
+      - name: Publish complete dictionary for GitHub Pages
+        run: |
+          git add dictionary/words.json
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Build complete web dictionary from frozen groups"
+            git push
+          fi
+
       - name: Validate complete offline dictionary
         run: python3 tools/validate_dictionary.py app/src/main/assets/dictionary/words.json
 
       - name: Package website and story images for offline Android use
         run: python3 tools/prepare_android_web.py
 
-      - name: Build universal debug APK
-        run: gradle --no-daemon clean assembleDebug
-
-      - name: Upload installable APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: SHOHIN-LUGHAT-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
