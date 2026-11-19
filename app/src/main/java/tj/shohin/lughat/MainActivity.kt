@@ -91,7 +91,7 @@ fun ShohinDictionaryApp() {
     var showPrivacy by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
     var searchHistory by remember {
-        mutableStateOf(preferences.getString("search_history", "")?.split("\\n")?.filter { it.isNotBlank() } ?: emptyList())
+        mutableStateOf(preferences.getString("search_history", "")?.split("\n")?.filter { it.isNotBlank() } ?: emptyList())
     }
     var ttsReady by remember { mutableStateOf(false) }
     val speech = remember {
