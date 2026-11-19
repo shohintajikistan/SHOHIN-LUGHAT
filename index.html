@@ -25,6 +25,19 @@
 .tools{display:flex;gap:6px;margin-top:8px}.tools button{border:1px solid #315b47;background:#102b21;color:var(--gold);border-radius:9px;padding:6px 10px;cursor:pointer;font-size:12px}
 .histList{display:grid;gap:6px}.histList button{background:#102b21;color:var(--ivory);border:1px solid #315b47;border-radius:10px;padding:10px;text-align:left}
 @media(max-width:600px){.hero{align-items:start;flex-direction:column}.words{grid-template-columns:1fr}.search button{padding:0 13px}.wrap{padding:18px 14px 36px}}
+
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+.word{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.word:hover{transform:translateY(-3px);border-color:#9d7c36;box-shadow:0 10px 24px #0003}
+.word.reveal{opacity:0;transform:translateY(16px);transition:opacity .48s ease,transform .48s ease,border-color .28s ease,box-shadow .28s ease}
+.word.reveal.visible{opacity:1;transform:translateY(0)}
+.hero h1{animation:heroIn .7s ease both}
+.menuBtn{transition:transform .3s ease,box-shadow .3s ease}
+.menuBtn:hover{transform:translateY(-2px);box-shadow:0 9px 24px #d9b45b22}
+#backTop{position:fixed;right:18px;bottom:20px;width:46px;height:46px;border:1px solid var(--gold);border-radius:15px;background:#0d3024;color:var(--gold);font-size:22px;box-shadow:0 8px 24px #0007;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s ease,transform .25s ease,visibility .25s;z-index:15;cursor:pointer}
+#backTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+@keyframes heroIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.word.reveal{opacity:1;transform:none}}
 </style></head>
 <body><main class="wrap">
 <header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Открыть меню" title="Меню SHOHIN"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M37 2a12 12 0 1 0 13 17A10 10 0 0 1 37 2Z" fill="#f1ce79" stroke="#f7df9d" stroke-width="1"/><g fill="#f1ce79"><path d="M7 15l1.5 3.5L12 20l-3.5 1.5L7 25l-1.5-3.5L2 20l3.5-1.5zM17 8l1.5 3.5L22 13l-3.5 1.5L17 18l-1.5-3.5L12 13l3.5-1.5zM27 13l1.5 3.5L32 18l-3.5 1.5L27 23l-1.5-3.5L22 18l3.5-1.5zM42 22l1.5 3.5L47 27l-3.5 1.5L42 32l-1.5-3.5L37 27l3.5-1.5zM52 8l1.5 3.5L57 13l-3.5 1.5L52 18l-1.5-3.5L47 13l3.5-1.5zM60 17l1.5 3.5L65 22l-3.5 1.5L60 27l-1.5-3.5L56 22l3.5-1.5zM11 28l1.5 3.5L16 33l-3.5 1.5L11 38l-1.5-3.5L6 33l3.5-1.5z"/></g><path d="M13 38Q23 30 31 38L39 28 36 40Q47 36 53 43L43 45Q37 56 24 55L15 51 24 48 10 45 20 43z" fill="#d9b45b" stroke="#f7df9d" stroke-width="1.5" stroke-linejoin="round"/><path d="M25 45l7 3 8-4-5 9-8 1z" fill="#102b21"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Главная / Словарь</button><button id="randomWord">✦ Случайное слово</button><button id="quizOpen">✓ Мини-тест слов</button><button id="favoritesToggle">★ Избранные слова</button><button id="historyOpen">◷ История поиска</button><button id="dailyOpen">☀ Слово дня</button><button id="copyAll">▣ Копировать перевод</button><button id="shareApp">↗ Поделиться приложением</button><button id="fontPlus">A+ Увеличить текст</button><button id="fontMinus">A− Уменьшить текст</button><button id="privacyOpen">♧ Политика конфиденциальности</button><button id="aboutOpen">ⓘ О приложении</button></div></div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div></header>
@@ -34,6 +47,7 @@
 <div class="section"><strong id="sectionTitle">Словарь</strong><span id="count">Загрузка…</span></div><section class="words" id="words"><div class="state">Загружаем словарь…</div></section>
 <p class="note">Предварительная веб-версия. Android-приложение содержит словарь внутри APK и работает без интернета.</p>
 </main>
+<button id="backTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
 
 <div class="policyBackdrop" id="policyBackdrop" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
  <article class="policyBox">
@@ -56,6 +70,17 @@
 let data=[],dir='en',favs=new Set(JSON.parse(localStorage.getItem('shohin_lughat_favs')||'[]')),showFavs=false;
 let historyWords=JSON.parse(localStorage.getItem('shohin_lughat_history')||'[]');
 const $=id=>document.getElementById(id);
+const motionOK=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let wordObserver=null;
+function revealWords(){
+ const cards=$('words').querySelectorAll('.word');
+ if(wordObserver)wordObserver.disconnect();
+ if(!motionOK||!('IntersectionObserver'in window)){cards.forEach(el=>el.classList.add('visible'));return}
+ wordObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');wordObserver.unobserve(entry.target)}})},{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+ cards.forEach(el=>wordObserver.observe(el));
+}
+window.addEventListener('scroll',()=>{$('backTop').classList.toggle('show',window.scrollY>360)},{passive:true});
+$('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'}));
 $('menuToggle').addEventListener('click',()=> $('menuPanel').classList.toggle('open'));
 document.addEventListener('click',e=>{if(!e.target.closest('.menuWrap'))$('menuPanel').classList.remove('open')});
 function menuDone(){ $('menuPanel').classList.remove('open') }
@@ -85,7 +110,8 @@ function render(){
  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
- $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
+ $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word reveal"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
+ revealWords();
 }
 $('en').addEventListener('click',()=>setDirection('en'));$('tj').addEventListener('click',()=>setDirection('tj'));$('q').addEventListener('input',render);
 $('clear').addEventListener('click',()=>{$('q').value='';showFavs=false;render()});
