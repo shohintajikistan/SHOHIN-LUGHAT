@@ -31,11 +31,19 @@ The bundled dictionary will use UTF-8 JSON records with these fields:
 Every push to `main` starts the GitHub Actions workflow. The debug APK is uploaded as an Actions artifact.
 
 ## Current development stage
-The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. Category filters have been removed; each word displays its permanent sequence number. The bundled dictionary currently contains **5,869 unique English headwords**, numbered from 1 to 5,869. **14,131 additional entries** are still required to reach the 20,000 target. The dataset combines editorial entries with sourced Wiktionary translations. Imported entries retain their source metadata; the dataset has not yet received a complete independent native-speaker review and must not be described as fully verified. GitHub Actions validates the JSON and copies it into the APK before building.
+The native Android app now loads its dictionary from a bundled UTF-8 JSON asset. Category filters have been removed; each word displays its permanent sequence number. The bundled dictionary currently contains **7,736 English headwords and expressions**, numbered from 1 to 7,736. **12,264 additional entries** are still required to reach the 20,000 target. The dataset combines editorial entries, Wiktionary-derived translations, practical vocabulary from the JBLMFLCL Tajik lessons, and phrasebook material from Wikivoyage. Each batch records its source in the `source` field. The dataset has not yet received a complete independent native-speaker review and must not be described as fully verified. GitHub Actions validates the JSON and copies it into the APK before building.
 
 
 ## Data attribution
 
 A portion of the Tajik translations is derived from the English Wiktionary translation tables, extracted through the [Multilingualism dataset](https://github.com/MethodoxTech/Multilingualism) and filtered to exclude entries marked as machine-translated. Attribution: **Wiktionary contributors**, via **MethodoxTech/Multilingualism**. The imported source data is distributed under **CC BY-SA 4.0**; the combined dictionary data must retain compatible attribution and share-alike terms. Each imported record identifies this provenance in its `source` field. No machine-translated rows from that source were imported.
+
+
+
+Additional practical vocabulary sources:
+- [JBLMFLCL Tajik language course](https://jblmflc.com/Tajik/PDF/): vocabulary lists in Lessons 3, 10, and 15. Tajik Cyrillic spellings were standardized during editorial import.
+- [Wikivoyage Tajik phrasebook](https://en.wikivoyage.org/wiki/Tajik): everyday phrases, travel, places, time, numbers, and food vocabulary. Wikivoyage text is available under CC BY-SA 3.0; retain attribution and share-alike terms for reused material.
+
+The additional practical batch includes editorially composed entries. Source labels are retained per entry; translations and phrase naturalness still require independent review by a fluent Tajik speaker.
 
 See [DATA_LICENSE.md](DATA_LICENSE.md) for the data licence and attribution details.
