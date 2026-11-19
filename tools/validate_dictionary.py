@@ -9,8 +9,10 @@ import sys
 import unicodedata
 from pathlib import Path
 
+
 def norm(value):
     return " ".join(unicodedata.normalize("NFC", value).casefold().split())
+
 
 def main():
     path = Path(sys.argv[1] if len(sys.argv) > 1 else "dictionary/words.json")
@@ -29,8 +31,8 @@ def main():
             errors.append(f"#{index}: missing English headword")
         if not isinstance(tg, str) or not tg.strip():
             errors.append(f"#{index}: missing Tajik translation")
-        if number != index:
-            errors.append(f"#{index}: number must be {index}, got {number!r}")
+        if isinstance(number, bool) or not isinstance(number, int) or number != index:
+            errors.append(f"#{index}: number must be integer {index}, got {number!r}")
         if "category" in item:
             errors.append(f"#{index}: category field must be removed")
         if isinstance(en, str) and en.strip():
@@ -44,7 +46,7 @@ def main():
 
     print(f"Entries: {len(data)}")
     print(f"Unique English headwords: {len(seen_en)}")
-    print(f"Target: 20,000")
+    print("Target: 20,000")
     print(f"Remaining: {max(0, 20000 - len(seen_en))}")
     if errors:
         print(f"Validation errors: {len(errors)}")
@@ -52,6 +54,7 @@ def main():
             print(" - " + error)
         raise SystemExit(1)
     print("Validation: PASS")
+
 
 if __name__ == "__main__":
     main()
