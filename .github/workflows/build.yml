@@ -27,11 +27,11 @@ jobs:
         with:
           gradle-version: "8.9"
 
-      - name: Validate offline dictionary
-        run: python3 tools/validate_dictionary.py dictionary/words.json
+      - name: Prepare complete offline dictionary
+        run: python3 tools/prepare_dictionary.py
 
-      - name: Copy dictionary into Android assets
-        run: mkdir -p app/src/main/assets/dictionary && cp dictionary/words.json app/src/main/assets/dictionary/words.json
+      - name: Validate complete offline dictionary
+        run: python3 tools/validate_dictionary.py app/src/main/assets/dictionary/words.json
 
       - name: Build debug APK
         run: gradle --no-daemon assembleDebug
