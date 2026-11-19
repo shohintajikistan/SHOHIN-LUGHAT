@@ -21,6 +21,8 @@ import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.filled.Menu
+import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
@@ -128,6 +130,10 @@ fun ShohinDictionaryApp() {
                             modifier = Modifier.background(SurfaceDark)
                         ) {
                             DropdownMenuItem(
+                                text = { Text("История поиска", color = Ivory) },
+                                onClick = { menuExpanded = false; showHistory = true }
+                            )
+                            DropdownMenuItem(
                                 text = { Text("Политика конфиденциальности", color = Ivory) },
                                 onClick = { menuExpanded = false; showPrivacy = true }
                             )
@@ -165,9 +171,44 @@ fun ShohinDictionaryApp() {
                     }
                 }
 
+                val wordOfDay = words.getOrNull(
+                    java.time.LocalDate.now().toEpochDay().mod(words.size.coerceAtLeast(1).toLong()).toInt()
+                )
+                if (wordOfDay != null) {
+                    Card(
+                        modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
+                        colors = CardDefaults.cardColors(containerColor = Emerald),
+                        shape = RoundedCornerShape(16.dp)
+                    ) {
+                        Column(Modifier.padding(14.dp)) {
+                            Text("КАЛИМАИ РӮЗ", color = Gold, fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.4.sp)
+                            Text(wordOfDay.en, color = Ivory, fontSize = 19.sp, fontWeight = FontWeight.Bold)
+                            Text(wordOfDay.tg, color = Ivory, fontSize = 15.sp)
+                            if (wordOfDay.example.isNotBlank()) {
+                                Text(wordOfDay.example, color = Ivory, fontSize = 12.sp, modifier = Modifier.padding(top = 5.dp))
+                            }
+                            TextButton(onClick = {
+                                query = wordOfDay.en
+                                showFavorites = false
+                            }) { Text("Дар луғат дидан", color = Gold) }
+                        }
+                    }
+                }
+
                 OutlinedTextField(
                     value = query,
-                    onValueChange = { query = it },
+                    onValueChange = {
+                        query = it
+                        val exact = words.firstOrNull { word ->
+                            word.en.equals(it.trim(), ignoreCase = true) ||
+                            word.tg.equals(it.trim(), ignoreCase = true)
+                        }
+                        if (exact != null) {
+                            val updated = (listOf(exact.en) + searchHistory.filterNot { old -> old == exact.en }).take(25)
+                            searchHistory = updated
+                            preferences.edit().putString("search_history", updated.joinToString("\n")).apply()
+                        }
+                    },
                     modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
                     placeholder = { Text("Калима нависед / Search...", color = Muted) },
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = EmeraldBright) },
@@ -246,17 +287,40 @@ fun ShohinDictionaryApp() {
                                 )
                                 Text("№ ${word.number}", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 5.dp))
                             }
-                            IconButton(onClick = {
-                                val updated = if (favorites.contains(word.en)) favorites - word.en else favorites + word.en
+                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                IconButton(onClick = {
+                                    val clipboard = context.getSystemService(android.content.Context.CLIPBOARD_SERVICE) as ClipboardManager
+                                    clipboard.setPrimaryClip(ClipData.newPlainText("SHOHIN LUGHAT", "${word.en} — ${word.tg}"))
+                                    Toast.makeText(context, "Калима нусхабардорӣ шуд", Toast.LENGTH_SHORT).show()
+                                }) {
+                                    Icon(Icons.Default.ContentCopy, contentDescription = "Copy", tint = Muted)
+                                }
+                                IconButton(onClick = {
+                                    if (ttsReady) speech.speak(word.en, TextToSpeech.QUEUE_FLUSH, null, "shohin_${word.number}")
+                                    else Toast.makeText(context, "Овоз ҳоло омода нест", Toast.LENGTH_SHORT).show()
+                                }) {
+                                    Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = EmeraldBright)
+                                }
+                                IconButton(onClick = {
+                                    val updated = if (favorites.contains(word.en)) favorites - word.en else favorites + word.en
                                 favorites = updated
                                 preferences.edit().putStringSet("favorites", updated).apply()
-                            }) {
-                                Icon(
-                                    if (favorites.contains(word.en)) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
-                                    contentDescription = "Favorite",
-                                    tint = if (favorites.contains(word.en)) Gold else Muted
-                                )
+                                }) {
+                                    Icon(
+                                        if (favorites.contains(word.en)) Icons.Default.Bookmark else Icons.Default.BookmarkBorder,
+                                        contentDescription = "Favorite",
+                                        tint = if (favorites.contains(word.en)) Gold else Muted
+                                    )
+                                }
                             }
+                        }
+                        if (word.example.isNotBlank()) {
+                            Text(
+                                word.example,
+                                color = Muted,
+                                fontSize = 12.sp,
+                                modifier = Modifier.padding(start = 15.dp, end = 15.dp, bottom = 12.dp)
+                            )
                         }
                     }
                 }
@@ -277,6 +341,37 @@ fun ShohinDictionaryApp() {
             }
         }
     }
+
+        if (showHistory) {
+            AlertDialog(
+                onDismissRequest = { showHistory = false },
+                containerColor = SurfaceDark,
+                title = { Text("История поиска", color = Gold, fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(modifier = Modifier.heightIn(max = 360.dp).verticalScroll(rememberScrollState())) {
+                        if (searchHistory.isEmpty()) {
+                            Text("Шумо ҳоло калимаҳоро ҷустуҷӯ накардаед.", color = Ivory)
+                        } else {
+                            searchHistory.forEach { item ->
+                                TextButton(onClick = {
+                                    query = item
+                                    showHistory = false
+                                }) { Text(item, color = Ivory) }
+                            }
+                        }
+                    }
+                },
+                confirmButton = {
+                    Row {
+                        TextButton(onClick = {
+                            searchHistory = emptyList()
+                            preferences.edit().remove("search_history").apply()
+                        }) { Text("Тоза кардан", color = Muted) }
+                        TextButton(onClick = { showHistory = false }) { Text("Пӯшидан", color = Gold) }
+                    }
+                }
+            )
+        }
 
         if (showPrivacy) {
             MaterialTheme(colorScheme = darkColorScheme(
