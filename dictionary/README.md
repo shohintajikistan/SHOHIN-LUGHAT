@@ -6,7 +6,7 @@ The dictionary is maintained as sequential, frozen JSON groups under `dictionary
 - `group_02.json`: entries 2,001–4,000; complete and frozen.
 - `group_03.json`: entries 4,001–5,869; complete and frozen.
 - `group_04.json`: entries 5,870–5,881; complete and frozen.
-- `group_05.json`: entries 5,882–6,801; in progress.
+- `group_05.json`: entries 5,882–7,315; in progress (1,434 entries).
 - `additions.json`: supplemental entries not yet assigned to a frozen group; these are appended after all group files during the build.
 - `words.json`: legacy source path retained for migration compatibility; it is currently empty.
 
