@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Merge curated supplemental entries into the offline dictionary without deleting data."""
 import json
-import sys
 import unicodedata
 from pathlib import Path
 
@@ -34,7 +33,7 @@ for item in batch:
     seen.add(key)
     added += 1
 out.parent.mkdir(parents=True, exist_ok=True)
-out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Base entries: {len(words) - added}")
 print(f"Supplemental candidates: {len(batch)}")
 print(f"New unique entries added: {added}")
