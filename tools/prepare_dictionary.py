@@ -83,7 +83,7 @@ for item in batch:
     added += 1
 
 out.parent.mkdir(parents=True, exist_ok=True)
-out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+out.write_text(json.dumps(words, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Frozen group files: {len(group_files)}")
 print(f"Frozen group entries: {sum(len(json.loads(p.read_text(encoding='utf-8'))) for p in group_files)}")
 print(f"Legacy entries added: {len(words) - added - sum(len(json.loads(p.read_text(encoding='utf-8'))) for p in group_files)}")
