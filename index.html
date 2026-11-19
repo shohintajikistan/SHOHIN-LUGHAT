@@ -101,6 +101,7 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 </div>
 
 <script>
+let currentPage='home';
 let data=[],dir='en',favs=new Set(JSON.parse(localStorage.getItem('shohin_lughat_favs')||'[]')),showFavs=false;
 let historyWords=JSON.parse(localStorage.getItem('shohin_lughat_history')||'[]');
 const $=id=>document.getElementById(id);
@@ -172,7 +173,7 @@ $('conversationLesson').addEventListener('click',e=>{
  const s=e.target.closest('[data-conv-speak]');if(s&&'speechSynthesis'in window){speechSynthesis.cancel();const phrase=conversationData[Number(s.dataset.topicIndex)].items[Number(s.dataset.convSpeak)][0];const u=new SpeechSynthesisUtterance(phrase);u.lang='en-US';speechSynthesis.speak(u)}
  const cp=e.target.closest('[data-conv-copy]');if(cp){const phrase=conversationData[Number(cp.dataset.convCopy)].items[Number(cp.dataset.phrase)];const value=phrase[0]+' — '+phrase[1];if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>cp.textContent='Нусхабардорӣ шуд').catch(()=>alert(value));else alert(value)}
 });
-function showPage(page){menuDone();['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);$('homeStories').hidden=page!=='home';const isDictionary=page==='lugat'||page==='home';$('words').hidden=!isDictionary;if(page==='conversation'){$('conversationSection').hidden=false;renderConversationTopics();}if(page==='stories'){$('storiesSection').hidden=false;renderStories();}if(page==='apps')$('myAppsSection').hidden=false;showFavs=false;if(isDictionary){$('sectionTitle').textContent=page==='home'?'Главное':'Луғат';$('q').value='';render()}else{$('sectionTitle').textContent=page==='conversation'?'Муошират':page==='stories'?'Ҳикояҳо':'БАРНОМАИ МО';$('count').textContent='SHOHIN TAJIKISTAN'}window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'})}
+function showPage(page){currentPage=page;menuDone();['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);$('homeStories').hidden=page!=='home';const isDictionary=page==='lugat'||page==='home';$('words').hidden=!isDictionary;if(page==='conversation'){$('conversationSection').hidden=false;renderConversationTopics();}if(page==='stories'){$('storiesSection').hidden=false;renderStories();}if(page==='apps')$('myAppsSection').hidden=false;showFavs=false;if(isDictionary){$('sectionTitle').textContent=page==='home'?'Главное':'Луғат';$('q').value='';render()}else{$('sectionTitle').textContent=page==='conversation'?'Муошират':page==='stories'?'Ҳикояҳо':'БАРНОМАИ МО';$('count').textContent='SHOHIN TAJIKISTAN'}window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'})}
 $('homeOpen').addEventListener('click',()=>showPage('home'));
 $('lugatOpen').addEventListener('click',()=>showPage('lugat'));
 $('conversationOpen').addEventListener('click',()=>showPage('conversation'));
@@ -203,7 +204,12 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function setDirection(d){dir=d;render()}
 function render(){
  if(!$('conversationSection').hidden)return;
- const q=$('q').value.trim().toLocaleLowerCase();
+ const rawQuery=$('q').value.trim();
+ const q=rawQuery.toLocaleLowerCase();
+ const hideHomeDictionary=currentPage==='home'&&!rawQuery;
+ $('words').hidden=currentPage!=='lugat'&&hideHomeDictionary;
+ $('sectionTitle').parentElement.hidden=hideHomeDictionary;
+ if(hideHomeDictionary){$('words').innerHTML='';return}
  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
