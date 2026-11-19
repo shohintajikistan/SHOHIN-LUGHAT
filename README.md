@@ -3,12 +3,10 @@
 **English ↔ Тоҷикӣ** — an offline bilingual dictionary for Android.
 
 ## Android APK
-- A single universal APK is built by GitHub Actions for Android devices from Android 6.0 onward.
-- The application packages the current website interface, dictionary JSON, and story cover images inside the APK.
-- Dictionary search and story illustrations work offline after installation.
-- No account, server, API key, or internet permission is required by the app.
-- Build artifact: `SHOHIN-LUGHAT-APK` in the latest successful **Build SHOHIN LUGHAT APK** workflow run.
-- The current APK is a debug-signed testing/distribution build. A private release keystore is required before publishing stable signed updates or distributing through Google Play.
+- APK packaging is intentionally paused while the content and navigation are being restored and checked.
+- The planned universal APK will include the website interface, full dictionary JSON, story covers, 24 conversation topics, and offline content.
+- The app is designed to work without an account, server, or API key.
+- A signed Release APK will be prepared only after the content and app behavior have been checked. A permanent private release keystore is required for stable updates.
 
 ## Dictionary target and quality
 - Target: 20,000 reviewed English–Tajik headwords and useful expressions.
@@ -18,8 +16,8 @@
 - No automatic translation just to reach the target count.
 - The dataset has not yet received a complete independent native-speaker review and must not be described as fully verified.
 
-## Android build
-Every push to `main` and manual workflow dispatch starts the Android APK build. The workflow assembles and validates the dictionary, packages the web interface and story illustrations into Android assets, builds the APK, and uploads it as an Actions artifact.
+## Content preparation
+Every push to `main` and manual workflow dispatch assembles the dictionary from the frozen source groups, publishes `dictionary/words.json` for the GitHub Pages website, validates the Android dictionary asset, and packages the story cover images for offline use. This workflow does not build an APK.
 
 ## Data format
 The bundled dictionary uses UTF-8 JSON records with:
@@ -37,6 +35,6 @@ Additional practical vocabulary sources:
 - [JBLMFLCL Tajik language course](https://jblmflc.com/Tajik/PDF/): vocabulary lists in Lessons 3, 10, and 15. Tajik Cyrillic spellings were standardized during editorial import.
 - [Wikivoyage Tajik phrasebook](https://en.wikivoyage.org/wiki/Tajik): everyday phrases, travel, places, time, numbers, and food vocabulary. Wikivoyage text is available under CC BY-SA 3.0; retain attribution and share-alike terms for reused material.
 
-The additional practical batch includes editorially composed entries. Source labels are retained per entry; translations and phrase naturalness still require independent review by a fluent Tajik speaker.
+The current assembled dictionary contains 7,315 unique entries; the 51 supplemental candidates are duplicates of existing headwords and are skipped. The additional practical batch includes editorially composed entries. Source labels are retained per entry; translations and phrase naturalness still require independent review by a fluent Tajik speaker.
 
 See [DATA_LICENSE.md](DATA_LICENSE.md) for the data licence and attribution details.
