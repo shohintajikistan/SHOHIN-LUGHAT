@@ -20,6 +20,9 @@ import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -76,6 +79,8 @@ fun ShohinDictionaryApp() {
     var query by remember { mutableStateOf("") }
     var englishFirst by remember { mutableStateOf(true) }
     var showFavorites by remember { mutableStateOf(false) }
+    var menuExpanded by remember { mutableStateOf(false) }
+    var showPrivacy by remember { mutableStateOf(false) }
 
     val filtered = words.filter { word ->
         val matchesQuery = query.isBlank() ||
@@ -110,11 +115,23 @@ fun ShohinDictionaryApp() {
                         Text("LUGHAT", color = Ivory, fontSize = 27.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 1.sp)
                         Text("English  ↔  Тоҷикӣ", color = Muted, fontSize = 13.sp)
                     }
-                    Box(
-                        modifier = Modifier.size(48.dp).background(Emerald, CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(Icons.Default.Translate, contentDescription = "Dictionary", tint = Gold, modifier = Modifier.size(25.dp))
+                    Box {
+                        IconButton(
+                            onClick = { menuExpanded = true },
+                            modifier = Modifier.size(48.dp).background(Emerald, CircleShape)
+                        ) {
+                            Icon(Icons.Default.Menu, contentDescription = "Меню", tint = Gold, modifier = Modifier.size(27.dp))
+                        }
+                        DropdownMenu(
+                            expanded = menuExpanded,
+                            onDismissRequest = { menuExpanded = false },
+                            modifier = Modifier.background(SurfaceDark)
+                        ) {
+                            DropdownMenuItem(
+                                text = { Text("Политика конфиденциальности", color = Ivory) },
+                                onClick = { menuExpanded = false; showPrivacy = true }
+                            )
+                        }
                     }
                 }
 
@@ -260,4 +277,44 @@ fun ShohinDictionaryApp() {
             }
         }
     }
+
+        if (showPrivacy) {
+            AlertDialog(
+                onDismissRequest = { showPrivacy = false },
+                containerColor = SurfaceDark,
+                title = { Text("Политика конфиденциальности", color = Gold, fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(
+                        modifier = Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())
+                    ) {
+                        Text(
+                            "SHOHIN LUGHAT — офлайн-словарь английского и таджикского языков. " +
+                            "Приложение не требует подключения к интернету и не отправляет поисковые запросы на сервер.\n\n" +
+                            "СБОР ДАННЫХ\n" +
+                            "Приложение не собирает, не получает и не передаёт разработчику персональные данные, " +
+                            "контакты, местоположение или историю поиска.\n\n" +
+                            "ЛОКАЛЬНОЕ ХРАНЕНИЕ\n" +
+                            "Список избранных слов сохраняется локально на устройстве. Эти данные используются " +
+                            "только для работы функции избранного. Они не передаются разработчику. " +
+                            "Резервное копирование Android может зависеть от настроек устройства и системы.\n\n" +
+                            "СТОРОННИЕ СЕРВИСЫ\n" +
+                            "В текущей версии нет рекламы, аналитики, регистрации и сторонних сервисов сбора данных.\n\n" +
+                            "БЕЗОПАСНОСТЬ И УДАЛЕНИЕ\n" +
+                            "Вы можете удалить сохранённые данные, очистив данные приложения или удалив приложение.\n\n" +
+                            "ИЗМЕНЕНИЯ\n" +
+                            "Если функции приложения или правила обработки данных изменятся, эта политика будет обновлена.\n\n" +
+                            "Разработчик: SHOHIN TAJIKISTAN\n" +
+                            "Контакт: через официальный канал SHOHIN TAJIKISTAN.",
+                            color = Ivory,
+                            lineHeight = 20.sp
+                        )
+                    }
+                },
+                confirmButton = {
+                    TextButton(onClick = { showPrivacy = false }) {
+                        Text("Закрыть", color = Gold)
+                    }
+                }
+            )
+        }
 }
