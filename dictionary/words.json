@@ -38147,5 +38147,1751 @@
     "tg": "ҳосил",
     "category": "Табиат",
     "source": "SHOHIN editorial translation batch 002"
+  },
+  {
+    "en": "abnormal",
+    "tg": "ғайриодӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "abrupt",
+    "tg": "ногаҳонӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "absent",
+    "tg": "ҳозир набуда",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "absorbent",
+    "tg": "ҷаббанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "accelerator",
+    "tg": "суръатфизо",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "acclaim",
+    "tg": "ситоиш",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "accuracy",
+    "tg": "дақиқӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "acidic",
+    "tg": "турш",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "acidity",
+    "tg": "туршӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "acoustics",
+    "tg": "акустика",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "activism",
+    "tg": "фаъолияти ҷамъиятӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "actuality",
+    "tg": "воқеият",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "additive",
+    "tg": "илова",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adhesive",
+    "tg": "ширеш",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adjacency",
+    "tg": "ҳамсоягӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adolescence",
+    "tg": "наврасӣ",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adornment",
+    "tg": "ороиш",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adrenaline",
+    "tg": "адреналин",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adulthood",
+    "tg": "калонсолӣ",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "adversity",
+    "tg": "мушкилӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "advisory",
+    "tg": "машваратӣ",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aerobic",
+    "tg": "аэробӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aerodynamics",
+    "tg": "аэродинамика",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aeronautics",
+    "tg": "ҳавопаймоӣ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aerosol",
+    "tg": "аэрозол",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affidavit",
+    "tg": "баёноти савгандӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affiliate",
+    "tg": "шарик",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affiliation",
+    "tg": "узвият",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affirmation",
+    "tg": "тасдиқ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affirmative",
+    "tg": "мусбат",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "affordability",
+    "tg": "дастрасии нарх",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aftermath",
+    "tg": "оқибат",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aggravation",
+    "tg": "бадшавӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "agility",
+    "tg": "чолокӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "agitation",
+    "tg": "изтироб",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "agronomy",
+    "tg": "агрономия",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "airfare",
+    "tg": "нархи чиптаи ҳавопаймо",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "airliner",
+    "tg": "ҳавопаймои мусофирбар",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "airway",
+    "tg": "роҳи нафас",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "algebra",
+    "tg": "алгебра",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "algorithmic",
+    "tg": "алгоритмӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alkali",
+    "tg": "ишқор",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alkaline",
+    "tg": "ишқорӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alkalinity",
+    "tg": "ишқорнокӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "allegiance",
+    "tg": "вафодорӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alleviation",
+    "tg": "сабуксозӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "allocator",
+    "tg": "тақсимкунанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "allotment",
+    "tg": "ҳисса",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alloying",
+    "tg": "хӯласозӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alphabetical",
+    "tg": "алифбоӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "alternation",
+    "tg": "ивазшавӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "altimeter",
+    "tg": "баландисанҷ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amalgam",
+    "tg": "омехта",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amalgamation",
+    "tg": "муттаҳидшавӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amateurism",
+    "tg": "ҳаваскорӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ambiguity",
+    "tg": "думаъноӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ambiguous",
+    "tg": "думаъно",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ambivalence",
+    "tg": "дудилагӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amendable",
+    "tg": "ислоҳшаванда",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amenity",
+    "tg": "шароити мусоид",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ammonia",
+    "tg": "аммиак",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amortization",
+    "tg": "пардохти тадриҷӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amphibian",
+    "tg": "обхокӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amphibious",
+    "tg": "обухокӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amplification",
+    "tg": "тақвият",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "amplitude",
+    "tg": "амплитуда",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "analgesic",
+    "tg": "бедардкунанда",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "analogy",
+    "tg": "монандӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "anatomical",
+    "tg": "анатомӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "anatomy",
+    "tg": "анатомия",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "anemometer",
+    "tg": "бодсанҷ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "angioplasty",
+    "tg": "рагкушоӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "annex",
+    "tg": "замима",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "annotation",
+    "tg": "эзоҳ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "annuity",
+    "tg": "рента",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "anomaly",
+    "tg": "ғайримуқаррарӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "anonymousness",
+    "tg": "беномӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antagonism",
+    "tg": "душманӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antagonist",
+    "tg": "рақиб",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antecedent",
+    "tg": "пешшарт",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antibody",
+    "tg": "подтан",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antigen",
+    "tg": "антиген",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antiquity",
+    "tg": "қадимият",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antiseptic",
+    "tg": "антисептик",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "antiviral",
+    "tg": "зиддивирусӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aperture",
+    "tg": "кушодагӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "apex",
+    "tg": "қулла",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aphid",
+    "tg": "ширинча",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "apiculture",
+    "tg": "занбӯриасалпарварӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "apparel",
+    "tg": "либос",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appendix",
+    "tg": "замима",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appetizer",
+    "tg": "иштиҳоовар",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appetizing",
+    "tg": "иштиҳоовар",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "applicability",
+    "tg": "татбиқпазирӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appraisal",
+    "tg": "арзёбӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appraiser",
+    "tg": "нархгузор",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "appropriation",
+    "tg": "ҷудокунии маблағ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aquaculture",
+    "tg": "парвариши обӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aqueduct",
+    "tg": "обгузар",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aquifer",
+    "tg": "қабати обдор",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aquatic",
+    "tg": "обӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arbitrage",
+    "tg": "арбитраж",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arbitration",
+    "tg": "ҳакамӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arbitrator",
+    "tg": "ҳакам",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arbor",
+    "tg": "соябон",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arboretum",
+    "tg": "боғи дарахтон",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ardor",
+    "tg": "гармҷӯшӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "argon",
+    "tg": "аргон",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "armament",
+    "tg": "силоҳ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "armistice",
+    "tg": "созиши оташбас",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aromatic",
+    "tg": "хушбӯй",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arraignment",
+    "tg": "пешниҳоди айб",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arrears",
+    "tg": "қарзи пардохтнашуда",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arson",
+    "tg": "оташзанӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arterial",
+    "tg": "шараёнӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "arthritis",
+    "tg": "артрит",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "articulation",
+    "tg": "баёни равшан",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "asbestos",
+    "tg": "асбест",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ascendancy",
+    "tg": "бартарӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ascent",
+    "tg": "болоравӣ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ascription",
+    "tg": "нисбатдиҳӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aspirin",
+    "tg": "аспирин",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assailant",
+    "tg": "ҳамлагар",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assay",
+    "tg": "таҳлил",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assertiveness",
+    "tg": "қатъият",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assessor",
+    "tg": "баҳогузор",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assimilation",
+    "tg": "азхудкунӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "assortment",
+    "tg": "гуногунӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "asthma",
+    "tg": "нафастангӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "astigmatism",
+    "tg": "астигматизм",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "astrology",
+    "tg": "ситорашиносии фолбинӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "astronomer",
+    "tg": "ситорашинос",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "asymmetry",
+    "tg": "нобаробарӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "asymptomatic",
+    "tg": "бенишона",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "atelier",
+    "tg": "устохонаи ҳунарӣ",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "atomizer",
+    "tg": "пошанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "atrocity",
+    "tg": "ваҳшоният",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "attainment",
+    "tg": "ноилшавӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "attestation",
+    "tg": "тасдиқнома",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "attic",
+    "tg": "болохона",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "attire",
+    "tg": "либос",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "audibility",
+    "tg": "шунидашавӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "audition",
+    "tg": "озмун",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "auditorium",
+    "tg": "толори маҷлис",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "augmentation",
+    "tg": "афзоиш",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "augmented",
+    "tg": "такмилёфта",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "austerity",
+    "tg": "сарфакорӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "authentication",
+    "tg": "тасдиқи ҳаққоният",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "authoritarian",
+    "tg": "худкома",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "authoritarianism",
+    "tg": "худкомагӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "autobiography",
+    "tg": "тарҷумаи ҳоли худ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "autocracy",
+    "tg": "худкомагӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "autocrat",
+    "tg": "худкома",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "auxiliary",
+    "tg": "ёрирасон",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "avatar",
+    "tg": "аватар",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aversion",
+    "tg": "нафрат",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "aviator",
+    "tg": "ҳавонавард",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "avionics",
+    "tg": "авионика",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "avocation",
+    "tg": "машғулияти дӯстдошта",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "avoidance",
+    "tg": "пешгирӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "awakening",
+    "tg": "бедоршавӣ",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "backlog",
+    "tg": "корҳои ҷамъшуда",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "backside",
+    "tg": "тарафи қафо",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "backstroke",
+    "tg": "шиноварӣ бо пушт",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bailiff",
+    "tg": "иҷрочии суд",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bailout",
+    "tg": "наҷоти молиявӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "balalaika",
+    "tg": "балалайка",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ballast",
+    "tg": "вазнсанг",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "ballistics",
+    "tg": "баллистика",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "baluster",
+    "tg": "сутунчаи панҷара",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "banality",
+    "tg": "оддӣ будан",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bandwidth",
+    "tg": "паҳнои маҷро",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "banknote",
+    "tg": "пулкоғаз",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bankroll",
+    "tg": "маблағгузорӣ кардан",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "barbarism",
+    "tg": "ваҳшоният",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "barometric",
+    "tg": "фишорсанҷӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "barrister",
+    "tg": "ҳуқуқшиноси додгоҳӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bartender",
+    "tg": "бармен",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "barter",
+    "tg": "мубодилаи мол",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bartering",
+    "tg": "мубодила",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bathrobe",
+    "tg": "халати ҳаммом",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "battleship",
+    "tg": "киштии ҷангӣ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "beacon",
+    "tg": "чароғи роҳнамо",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "beaker",
+    "tg": "колба",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bearer",
+    "tg": "баранда",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bearing",
+    "tg": "подшипник",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bedrock",
+    "tg": "ҷинси таҳкурсӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bedside",
+    "tg": "паҳлуи кат",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bedspread",
+    "tg": "рӯйпӯши кат",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "beetroot",
+    "tg": "лаблабу",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "belated",
+    "tg": "дермонда",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "belligerent",
+    "tg": "ҷангҷӯ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "benefactor",
+    "tg": "хайрхоҳ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "beneficence",
+    "tg": "некӯкорӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "benefits",
+    "tg": "имтиёзҳо",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "benign",
+    "tg": "безарар",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "benzene",
+    "tg": "бензол",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "beret",
+    "tg": "кулоҳи берет",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "berth",
+    "tg": "ҷойи хоб дар нақлиёт",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bespoke",
+    "tg": "фармоишӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bestowal",
+    "tg": "бахшиш",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "betrothal",
+    "tg": "номзадӣ",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bibliography",
+    "tg": "рӯйхати адабиёт",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bibliophile",
+    "tg": "китобдӯст",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bicameral",
+    "tg": "дуқисмата",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biennial",
+    "tg": "ду сол як бор",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bifocal",
+    "tg": "дуфокусӣ",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bilingual",
+    "tg": "дузабона",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bilateral",
+    "tg": "дуҷониба",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "billboard",
+    "tg": "лавҳаи таблиғотӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "billiards",
+    "tg": "билярд",
+    "category": "Оила",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biodegradable",
+    "tg": "таҷзияшавандаи биологӣ",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biome",
+    "tg": "биом",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biometric",
+    "tg": "биометрӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biometrics",
+    "tg": "биометрия",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biophysics",
+    "tg": "биофизика",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "biosphere",
+    "tg": "биосфера",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bipartisan",
+    "tg": "дуҳизбӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bipolar",
+    "tg": "дуқутбӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "birch",
+    "tg": "тӯс",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bistro",
+    "tg": "ошхонаи хурд",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bitterness",
+    "tg": "талхӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bladder",
+    "tg": "масона",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bland",
+    "tg": "бемаза",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "blender",
+    "tg": "миксер",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "blockchain",
+    "tg": "блокчейн",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "blocker",
+    "tg": "бандкунанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "blueberry",
+    "tg": "кабудмева",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "boathouse",
+    "tg": "анбори қаиқ",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "boating",
+    "tg": "қаиқронӣ",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "boilerplate",
+    "tg": "матни қолабӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bondholder",
+    "tg": "дорандаи вомбарг",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookcase",
+    "tg": "рафи китоб",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookkeeper",
+    "tg": "муҳосиб",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookkeeping",
+    "tg": "баҳисобгирӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "booklet",
+    "tg": "китобча",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookmaker",
+    "tg": "букмекер",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookmark",
+    "tg": "хатчӯб",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bookstore",
+    "tg": "мағозаи китоб",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "booster",
+    "tg": "тақвиятдиҳанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bootleg",
+    "tg": "ғайриқонунӣ нусхабардорӣ кардан",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "botanical",
+    "tg": "ботаникӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "botanist",
+    "tg": "ботаник",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bottleneck",
+    "tg": "монеаи асосӣ",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "boulevard",
+    "tg": "гулгашт",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bowler",
+    "tg": "кулоҳдор",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brace",
+    "tg": "такягоҳ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bracket",
+    "tg": "қавс",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brackish",
+    "tg": "нимшӯр",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brainchild",
+    "tg": "ихтироъ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brainstorm",
+    "tg": "фикрронӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brasserie",
+    "tg": "ошхонаи фаронсавӣ",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "breadth",
+    "tg": "паҳноӣ",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "breeder",
+    "tg": "парваришгар",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brewery",
+    "tg": "пивопазхона",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bricklayer",
+    "tg": "хиштчин",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brickwork",
+    "tg": "хиштчинӣ",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "briefcase",
+    "tg": "ҷузвдони корӣ",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brigade",
+    "tg": "бригада",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brigadier",
+    "tg": "сардори бригада",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brightness",
+    "tg": "равшанӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brilliance",
+    "tg": "дурахшонӣ",
+    "category": "Муошират",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "broadcaster",
+    "tg": "пахшкунанда",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bromine",
+    "tg": "бром",
+    "category": "Маориф",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bronchitis",
+    "tg": "бронхит",
+    "category": "Саломатӣ",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brownie",
+    "tg": "ширинии брауни",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "browser",
+    "tg": "браузер",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "brunch",
+    "tg": "наҳории дер",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bubbler",
+    "tg": "ҳубобсоз",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buckwheat",
+    "tg": "гречка",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "budgetary",
+    "tg": "буҷавӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buffalo",
+    "tg": "буффало",
+    "category": "Табиат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buffer",
+    "tg": "буфер",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buffering",
+    "tg": "буферсозӣ",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buggy",
+    "tg": "аробачаи сабук",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bulldozer",
+    "tg": "булдозер",
+    "category": "Кор",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bulletproof",
+    "tg": "тирногузар",
+    "category": "Технология",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bullion",
+    "tg": "тиллои холис",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bulwark",
+    "tg": "паноҳгоҳ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bureaucrat",
+    "tg": "мансабдор",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "burglar",
+    "tg": "дузд",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "burglary",
+    "tg": "дуздии хона",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "burner",
+    "tg": "оташдон",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "butchery",
+    "tg": "қассобхона",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buttermilk",
+    "tg": "оби ҷурғот",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "butternut",
+    "tg": "кадуи ширин",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buttery",
+    "tg": "равғанин",
+    "category": "Ғизо",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "buttonhole",
+    "tg": "сӯрохии тугма",
+    "category": "Хона",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bylaw",
+    "tg": "қоидаи дохилӣ",
+    "category": "Ҷомеа",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "bypass",
+    "tg": "роҳи даврзан",
+    "category": "Сафар",
+    "source": "SHOHIN editorial translation batch 003"
+  },
+  {
+    "en": "byproduct",
+    "tg": "маҳсулоти иловагӣ",
+    "category": "Тиҷорат",
+    "source": "SHOHIN editorial translation batch 003"
   }
 ]
