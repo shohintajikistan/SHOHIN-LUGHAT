@@ -7,6 +7,7 @@ import android.speech.tts.TextToSpeech
 import android.widget.Toast
 import java.util.Locale
 import java.util.Calendar
+import java.text.Normalizer
 import org.json.JSONArray
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -103,10 +104,16 @@ fun ShohinDictionaryApp() {
         onDispose { speech.shutdown() }
     }
 
+    fun normalizeSearch(value: String): String =
+        Normalizer.normalize(value.trim(), Normalizer.Form.NFD)
+            .replace(Regex("\\p{Mn}+"), "")
+            .lowercase(Locale.ROOT)
+
+    val normalizedQuery = normalizeSearch(query)
     val filtered = words.filter { word ->
-        val matchesQuery = query.isBlank() ||
-            word.en.contains(query.trim(), ignoreCase = true) ||
-            word.tg.contains(query.trim(), ignoreCase = true)
+        val matchesQuery = normalizedQuery.isBlank() ||
+            normalizeSearch(word.en).contains(normalizedQuery) ||
+            normalizeSearch(word.tg).contains(normalizedQuery)
         val matchesFavorites = !showFavorites || favorites.contains(word.en)
         matchesQuery && matchesFavorites
     }
