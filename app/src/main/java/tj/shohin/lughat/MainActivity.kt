@@ -279,6 +279,14 @@ fun ShohinDictionaryApp() {
     }
 
         if (showPrivacy) {
+            MaterialTheme(colorScheme = darkColorScheme(
+                primary = EmeraldBright,
+                secondary = Gold,
+                background = Midnight,
+                surface = SurfaceDark,
+                onBackground = Ivory,
+                onSurface = Ivory
+            )) {
             AlertDialog(
                 onDismissRequest = { showPrivacy = false },
                 containerColor = SurfaceDark,
@@ -316,5 +324,6 @@ fun ShohinDictionaryApp() {
                     }
                 }
             )
+            }
         }
 }
