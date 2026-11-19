@@ -24,6 +24,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Assemble and validate full dictionary for website
+        run: |
+          python3 tools/prepare_dictionary.py
+          python3 tools/validate_dictionary.py app/src/main/assets/dictionary/words.json
+          cp app/src/main/assets/dictionary/words.json dictionary/words.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site
