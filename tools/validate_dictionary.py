@@ -9,11 +9,6 @@ import sys
 import unicodedata
 from pathlib import Path
 
-ALLOWED_CATEGORIES = {
-    "Муошират", "Оила", "Ғизо", "Хона", "Маориф", "Кор",
-    "Тиҷорат", "Сафар", "Саломатӣ", "Табиат", "Технология", "Ҷомеа",
-}
-
 def norm(value):
     return " ".join(unicodedata.normalize("NFC", value).casefold().split())
 
@@ -29,13 +24,15 @@ def main():
         if not isinstance(item, dict):
             errors.append(f"#{index}: entry must be an object")
             continue
-        en, tg, category = item.get("en"), item.get("tg"), item.get("category")
+        en, tg, number = item.get("en"), item.get("tg"), item.get("number")
         if not isinstance(en, str) or not en.strip():
             errors.append(f"#{index}: missing English headword")
         if not isinstance(tg, str) or not tg.strip():
             errors.append(f"#{index}: missing Tajik translation")
-        if category not in ALLOWED_CATEGORIES:
-            errors.append(f"#{index}: invalid category {category!r}")
+        if number != index:
+            errors.append(f"#{index}: number must be {index}, got {number!r}")
+        if "category" in item:
+            errors.append(f"#{index}: category field must be removed")
         if isinstance(en, str) and en.strip():
             key = norm(en)
             if key in seen_en:
