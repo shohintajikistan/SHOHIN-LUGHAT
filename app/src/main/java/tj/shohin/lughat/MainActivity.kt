@@ -1,6 +1,12 @@
 package tj.shohin.lughat
 
 import android.os.Bundle
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.speech.tts.TextToSpeech
+import android.widget.Toast
+import java.util.Locale
+import java.util.Calendar
 import org.json.JSONArray
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -83,6 +89,19 @@ fun ShohinDictionaryApp() {
     var showFavorites by remember { mutableStateOf(false) }
     var menuExpanded by remember { mutableStateOf(false) }
     var showPrivacy by remember { mutableStateOf(false) }
+    var showHistory by remember { mutableStateOf(false) }
+    var searchHistory by remember {
+        mutableStateOf(preferences.getString("search_history", "")?.split("\\n")?.filter { it.isNotBlank() } ?: emptyList())
+    }
+    var ttsReady by remember { mutableStateOf(false) }
+    val speech = remember {
+        TextToSpeech(context) { status ->
+            if (status == TextToSpeech.SUCCESS) ttsReady = true
+        }
+    }
+    DisposableEffect(Unit) {
+        onDispose { speech.shutdown() }
+    }
 
     val filtered = words.filter { word ->
         val matchesQuery = query.isBlank() ||
