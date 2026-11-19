@@ -38,12 +38,7 @@ private val Ivory = Color(0xFFF5EBD5)
 private val Muted = Color(0xFF9AAB9F)
 private val SurfaceDark = Color(0xFF102820)
 
-data class Word(val en: String, val tg: String, val category: String, val example: String = "")
-
-private val categories = listOf(
-    "Ҳама", "Муошират", "Оила", "Ғизо", "Хона", "Маориф", "Кор",
-    "Тиҷорат", "Сафар", "Саломатӣ", "Табиат", "Технология", "Ҷомеа"
-)
+data class Word(val number: Int, val en: String, val tg: String, val example: String = "")
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +64,7 @@ fun ShohinDictionaryApp() {
                 val array = JSONArray(raw)
                 List(array.length()) { index ->
                     val item = array.getJSONObject(index)
-                    Word(item.getString("en"), item.getString("tg"), item.getString("category"), item.optString("example", ""))
+                    Word(item.getInt("number"), item.getString("en"), item.getString("tg"), item.optString("example", ""))
                 }
             }
         } catch (_: Exception) {
@@ -80,16 +75,14 @@ fun ShohinDictionaryApp() {
     }
     var query by remember { mutableStateOf("") }
     var englishFirst by remember { mutableStateOf(true) }
-    var selectedCategory by remember { mutableStateOf("Ҳама") }
     var showFavorites by remember { mutableStateOf(false) }
 
     val filtered = words.filter { word ->
         val matchesQuery = query.isBlank() ||
             word.en.contains(query.trim(), ignoreCase = true) ||
             word.tg.contains(query.trim(), ignoreCase = true)
-        val matchesCategory = selectedCategory == "Ҳама" || word.category == selectedCategory
         val matchesFavorites = !showFavorites || favorites.contains(word.en)
-        matchesQuery && matchesCategory && matchesFavorites
+        matchesQuery && matchesFavorites
     }
 
     MaterialTheme(
@@ -177,36 +170,12 @@ fun ShohinDictionaryApp() {
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
-                    Text(if (showFavorites) "ИЗБРАННОЕ" else "КАТЕГОРИЯ", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.2.sp)
+                    Text(if (showFavorites) "ИЗБРАННОЕ" else "СЛОВАРЬ", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.2.sp)
                     TextButton(onClick = { showFavorites = !showFavorites }) {
                         Icon(if (showFavorites) Icons.Default.Bookmark else Icons.Default.BookmarkBorder, contentDescription = null, tint = Gold, modifier = Modifier.size(17.dp))
                         Spacer(Modifier.width(5.dp))
                         Text(if (showFavorites) "Ҳамаи калимаҳо" else "Избранное", color = Ivory, fontSize = 12.sp)
                     }
-                }
-            }
-
-            androidx.compose.foundation.lazy.LazyRow(
-                contentPadding = PaddingValues(horizontal = 20.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                items(categories) { category ->
-                    FilterChip(
-                        selected = selectedCategory == category,
-                        onClick = { selectedCategory = category },
-                        label = { Text(category, fontSize = 12.sp) },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Emerald,
-                            selectedLabelColor = Ivory,
-                            labelColor = Muted
-                        ),
-                        border = FilterChipDefaults.filterChipBorder(
-                            enabled = true,
-                            selected = selectedCategory == category,
-                            borderColor = Color(0xFF294238),
-                            selectedBorderColor = Gold
-                        )
-                    )
                 }
             }
 
@@ -258,7 +227,7 @@ fun ShohinDictionaryApp() {
                                     color = EmeraldBright, fontSize = 15.sp, fontWeight = FontWeight.Medium,
                                     modifier = Modifier.padding(top = 3.dp)
                                 )
-                                Text(word.category, color = Muted, fontSize = 10.sp, modifier = Modifier.padding(top = 5.dp))
+                                Text("№ ${word.number}", color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(bottom = 5.dp))
                             }
                             IconButton(onClick = {
                                 val updated = if (favorites.contains(word.en)) favorites - word.en else favorites + word.en
