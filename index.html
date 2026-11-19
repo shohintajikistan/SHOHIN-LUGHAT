@@ -58,7 +58,7 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 <div id="conversationLesson" style="margin-top:18px"></div>
 </section>
 <section class="panel" id="storiesSection" hidden style="margin-top:18px">
-<div class="section" style="margin-top:0"><strong>Ҳикояҳои англисӣ</strong><span id="storiesCount">5 ҳикоя</span></div>
+<div class="section" style="margin-top:0"><strong>Ҳикояҳои англисӣ</strong><span id="storiesCount">9 ҳикоя</span></div>
 <p style="color:var(--muted);line-height:1.7">Ҳикояҳои омӯзишӣ бо забони англисӣ ва тарҷумаи тоҷикӣ. Матнҳо ҳамчун бозгӯии кӯтоҳи таълимӣ аз асарҳои классикии нависандагони Британия омода шудаанд.</p>
 <div id="storyList" class="words" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))"></div>
 <div id="storyReader" style="margin-top:18px"></div>
@@ -205,8 +205,13 @@ function render(){
  $('words').hidden=false;$('dictionaryHeading').hidden=false;
  const rawQuery=$('q').value.trim();
  const q=rawQuery.toLocaleLowerCase();
- const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
+ if(!q && !showFavs){
+   $('count').textContent=data.length.toLocaleString('ru-RU')+' слов';
+   $('words').innerHTML='<div class="state">Введите английское или таджикское слово в поиске, чтобы увидеть перевод.</div>';
+   return;
+ }
+ const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
  $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word reveal"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
  revealWords();
