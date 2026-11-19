@@ -172,7 +172,7 @@ fun ShohinDictionaryApp() {
                 }
 
                 val wordOfDay = words.getOrNull(
-                    java.time.LocalDate.now().toEpochDay().mod(words.size.coerceAtLeast(1).toLong()).toInt()
+                    if (words.isEmpty()) 0 else (Calendar.getInstance().get(Calendar.DAY_OF_YEAR) - 1) % words.size
                 )
                 if (wordOfDay != null) {
                     Card(
@@ -296,7 +296,7 @@ fun ShohinDictionaryApp() {
                                     Icon(Icons.Default.ContentCopy, contentDescription = "Copy", tint = Muted)
                                 }
                                 IconButton(onClick = {
-                                    if (ttsReady) speech.speak(word.en, TextToSpeech.QUEUE_FLUSH, null, "shohin_${word.number}")
+                                    if (ttsReady) { speech.language = Locale.US; speech.speak(word.en, TextToSpeech.QUEUE_FLUSH, null, "shohin_${word.number}") }
                                     else Toast.makeText(context, "Овоз ҳоло омода нест", Toast.LENGTH_SHORT).show()
                                 }) {
                                     Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = EmeraldBright)
