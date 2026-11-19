@@ -186,7 +186,7 @@ private val conversationTopics = listOf(
         "Could you please clarify this point?" to "Лутфан, ин нуктаро равшан карда метавонед?",
         "I appreciate your time." to "Ман вақти шуморо қадр мекунам.",
         "Please accept my apologies." to "Лутфан, узри маро қабул кунед.",
-        "I look forward to your reply." to "Ман мунтazири ҷавоби шумо ҳастам."
+        "I look forward to your reply." to "Ман мунтазири ҷавоби шумо ҳастам."
     )),
     ConversationTopic("Ҳалли мушкилот", "Solving a problem", listOf(
         "There seems to be a problem." to "Ба назар мерасад, ки мушкилӣ вуҷуд дорад.",
@@ -320,7 +320,7 @@ fun ShohinDictionaryApp() {
                             onDismissRequest = { menuExpanded = false },
                             modifier = Modifier.background(SurfaceDark)
                         ) {
-                            DropdownMenuItem(text = { Text("Главное", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
+                            DropdownMenuItem(text = { Text("Главное", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false; showStories = false })
                             DropdownMenuItem(text = { Text("Луғат", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
                             DropdownMenuItem(text = { Text("Муошират", color = Ivory) }, onClick = { menuExpanded = false; selectedConversation = -1; showConversation = true; showStories = false })
                             DropdownMenuItem(text = { Text("Ҳикояҳо", color = Ivory) }, onClick = { menuExpanded = false; selectedStory = -1; showStories = true; showConversation = false })
