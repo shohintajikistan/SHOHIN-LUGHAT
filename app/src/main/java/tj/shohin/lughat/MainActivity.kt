@@ -52,6 +52,52 @@ private val SurfaceDark = Color(0xFF102820)
 
 data class Word(val number: Int, val en: String, val tg: String, val example: String = "")
 
+
+private data class ConversationTopic(val title: String, val englishTitle: String, val phrases: List<Pair<String, String>>)
+
+private val conversationTopics = listOf(
+    ConversationTopic("Шиносоӣ", "Introductions", listOf(
+        "Hello!" to "Салом!", "What is your name?" to "Номи шумо чист?", "My name is Ali." to "Номи ман Алӣ аст.",
+        "Where are you from?" to "Шумо аз куҷо ҳастед?", "I am from Tajikistan." to "Ман аз Тоҷикистон ҳастам.",
+        "Nice to meet you." to "Аз шиносоӣ бо шумо шодам.", "How are you?" to "Шумо чӣ хел ҳастед?"
+    )),
+    ConversationTopic("Оила", "Family", listOf(
+        "This is my family." to "Ин оилаи ман аст.", "I have two brothers." to "Ман ду бародар дорам.",
+        "Do you have children?" to "Шумо фарзанд доред?", "My parents live here." to "Падару модари ман дар ин ҷо зиндагӣ мекунанд.",
+        "I love my family." to "Ман оилаи худро дӯст медорам."
+    )),
+    ConversationTopic("Дар мағоза", "At the shop", listOf(
+        "How much is this?" to "Ин чанд пул аст?", "I would like to buy this." to "Ман мехоҳам инро харам.",
+        "Do you have a smaller size?" to "Андозаи хурдтар доред?", "Can I pay by card?" to "Метавонам бо корт пардохт кунам?",
+        "It is too expensive." to "Ин хеле қимат аст."
+    )),
+    ConversationTopic("Дар кор", "At work", listOf(
+        "Where do you work?" to "Шумо дар куҷо кор мекунед?", "I work in an office." to "Ман дар идора кор мекунам.",
+        "I need some help." to "Ба ман каме ёрӣ лозим аст.", "Let's discuss this later." to "Биёед инро баъд муҳокима кунем.",
+        "I have finished my work." to "Ман корамро анҷом додам."
+    )),
+    ConversationTopic("Дар мактаб", "At school", listOf(
+        "What is the homework?" to "Вазифаи хонагӣ чист?", "I do not understand." to "Ман намефаҳмам.",
+        "Could you repeat that, please?" to "Лутфан, инро такрор мекунед?", "May I ask a question?" to "Метавонам савол диҳам?",
+        "I am learning English." to "Ман забони англисиро меомӯзам."
+    )),
+    ConversationTopic("Сафар", "Travel", listOf(
+        "Where is the bus station?" to "Истгоҳи автобус дар куҷост?", "I need a ticket to Dushanbe." to "Ба ман чипта ба Душанбе лозим аст.",
+        "What time does the train leave?" to "Қатор соати чанд меравад?", "Where can I find a taxi?" to "Дар куҷо таксӣ ёфта метавонам?",
+        "Please help me." to "Лутфан, ба ман ёрӣ диҳед."
+    )),
+    ConversationTopic("Дар тарабхона", "At a restaurant", listOf(
+        "A table for two, please." to "Лутфан, барои ду нафар як миз.", "Can I see the menu?" to "Метавонам менюро бинам?",
+        "I would like some water." to "Ман каме об мехоҳам.", "What do you recommend?" to "Шумо чӣ тавсия медиҳед?",
+        "The food is delicious." to "Таом болаззат аст."
+    )),
+    ConversationTopic("Муоширати ҳаррӯза", "Daily conversation", listOf(
+        "Good morning!" to "Субҳ ба хайр!", "What are you doing?" to "Шумо чӣ кор карда истодаед?",
+        "I am on my way." to "Ман дар роҳ ҳастам.", "Please wait a moment." to "Лутфан, як лаҳза интизор шавед.",
+        "I agree with you." to "Ман бо шумо розӣ ҳастам.", "See you tomorrow." to "То пагоҳ!"
+    ))
+)
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -90,6 +136,8 @@ fun ShohinDictionaryApp() {
     var showFavorites by remember { mutableStateOf(false) }
     var menuExpanded by remember { mutableStateOf(false) }
     var showPrivacy by remember { mutableStateOf(false) }
+    var showConversation by remember { mutableStateOf(false) }
+    var selectedConversation by remember { mutableIntStateOf(-1) }
     var showHistory by remember { mutableStateOf(false) }
     var searchHistory by remember {
         mutableStateOf(preferences.getString("search_history", "")?.split("\n")?.filter { it.isNotBlank() } ?: emptyList())
@@ -155,14 +203,13 @@ fun ShohinDictionaryApp() {
                             onDismissRequest = { menuExpanded = false },
                             modifier = Modifier.background(SurfaceDark)
                         ) {
-                            DropdownMenuItem(
-                                text = { Text("История поиска", color = Ivory) },
-                                onClick = { menuExpanded = false; showHistory = true }
-                            )
-                            DropdownMenuItem(
-                                text = { Text("Политика конфиденциальности", color = Ivory) },
-                                onClick = { menuExpanded = false; showPrivacy = true }
-                            )
+                            DropdownMenuItem(text = { Text("Главное", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
+                            DropdownMenuItem(text = { Text("Луғат", color = Ivory) }, onClick = { menuExpanded = false; showConversation = false })
+                            DropdownMenuItem(text = { Text("Муошират", color = Ivory) }, onClick = { menuExpanded = false; selectedConversation = -1; showConversation = true })
+                            DropdownMenuItem(text = { Text("Ҳикояҳо", color = Ivory) }, onClick = { menuExpanded = false; Toast.makeText(context, "Ҳикояҳо дар навсозии оянда илова мешаванд", Toast.LENGTH_SHORT).show() })
+                            DropdownMenuItem(text = { Text("Политика использования", color = Ivory) }, onClick = { menuExpanded = false; Toast.makeText(context, "SHOHIN LUGHAT барои омӯзиши забон пешбинӣ шудааст.", Toast.LENGTH_LONG).show() })
+                            DropdownMenuItem(text = { Text("Политика конфиденциальности", color = Ivory) }, onClick = { menuExpanded = false; showPrivacy = true })
+                            DropdownMenuItem(text = { Text("БАРНОМАИ МО", color = Gold, fontWeight = FontWeight.Bold) }, onClick = { menuExpanded = false; Toast.makeText(context, "SHOHIN TAJIKISTAN — таҳиягари барномаҳои омӯзишӣ ва муфид. Дар оянда барномаҳои нави мо дар ин бахш муаррифӣ мешаванд.", Toast.LENGTH_LONG).show() })
                         }
                     }
                 }
@@ -367,6 +414,53 @@ fun ShohinDictionaryApp() {
             }
         }
     }
+
+        if (showConversation) {
+            AlertDialog(
+                onDismissRequest = { showConversation = false },
+                containerColor = SurfaceDark,
+                title = { Text(if (selectedConversation < 0) "Муошират · English ↔ Тоҷикӣ" else conversationTopics[selectedConversation].title, color = Gold, fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(modifier = Modifier.heightIn(max = 500.dp).verticalScroll(rememberScrollState())) {
+                        if (selectedConversation < 0) {
+                            Text("Мавзӯъро интихоб кунед. Ҷумлаҳо бо тарҷумаи тоҷикӣ нишон дода мешаванд.", color = Muted, lineHeight = 20.sp)
+                            Spacer(Modifier.height(12.dp))
+                            conversationTopics.forEachIndexed { index, topic ->
+                                Card(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp).clickable { selectedConversation = index },
+                                    colors = CardDefaults.cardColors(containerColor = Midnight),
+                                    shape = RoundedCornerShape(12.dp)
+                                ) {
+                                    Column(Modifier.padding(13.dp)) {
+                                        Text(topic.title, color = Ivory, fontWeight = FontWeight.Bold)
+                                        Text(topic.englishTitle, color = Muted, fontSize = 12.sp)
+                                        Text("${topic.phrases.size} ҷумла", color = Gold, fontSize = 11.sp)
+                                    }
+                                }
+                            }
+                        } else {
+                            TextButton(onClick = { selectedConversation = -1 }) { Text("← Ҳамаи мавзӯъҳо", color = Gold) }
+                            conversationTopics[selectedConversation].phrases.forEachIndexed { index, phrase ->
+                                Card(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp),
+                                    colors = CardDefaults.cardColors(containerColor = Midnight),
+                                    shape = RoundedCornerShape(12.dp)
+                                ) {
+                                    Column(Modifier.padding(12.dp)) {
+                                        Text("${index + 1}. ${phrase.first}", color = Ivory, fontWeight = FontWeight.SemiBold)
+                                        Text(phrase.second, color = EmeraldBright, modifier = Modifier.padding(top = 5.dp))
+                                        TextButton(onClick = {
+                                            if (ttsReady) { speech.language = Locale.US; speech.speak(phrase.first, TextToSpeech.QUEUE_FLUSH, null, "conversation_${index}") }
+                                        }) { Icon(Icons.Default.VolumeUp, contentDescription = null, tint = Gold); Spacer(Modifier.width(5.dp)); Text("Шунидан", color = Gold) }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                confirmButton = { TextButton(onClick = { showConversation = false }) { Text("Пӯшидан", color = Gold) } }
+            )
+        }
 
         if (showHistory) {
             AlertDialog(
