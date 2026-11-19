@@ -178,5 +178,329 @@
     "en": "mistake",
     "tg": "хато",
     "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "number": 5912,
+    "en": "paycheck",
+    "tg": "варақаи маош",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5913,
+    "en": "interest rate",
+    "tg": "меъёри фоиз",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5914,
+    "en": "withdraw",
+    "tg": "гирифтани пул аз ҳисоб",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5915,
+    "en": "cashless",
+    "tg": "ғайринақдӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5916,
+    "en": "payment terminal",
+    "tg": "терминали пардохт",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5917,
+    "en": "supervisor",
+    "tg": "нозир; роҳбари бевосита",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5918,
+    "en": "meeting room",
+    "tg": "толори маҷлис",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5919,
+    "en": "agenda",
+    "tg": "рӯзномаи маҷлис",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5920,
+    "en": "minutes",
+    "tg": "протоколи маҷлис",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5921,
+    "en": "spreadsheet",
+    "tg": "ҷадвали электронӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5922,
+    "en": "password reset",
+    "tg": "аз нав барқарор кардани рамз",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5923,
+    "en": "logout",
+    "tg": "баромадан аз ҳисоб",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5924,
+    "en": "privacy",
+    "tg": "махфият",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5925,
+    "en": "notification",
+    "tg": "огоҳинома",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5926,
+    "en": "outlet",
+    "tg": "розетка; васлаки барқ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5927,
+    "en": "extension cord",
+    "tg": "симдарозкунак",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5928,
+    "en": "cutting board",
+    "tg": "тахтаи буридан",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5929,
+    "en": "emergency exit",
+    "tg": "баромадгоҳи изтирорӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5930,
+    "en": "smoke alarm",
+    "tg": "ҳушдордиҳандаи дуд",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5931,
+    "en": "leak",
+    "tg": "ҷойи шоридан; ихроҷ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5932,
+    "en": "damaged",
+    "tg": "осебдида",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5933,
+    "en": "replace",
+    "tg": "иваз кардан",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5934,
+    "en": "fix",
+    "tg": "ислоҳ кардан; таъмир кардан",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5935,
+    "en": "delivery driver",
+    "tg": "ронандаи расонанда",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5936,
+    "en": "job interview",
+    "tg": "мусоҳибаи корӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5937,
+    "en": "work contract",
+    "tg": "шартномаи меҳнатӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5938,
+    "en": "business hours",
+    "tg": "соатҳои корӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5939,
+    "en": "roundabout",
+    "tg": "гардишгоҳи даврӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5940,
+    "en": "one-way street",
+    "tg": "кӯчаи яктарафа",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5941,
+    "en": "speed limit",
+    "tg": "маҳдудияти суръат",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5942,
+    "en": "parking space",
+    "tg": "ҷойи таваққуф",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5943,
+    "en": "toll road",
+    "tg": "роҳи пулакӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5944,
+    "en": "departure gate",
+    "tg": "дарвозаи парвоз",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5945,
+    "en": "arrival hall",
+    "tg": "толори воридшавӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5946,
+    "en": "luggage allowance",
+    "tg": "меъёри бағоҷ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5947,
+    "en": "lost property",
+    "tg": "ашёи гумшуда",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5948,
+    "en": "travel insurance",
+    "tg": "суғуртаи сафар",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5949,
+    "en": "reservation number",
+    "tg": "рақами фармоиши пешакӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5950,
+    "en": "check-in desk",
+    "tg": "мизҳои бақайдгирӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5951,
+    "en": "room service",
+    "tg": "хизматрасонӣ ба ҳуҷра",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5952,
+    "en": "laundry service",
+    "tg": "хизматрасонии ҷомашӯӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5953,
+    "en": "dry cleaning",
+    "tg": "тозакунии химиявӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5954,
+    "en": "appointment card",
+    "tg": "варақаи вақти қабул",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5955,
+    "en": "medical certificate",
+    "tg": "маълумотномаи тиббӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5956,
+    "en": "dosage",
+    "tg": "миқдори истеъмоли дору",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5957,
+    "en": "side effect",
+    "tg": "таъсири иловагӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5958,
+    "en": "blood pressure",
+    "tg": "фишори хун",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5959,
+    "en": "body temperature",
+    "tg": "ҳарорати бадан",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5960,
+    "en": "emergency contact",
+    "tg": "тамоси фаврӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5961,
+    "en": "insurance policy",
+    "tg": "полиси суғурта",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5962,
+    "en": "bank statement",
+    "tg": "ҳисоботи бонкӣ",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5963,
+    "en": "exchange rate",
+    "tg": "қурби асъор",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5964,
+    "en": "money transfer",
+    "tg": "интиқоли пул",
+    "source": "SHOHIN editorial batch 010"
+  },
+  {
+    "number": 5965,
+    "en": "service charge",
+    "tg": "ҳаққи хизматрасонӣ",
+    "source": "SHOHIN editorial batch 010"
   }
 ]
