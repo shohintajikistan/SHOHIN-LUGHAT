@@ -128,7 +128,7 @@ const dictionaryThemes=[
 {id:'school',title:'Мактаб ва таҳсил',terms:['school','student','teacher','book','lesson','study','мактаб','хонанда','омӯзгор','китоб','дарс']},
 {id:'health',title:'Саломатӣ',terms:['health','doctor','hospital','medicine','pain','healthy','саломат','духтур','беморхона','дору','дард']},
 {id:'nature',title:'Табиат',terms:['nature','tree','flower','river','mountain','sun','rain','табиат','дарахт','гул','дарё','кӯҳ','офтоб','борон']},
-{id:'home',title:'Хона',terms:['home','house','room','door','window','kitchen','х хона','хона','ҳуҷра','дар','тиреза','ошхона']},
+{id:'home',title:'Хона',terms:['home','house','room','door','window','kitchen','хона','ҳуҷра','дар','тиреза','ошхона']},
 {id:'technology',title:'Технология',terms:['computer','phone','internet','screen','keyboard','technology','компютер','телефон','интернет','технология']},
 {id:'animals',title:'Ҳайвонот',terms:['animal','dog','cat','bird','horse','cow','ҳайвон','саг','гурба','парранда','асп','гов']},
 {id:'time',title:'Вақт ва сана',terms:['time','day','week','month','year','hour','minute','рӯз','ҳафта','моҳ','сол','соат']}
@@ -324,7 +324,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function setDirection(d){dir=d;render()}
 function renderDictionaryThemes(){
  const box=$('dictionaryTopicList');if(!box)return;
- box.innerHTML=dictionaryThemes.map(t=>'<button type="button" class="dictionaryTopic '+(activeDictionaryTheme===t.id?'active':'')+'" data-dictionary-theme="'+t.id+'">'+t.title+'</button>').join('');
+ box.innerHTML=dictionaryThemes.map(t=>'<button type="button" class="dictionaryTopic '+(activeDictionaryTheme===(t.id==='all'?'':t.id)?'active':'')+'" data-dictionary-theme="'+t.id+'">'+t.title+'</button>').join('');
 }
 $('dictionaryTopicList').addEventListener('click',e=>{
  const b=e.target.closest('[data-dictionary-theme]');if(!b)return;
