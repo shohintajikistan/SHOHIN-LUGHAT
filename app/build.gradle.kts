@@ -16,6 +16,14 @@ android {
         versionName = "1.0.2"
     }
 
+    buildTypes {
+        getByName("release") {
+            // Temporary signing for direct APK installation.
+            // Replace with a private, persistent release keystore before publishing updates.
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
     buildFeatures {
         compose = true
     }
