@@ -263,7 +263,7 @@ if('serviceWorker'in navigator&&location.protocol==='https:'){window.addEventLis
  ['learned','history','errors'].forEach(k=>{if(!Array.isArray(progress[k]))progress[k]=[]});
  ['tests','correct','answered','reviewed','known','deferred'].forEach(k=>{if(!Number.isFinite(progress[k]))progress[k]=0});
  const save=()=>{try{localStorage.setItem(storeKey,JSON.stringify(progress))}catch(e){}};
- let deck=[],retryQueue=[],cardIndex=0,cardFlipped=false,cardMode='all',quiz=[],quizIndex=0,quizScore=0,quizLocked=false,quizWrong=[];
+ let deck=[],retryQueue=[],retryPass=false,cardIndex=0,cardFlipped=false,cardMode='all',quiz=[],quizIndex=0,quizScore=0,quizLocked=false,quizWrong=[];
  const studyPage=['study','cards','favorites','test','progress','mistakes','testHistory'];
  const originalShowPage=showPage;
  showPage=function(page){
@@ -285,17 +285,17 @@ if('serviceWorker'in navigator&&location.protocol==='https:'){window.addEventLis
  function startCards(mode){
   cardMode=mode||'all';const source=cardMode==='errors'?progress.errors.map(x=>data.find(w=>w.en===x.en)).filter(Boolean):(favs.size?[...favs].map(w=>data.find(x=>x.en===w)).filter(Boolean):data);
   if(!source.length){$('studyTitle').textContent='Карточки слов';$('studyContent').innerHTML='<p class="state">'+(cardMode==='errors'?'Ошибок для повторения пока нет.':'Слова пока не загружены.')+'</p><button class="studyBack" data-study-page="study">← Назад</button>';return}
-  deck=source.slice().sort(()=>Math.random()-.5).slice(0,Math.min(30,source.length));retryQueue=[];cardIndex=0;cardFlipped=false;renderCard();
+  deck=source.slice().sort(()=>Math.random()-.5).slice(0,Math.min(30,source.length));retryQueue=[];retryPass=false;cardIndex=0;cardFlipped=false;renderCard();
  }
  function renderCard(){
-  if(cardIndex>=deck.length){if(retryQueue.length){deck=retryQueue.slice();retryQueue=[];cardIndex=0;cardFlipped=false}else{$('studyContent').innerHTML='<h2>Повторение завершено</h2><div class="studyGrid"><div class="studyStat"><b>'+progress.reviewed+'</b><span>Просмотрено</span></div><div class="studyStat"><b>'+progress.known+'</b><span>Знаю</span></div><div class="studyStat"><b>'+progress.deferred+'</b><span>Отложено</span></div></div><button class="studyAction primary" data-study-page="cards">Ещё карточки</button><button class="studyBack" data-study-page="study">В меню обучения</button>';return}}
+  if(cardIndex>=deck.length){if(retryQueue.length&&!retryPass){deck=retryQueue.slice();retryQueue=[];retryPass=true;cardIndex=0;cardFlipped=false}else{$('studyContent').innerHTML='<h2>Повторение завершено</h2><div class="studyGrid"><div class="studyStat"><b>'+progress.reviewed+'</b><span>Просмотрено</span></div><div class="studyStat"><b>'+progress.known+'</b><span>Знаю</span></div><div class="studyStat"><b>'+progress.deferred+'</b><span>Отложено</span></div></div><button class="studyAction primary" data-study-page="cards">Ещё карточки</button><button class="studyBack" data-study-page="study">В меню обучения</button>';return}}
   const w=deck[cardIndex];$('studyTitle').textContent=cardMode==='errors'?'Повторение ошибок':'Карточки слов';
   $('studyContent').innerHTML='<div class="meta">Карточка '+(cardIndex+1)+' из '+deck.length+(retryQueue.length?' · В очереди: '+retryQueue.length:'')+'</div><div class="studyCard" id="flipCard" role="button" tabindex="0"><div><div class="studyWord">'+(cardFlipped?escapeHTML(w.tg):escapeHTML(w.en))+'</div><div class="studyHint">'+(cardFlipped?'Тоҷикӣ':'Нажмите, чтобы увидеть перевод')+'</div></div></div><div class="studyControls"><button class="studyAction" data-card="flip">Перевернуть</button><button class="studyAction" data-card="speak">🔊 Произношение</button><button class="studyAction" data-card="miss">Повторить позже</button><button class="studyAction primary" data-card="know">Знаю ✓</button><button class="studyBack" data-study-page="study">← Назад</button></div><p class="meta">Просмотрено: '+progress.reviewed+' · Изучено: '+progress.learned.length+'</p>';
  }
  function nextCard(known){
   const w=deck[cardIndex];progress.reviewed++;
   if(known){progress.known++;if(!progress.learned.includes(w.en))progress.learned.push(w.en);if(cardMode==='errors')progress.errors=progress.errors.filter(x=>x.en!==w.en)}
-  else{progress.deferred++;if(!retryQueue.some(x=>x.en===w.en))retryQueue.push(w)}
+  else{progress.deferred++;if(!retryPass&&!retryQueue.some(x=>x.en===w.en))retryQueue.push(w)}
   save();cardIndex++;cardFlipped=false;renderCard();
  }
  function showFavorites(){
