@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "index.html"
 DICTIONARY = ROOT / "app/src/main/assets/dictionary/words.json"
 WWW = ROOT / "app/src/main/assets/www"
+LEARNING_TOOLS = ROOT / "learning-tools.js"
 COVERS = [
     "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80&fm=jpg",
     "https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=900&q=80&fm=jpg",
@@ -58,6 +59,9 @@ replacement = "const storyCovers=[" + ",".join(local_urls) + "];"
 html = html[:match.start()] + replacement + html[match.end():]
 WWW.mkdir(parents=True, exist_ok=True)
 (WWW / "index.html").write_text(html, encoding="utf-8")
+if not LEARNING_TOOLS.exists():
+    raise SystemExit("Offline learning tools script is missing")
+shutil.copy2(LEARNING_TOOLS, WWW / "learning-tools.js")
 
 if not DICTIONARY.exists():
     raise SystemExit("Prepared offline dictionary is missing")
