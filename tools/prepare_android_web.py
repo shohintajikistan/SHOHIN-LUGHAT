@@ -44,6 +44,16 @@ for index, url in enumerate(COVERS, 1):
     local_urls.append(f'"https://shohin.local/assets/story-covers/{filename}"')
     print(f"Bundled {filename}: {len(data):,} bytes")
 
+LOCAL_STORIES = ["nightingale.svg", "devoted-friend.svg"]
+story_art_dir = WWW / "assets/stories"
+story_art_dir.mkdir(parents=True, exist_ok=True)
+for filename in LOCAL_STORIES:
+    source = ROOT / "assets/stories" / filename
+    if not source.exists():
+        raise SystemExit(f"Local story illustration is missing: {source}")
+    shutil.copy2(source, story_art_dir / filename)
+    local_urls.append(f'"https://shohin.local/assets/stories/{filename}"')
+
 replacement = "const storyCovers=[" + ",".join(local_urls) + "];"
 html = html[:match.start()] + replacement + html[match.end():]
 WWW.mkdir(parents=True, exist_ok=True)
