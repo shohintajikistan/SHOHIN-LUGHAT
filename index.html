@@ -45,6 +45,18 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 @media(max-width:600px){.storyCard{flex-basis:205px}}.storyCard{padding:0;overflow:hidden;min-height:225px}.storyCard img{display:block;width:100%;height:118px;object-fit:cover;margin:0 0 10px;border-radius:17px 17px 0 0}.storyCard strong,.storyCard span,.storyCard small{margin-left:14px;margin-right:14px}.storyCard small{margin-bottom:14px}.storyCover{display:block;width:100%;height:120px;object-fit:cover;border-radius:12px;margin:0 0 10px}.storyReaderImage{display:block;width:100%;max-height:260px;object-fit:cover;border-radius:15px;margin:0 0 16px}
 /* SHOHIN STUDY TOOLS */
 .studyGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px;margin:18px 0}.studyTile{border:1px solid #426b52;border-radius:18px;padding:17px;text-align:left;background:linear-gradient(145deg,#164431,#0a251c);color:var(--ivory);min-height:120px;cursor:pointer;transition:transform .22s,border-color .22s,box-shadow .22s}.studyTile:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 10px 24px #0004}.studyTile .tileIcon{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#d9b45b1c;color:var(--gold);font-size:20px;margin-bottom:12px}.studyTile strong{display:block;font-size:15px}.studyTile small{display:block;color:var(--muted);margin-top:5px}.studyAction,.studyBack,.answerBtn{border:1px solid #52765d;border-radius:13px;padding:12px 16px;background:linear-gradient(145deg,#17432f,#0b281f);color:var(--ivory);font:inherit;font-weight:650;cursor:pointer;transition:transform .18s,border-color .18s,background .18s}.studyAction.primary{background:linear-gradient(135deg,#d9b45b,#b58c38);border-color:#e6ca82;color:#18251b}.studyAction:hover,.studyBack:hover,.answerBtn:hover{border-color:var(--gold);transform:translateY(-2px)}.studyCard{min-height:210px;display:grid;place-items:center;text-align:center;padding:24px;border:1px solid #9b7b3e;border-radius:22px;background:radial-gradient(circle at 80% 10%,#d9b45b25,transparent 35%),linear-gradient(145deg,#123d2c,#071c16);cursor:pointer;box-shadow:0 15px 35px #0004}.studyCard .studyWord{font-size:clamp(28px,7vw,42px);font-weight:850}.studyCard .studyHint{color:var(--muted);margin-top:12px}.studyControls{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.answerGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}.answerBtn{text-align:left;min-height:56px}.answerBtn:disabled{opacity:.8}.answerBtn.correct{border-color:#35c88b;background:#10452f}.answerBtn.wrong{border-color:#df7777;background:#482522}.progressTrack{height:10px;background:#071c16;border-radius:20px;overflow:hidden;margin:9px 0 17px}.progressFill{height:100%;background:linear-gradient(90deg,#08a56c,#baf05b);border-radius:20px;width:0}.studyStat{padding:16px;border:1px solid #315541;border-radius:16px;background:#0a281e}.studyStat b{display:block;font-size:25px;color:var(--gold)}.studyStat span{font-size:12px;color:var(--muted)}.studyBack{margin-bottom:16px}@media(max-width:480px){.answerGrid{grid-template-columns:1fr}.studyGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* SHOHIN GLOBAL CONTROL SYSTEM */
+button{font:inherit;cursor:pointer;transition:background .2s ease,border-color .2s ease,color .2s ease,transform .18s ease,box-shadow .2s ease}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.menuPanel button{border:1px solid transparent;text-align:left;font-weight:600;transition:background .18s,border-color .18s,transform .18s}
+.menuPanel button:hover{background:#174a35;border-color:#426b52;transform:translateX(2px)}
+.studyIntro{color:var(--muted);line-height:1.7}.quizWord{font-size:clamp(26px,6vw,38px);margin:20px 0 8px}
+.testHistoryItem{display:grid;gap:5px;padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:#0a281e}
+.testHistoryItem b{color:var(--gold);font-size:16px}.testHistoryItem span,.testHistoryItem small{color:var(--muted);font-size:12px}
+.studyControls button{min-height:44px}.answerBtn{min-height:58px}
+.studyTile:active,.studyAction:active,.studyBack:active,.answerBtn:active{transform:scale(.98)}
+
 </style></head>
 <body><main class="wrap">
 <header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Открыть меню" title="Меню SHOHIN"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 5a22 22 0 1 0 21 31A19 19 0 0 1 38 5Z" fill="#f1ce79" stroke="#f7df9d" stroke-width="1.5"/><g fill="#f1ce79" stroke="#f7df9d" stroke-width=".5"><path d="M12 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/><path d="M31 3l1.6 3.2L36 8l-3.4 1.8L31 13l-1.6-3.2L26 8l3.4-1.8z"/><path d="M52 7l1.6 3.2L57 12l-3.4 1.8L52 17l-1.6-3.2L47 12l3.4-1.8z"/><path d="M9 30l1.6 3.2L14 35l-3.4 1.8L9 40l-1.6-3.2L4 35l3.4-1.8z"/><path d="M29 25l1.6 3.2L34 30l-3.4 1.8L29 35l-1.6-3.2L25 30l3.4-1.8z"/><path d="M48 29l1.6 3.2L53 34l-3.4 1.8L48 39l-1.6-3.2L44 34l3.4-1.8z"/><path d="M24 48l1.6 3.2L29 53l-3.4 1.8L24 58l-1.6-3.2L19 53l3.4-1.8z"/></g></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Главное</button><button id="lugatOpen">📖 Луғат</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="studyOpen">✦ Маркази омӯзиш</button><button id="cardsOpen">▣ Карточки слов</button><button id="favoritesOpen">★ Избранное</button><button id="testOpen">✓ Тесты</button><button id="progressOpen">▥ Мой прогресс</button><button id="termsOpen">▤ Политика использования</button><button id="privacyOpen">♧ Политика конфиденциальности</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div><div class="topSearch" id="topSearch"><input id="q" autocomplete="off" placeholder="Ҷустуҷӯи калима / Поиск слова..." aria-label="Поиск по английским и таджикским словам" hidden><button class="searchIcon" id="searchToggle" type="button" aria-label="Открыть поиск" title="Поиск"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
@@ -244,85 +256,91 @@ fetch('./dictionary/words.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status)
 </script>
 <script>
 (function(){
- const storeKey='shohin_lughat_study_progress';
- let progress={learned:[],tests:0,correct:0,answered:0};
+ const storeKey='shohin_lugat_study_progress';
+ let progress={learned:[],tests:0,correct:0,answered:0,reviewed:0,known:0,deferred:0,history:[],errors:[]};
  try{progress=Object.assign(progress,JSON.parse(localStorage.getItem(storeKey)||'{}'))}catch(e){}
- const save=()=>localStorage.setItem(storeKey,JSON.stringify(progress));
- let deck=[],cardIndex=0,cardFlipped=false,quiz=[],quizIndex=0,quizScore=0,quizLocked=false;
- const studyPage=['study','cards','favorites','test','progress'];
+ ['learned','history','errors'].forEach(k=>{if(!Array.isArray(progress[k]))progress[k]=[]});
+ ['tests','correct','answered','reviewed','known','deferred'].forEach(k=>{if(!Number.isFinite(progress[k]))progress[k]=0});
+ const save=()=>{try{localStorage.setItem(storeKey,JSON.stringify(progress))}catch(e){}};
+ let deck=[],retryQueue=[],cardIndex=0,cardFlipped=false,cardMode='all',quiz=[],quizIndex=0,quizScore=0,quizLocked=false,quizWrong=[];
+ const studyPage=['study','cards','favorites','test','progress','mistakes','testHistory'];
  const originalShowPage=showPage;
  showPage=function(page){
-   $('studySection').hidden=true;
-   if(studyPage.includes(page)){
-     currentPage=page;menuDone();$('menuToggle').setAttribute('aria-expanded','false');
-     ['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);
-     $('homeStories').hidden=true;$('words').hidden=true;$('dictionaryHeading').hidden=true;$('topSearch').hidden=true;
-     $('studySection').hidden=false;
-     if(page==='study')renderDashboard();
-     if(page==='cards')startCards();
-     if(page==='favorites')showFavorites();
-     if(page==='test')startQuiz();
-     if(page==='progress')renderProgress();
-     window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'});
-     return;
-   }
-   originalShowPage(page);
+  $('studySection').hidden=true;
+  if(studyPage.includes(page)){
+   currentPage=page;menuDone();$('menuToggle').setAttribute('aria-expanded','false');
+   ['conversationSection','storiesSection','myAppsSection'].forEach(id=>$(id).hidden=true);
+   $('homeStories').hidden=true;$('words').hidden=true;$('dictionaryHeading').hidden=true;$('topSearch').hidden=true;$('studySection').hidden=false;
+   if(page==='study')renderDashboard();if(page==='cards')startCards('all');if(page==='favorites')showFavorites();if(page==='test')showTestSetup();if(page==='progress')renderProgress();if(page==='mistakes')renderMistakes();if(page==='testHistory')renderTestHistory();
+   window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'});return;
+  }originalShowPage(page);
  };
- function dashboardTile(icon,title,desc,page){return '<button class="studyTile" type="button" data-study-page="'+page+'"><span class="tileIcon">'+icon+'</span><strong>'+title+'</strong><small>'+desc+'</small></button>'}
+ function tile(icon,title,desc,page){return '<button class="studyTile" type="button" data-study-page="'+page+'"><span class="tileIcon">'+icon+'</span><strong>'+title+'</strong><small>'+desc+'</small></button>'}
+ function speakWord(word){if(!('speechSynthesis'in window)||!window.SpeechSynthesisUtterance){alert('На этом устройстве произношение недоступно.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(word);u.lang='en-US';u.rate=.88;speechSynthesis.speak(u)}
  function renderDashboard(){
-   $('studyTitle').textContent='Маркази омӯзиш';
-   $('studyContent').innerHTML='<p style="color:var(--muted);line-height:1.7">Омӯзиши калимаҳо, санҷиши дониш ва пайгирии натиҷаҳо. Маълумот дар ҳамин дастгоҳ нигоҳ дошта мешавад.</p><div class="studyGrid">'+dashboardTile('▣','Карточки слов','Повторяйте слова','cards')+dashboardTile('★','Избранное','Ваши сохранённые слова','favorites')+dashboardTile('✓','Тесты','Проверьте знания','test')+dashboardTile('▥','Мой прогресс','Ваши результаты','progress')+'</div>';
+  $('studyTitle').textContent='Маркази омӯзиш';
+  $('studyContent').innerHTML='<p class="studyIntro">Омӯзиши калимаҳо, санҷиши дониш ва пайгирии натиҷаҳо. Маълумот дар ҳамин дастгоҳ нигоҳ дошта мешавад.</p><div class="studyGrid">'+tile('▣','Карточки слов','Повторяйте слова','cards')+tile('★','Избранное','Ваши сохранённые слова','favorites')+tile('✓','Тесты','10, 20 или 50 вопросов','test')+tile('↻','Повторение ошибок',progress.errors.length+' слов требуют повторения','mistakes')+tile('▤','История тестов',progress.history.length+' результатов','testHistory')+tile('▥','Мой прогресс','Статистика обучения','progress')+'</div>';
  }
- function startCards(){
-   $('studyTitle').textContent='Карточки слов';
-   const source=favs.size?[...favs].map(w=>data.find(x=>x.en===w)).filter(Boolean):data;
-   if(!source.length){$('studyContent').innerHTML='<p class="state">Сначала добавьте слова в избранное или дождитесь загрузки словаря.</p><button class="studyBack" data-study-page="study">← Назад</button>';return}
-   deck=source.slice().sort(()=>Math.random()-.5).slice(0,Math.min(30,source.length));cardIndex=0;cardFlipped=false;renderCard();
+ function startCards(mode){
+  cardMode=mode||'all';const source=cardMode==='errors'?progress.errors.map(x=>data.find(w=>w.en===x.en)).filter(Boolean):(favs.size?[...favs].map(w=>data.find(x=>x.en===w)).filter(Boolean):data);
+  if(!source.length){$('studyTitle').textContent='Карточки слов';$('studyContent').innerHTML='<p class="state">'+(cardMode==='errors'?'Ошибок для повторения пока нет.':'Слова пока не загружены.')+'</p><button class="studyBack" data-study-page="study">← Назад</button>';return}
+  deck=source.slice().sort(()=>Math.random()-.5).slice(0,Math.min(30,source.length));retryQueue=[];cardIndex=0;cardFlipped=false;renderCard();
  }
  function renderCard(){
-   if(!deck.length)return;
-   const w=deck[cardIndex];
-   $('studyContent').innerHTML='<div class="meta">Карточка '+(cardIndex+1)+' из '+deck.length+'</div><div class="studyCard" id="flipCard" role="button" tabindex="0"><div><div class="studyWord">'+(cardFlipped?escapeHTML(w.tg):escapeHTML(w.en))+'</div><div class="studyHint">'+(cardFlipped?'Тоҷикӣ':'Нажмите, чтобы увидеть перевод')+'</div></div></div><div class="studyControls"><button class="studyAction" data-card="flip">Перевернуть</button><button class="studyAction" data-card="miss">Повторить позже</button><button class="studyAction primary" data-card="know">Знаю ✓</button><button class="studyBack" data-study-page="study">Назад</button></div>';
+  if(cardIndex>=deck.length){if(retryQueue.length){deck=retryQueue.slice();retryQueue=[];cardIndex=0;cardFlipped=false}else{$('studyContent').innerHTML='<h2>Повторение завершено</h2><div class="studyGrid"><div class="studyStat"><b>'+progress.reviewed+'</b><span>Просмотрено</span></div><div class="studyStat"><b>'+progress.known+'</b><span>Знаю</span></div><div class="studyStat"><b>'+progress.deferred+'</b><span>Отложено</span></div></div><button class="studyAction primary" data-study-page="cards">Ещё карточки</button><button class="studyBack" data-study-page="study">В меню обучения</button>';return}}
+  const w=deck[cardIndex];$('studyTitle').textContent=cardMode==='errors'?'Повторение ошибок':'Карточки слов';
+  $('studyContent').innerHTML='<div class="meta">Карточка '+(cardIndex+1)+' из '+deck.length+(retryQueue.length?' · В очереди: '+retryQueue.length:'')+'</div><div class="studyCard" id="flipCard" role="button" tabindex="0"><div><div class="studyWord">'+(cardFlipped?escapeHTML(w.tg):escapeHTML(w.en))+'</div><div class="studyHint">'+(cardFlipped?'Тоҷикӣ':'Нажмите, чтобы увидеть перевод')+'</div></div></div><div class="studyControls"><button class="studyAction" data-card="flip">Перевернуть</button><button class="studyAction" data-card="speak">🔊 Произношение</button><button class="studyAction" data-card="miss">Повторить позже</button><button class="studyAction primary" data-card="know">Знаю ✓</button><button class="studyBack" data-study-page="study">← Назад</button></div><p class="meta">Просмотрено: '+progress.reviewed+' · Изучено: '+progress.learned.length+'</p>';
  }
- function escapeHTML(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
  function nextCard(known){
-   const w=deck[cardIndex];if(known&&!progress.learned.includes(w.en))progress.learned.push(w.en);
-   save();cardIndex++;cardFlipped=false;
-   if(cardIndex>=deck.length){$('studyContent').innerHTML='<h2>Повторение завершено</h2><p style="color:var(--muted)">Карточек просмотрено: '+deck.length+'</p><button class="studyAction primary" data-study-page="cards">Повторить ещё</button><button class="studyBack" data-study-page="study">В меню обучения</button>';return}
-   renderCard();
+  const w=deck[cardIndex];progress.reviewed++;
+  if(known){progress.known++;if(!progress.learned.includes(w.en))progress.learned.push(w.en);if(cardMode==='errors')progress.errors=progress.errors.filter(x=>x.en!==w.en)}
+  else{progress.deferred++;if(!retryQueue.some(x=>x.en===w.en))retryQueue.push(w)}
+  save();cardIndex++;cardFlipped=false;renderCard();
  }
  function showFavorites(){
-   $('studyTitle').textContent='Избранные слова';
-   const list=[...favs].map(w=>data.find(x=>x.en===w)).filter(Boolean);
-   $('studyContent').innerHTML=list.length?'<p style="color:var(--muted)">Сохранено слов: '+list.length+'</p><div class="words">'+list.map(w=>'<article class="word" style="aspect-ratio:auto;min-height:110px"><div class="en">'+escapeHTML(w.en)+'</div><div class="tj">'+escapeHTML(w.tg)+'</div><button class="star" data-unfavorite="'+escapeHTML(w.en)+'" aria-label="Удалить из избранного">★</button></article>').join('')+'</div>':'<p class="state">Пока нет избранных слов. Откройте словарь и нажмите ☆ у нужного слова.</p>';
-   $('studyContent').insertAdjacentHTML('beforeend','<button class="studyBack" data-study-page="study">← Назад</button>');
+  $('studyTitle').textContent='Избранные слова';const list=[...favs].map(w=>data.find(x=>x.en===w)).filter(Boolean);
+  $('studyContent').innerHTML=list.length?'<p class="studyIntro">Сохранено слов: '+list.length+'</p><div class="words">'+list.map(w=>'<article class="word" style="aspect-ratio:auto;min-height:110px"><div class="en">'+escapeHTML(w.en)+'</div><div class="tj">'+escapeHTML(w.tg)+'</div><button class="star" data-unfavorite="'+escapeHTML(w.en)+'">★</button><button class="studyAction" data-fav-speak="'+escapeHTML(w.en)+'">🔊</button></article>').join('')+'</div>':'<p class="state">Пока нет избранных слов.</p>';
+  $('studyContent').insertAdjacentHTML('beforeend','<button class="studyBack" data-study-page="study">← Назад</button>');
  }
- function startQuiz(){
-   if(data.length<4){$('studyTitle').textContent='Тесты';$('studyContent').innerHTML='<p class="state">Словарь ещё загружается. Попробуйте через несколько секунд.</p><button class="studyBack" data-study-page="study">Назад</button>';return}
-   $('studyTitle').textContent='Тест по словам';quiz=data.slice().sort(()=>Math.random()-.5).slice(0,10);quizIndex=0;quizScore=0;quizLocked=false;renderQuestion();
+ function showTestSetup(){$('studyTitle').textContent='Настройка теста';$('studyContent').innerHTML='<p class="studyIntro">Выберите количество вопросов.</p><div class="studyControls"><button class="studyAction primary" data-test-count="10">10 вопросов</button><button class="studyAction" data-test-count="20">20 вопросов</button><button class="studyAction" data-test-count="50">50 вопросов</button></div><button class="studyBack" data-study-page="study">← Назад</button>'}
+ function startQuiz(count){
+  if(data.length<4){$('studyContent').innerHTML='<p class="state">Словарь ещё загружается.</p><button class="studyBack" data-study-page="study">Назад</button>';return}
+  quiz=data.slice().sort(()=>Math.random()-.5).slice(0,Math.min(count,data.length));quizIndex=0;quizScore=0;quizLocked=false;quizWrong=[];$('studyTitle').textContent='Тест по словам';renderQuestion();
  }
  function renderQuestion(){
-   if(quizIndex>=quiz.length){progress.tests++;progress.correct+=quizScore;progress.answered+=quiz.length;save();$('studyContent').innerHTML='<h2>Тест завершён</h2><div class="studyStat"><b>'+quizScore+' / '+quiz.length+'</b><span>Правильные ответы</span></div><p style="color:var(--muted)">Ваш результат сохранён на устройстве.</p><div class="studyControls"><button class="studyAction primary" data-study-page="test">Пройти ещё раз</button><button class="studyBack" data-study-page="study">Назад</button></div>';return}
-   const w=quiz[quizIndex],opts=[w,...data.filter(x=>x.en!==w.en).sort(()=>Math.random()-.5).slice(0,3)].sort(()=>Math.random()-.5);
-   $('studyContent').innerHTML='<div class="meta">Вопрос '+(quizIndex+1)+' из '+quiz.length+' · Очки: '+quizScore+'</div><div class="progressTrack"><div class="progressFill" style="width:'+quizIndex/quiz.length*100+'%"></div></div><h2 style="font-size:clamp(25px,6vw,36px);margin:22px 0 8px">'+escapeHTML(w.en)+'</h2><p style="color:var(--muted)">Выберите правильный перевод</p><div class="answerGrid">'+opts.map(o=>'<button class="answerBtn" data-answer="'+escapeHTML(o.en)+'">'+escapeHTML(o.tg)+'</button>').join('')+'</div><p id="quizFeedback" aria-live="polite"></p><button class="studyAction primary" id="nextQuestion" hidden>Далее →</button><button class="studyBack" data-study-page="study">Завершить тест</button>';
+  if(quizIndex>=quiz.length){
+   progress.tests++;progress.correct+=quizScore;progress.answered+=quiz.length;progress.history.unshift({date:new Date().toISOString(),score:quizScore,total:quiz.length,percent:Math.round(quizScore/quiz.length*100),mistakes:quizWrong.length});progress.history=progress.history.slice(0,50);save();
+   $('studyContent').innerHTML='<h2>Тест завершён</h2><div class="studyStat"><b>'+quizScore+' / '+quiz.length+'</b><span>Правильные ответы · '+Math.round(quizScore/quiz.length*100)+'%</span></div><p class="studyIntro">Ошибок: '+quizWrong.length+'. Результат сохранён.</p><div class="studyControls"><button class="studyAction primary" data-study-page="test">Новый тест</button><button class="studyAction" data-study-page="mistakes">Повторить ошибки</button><button class="studyAction" data-study-page="testHistory">История тестов</button><button class="studyBack" data-study-page="study">В меню обучения</button></div>';return;
+  }
+  const w=quiz[quizIndex],opts=[w,...data.filter(x=>x.en!==w.en).sort(()=>Math.random()-.5).slice(0,3)].sort(()=>Math.random()-.5);
+  $('studyContent').innerHTML='<div class="meta">Вопрос '+(quizIndex+1)+' из '+quiz.length+' · Очки: '+quizScore+'</div><div class="progressTrack"><div class="progressFill" style="width:'+quizIndex/quiz.length*100+'%"></div></div><h2 class="quizWord">'+escapeHTML(w.en)+'</h2><button class="studyAction" data-quiz-speak="'+escapeHTML(w.en)+'">🔊 Произношение</button><p class="studyIntro">Выберите правильный перевод</p><div class="answerGrid">'+opts.map(o=>'<button class="answerBtn" data-answer="'+escapeHTML(o.en)+'">'+escapeHTML(o.tg)+'</button>').join('')+'</div><p id="quizFeedback" aria-live="polite"></p><button class="studyAction primary" id="nextQuestion" hidden>Далее →</button><button class="studyBack" data-study-page="study">Завершить тест</button>';
+ }
+ function renderMistakes(){
+  $('studyTitle').textContent='Повторение ошибок';if(!progress.errors.length){$('studyContent').innerHTML='<p class="state">Ошибок пока нет. Пройдите тест.</p><button class="studyBack" data-study-page="study">← Назад</button>';return}
+  const rows=progress.errors.map(x=>{const w=data.find(y=>y.en===x.en);return w?'<article class="word" style="aspect-ratio:auto;min-height:110px"><div class="en">'+escapeHTML(w.en)+'</div><div class="tj">'+escapeHTML(w.tg)+'</div><div class="meta">Ошибок: '+(x.count||1)+'</div><button class="studyAction" data-fav-speak="'+escapeHTML(w.en)+'">🔊 Слушать</button></article>':''}).join('');
+  $('studyContent').innerHTML='<p class="studyIntro">Слова с допущенными ошибками: '+progress.errors.length+'</p><div class="words">'+rows+'</div><div class="studyControls"><button class="studyAction primary" data-study-page="mistakeCards">Начать повторение</button><button class="studyBack" data-study-page="study">← Назад</button></div>';
+ }
+ function renderTestHistory(){
+  $('studyTitle').textContent='История тестов';$('studyContent').innerHTML=progress.history.length?'<div class="histList">'+progress.history.map(x=>'<article class="testHistoryItem"><b>'+x.score+' / '+x.total+' · '+x.percent+'%</b><span>'+new Date(x.date).toLocaleString('ru-RU')+'</span><small>Ошибок: '+x.mistakes+'</small></article>').join('')+'</div>':'<p class="state">История тестов пока пуста.</p>';
+  $('studyContent').insertAdjacentHTML('beforeend','<button class="studyBack" data-study-page="study">← Назад</button>');
  }
  function renderProgress(){
-   $('studyTitle').textContent='Мой прогресс';
-   const total=data.length,learned=progress.learned.length,pct=total?Math.min(100,Math.round(learned/total*100)):0,rate=progress.answered?Math.round(progress.correct/progress.answered*100):0;
-   $('studyContent').innerHTML='<div class="studyGrid"><div class="studyStat"><b>'+learned+'</b><span>Слов отмечено как изученные</span></div><div class="studyStat"><b>'+progress.tests+'</b><span>Пройдено тестов</span></div><div class="studyStat"><b>'+rate+'%</b><span>Точность ответов</span></div><div class="studyStat"><b>'+total+'</b><span>Слов в словаре</span></div></div><p>Изучение слов</p><div class="progressTrack"><div class="progressFill" style="width:'+pct+'%"></div></div><p style="color:var(--muted)">'+pct+'% от словаря отмечено как изученное.</p><button class="studyBack" data-study-page="study">← Назад</button>';
+  $('studyTitle').textContent='Мой прогресс';const total=data.length,learned=progress.learned.length,pct=total?Math.min(100,Math.round(learned/total*100)):0,rate=progress.answered?Math.round(progress.correct/progress.answered*100):0;
+  $('studyContent').innerHTML='<div class="studyGrid"><div class="studyStat"><b>'+learned+'</b><span>Изучено слов</span></div><div class="studyStat"><b>'+progress.tests+'</b><span>Пройдено тестов</span></div><div class="studyStat"><b>'+rate+'%</b><span>Точность ответов</span></div><div class="studyStat"><b>'+progress.reviewed+'</b><span>Карточек просмотрено</span></div><div class="studyStat"><b>'+progress.known+'</b><span>Карточек знаю</span></div><div class="studyStat"><b>'+progress.errors.length+'</b><span>Слов на повторение</span></div></div><p>Изучение слов</p><div class="progressTrack"><div class="progressFill" style="width:'+pct+'%"></div></div><p class="studyIntro">'+pct+'% словаря отмечено как изученное.</p><button class="studyAction" data-study-page="testHistory">История тестов</button><button class="studyBack" data-study-page="study">← Назад</button>';
  }
  $('studyContent').addEventListener('click',e=>{
-   const nav=e.target.closest('[data-study-page]');if(nav){showPage(nav.dataset.studyPage);return}
-   const card=e.target.closest('[data-card]');if(card){if(card.dataset.card==='flip'){cardFlipped=!cardFlipped;renderCard()}else nextCard(card.dataset.card==='know');return}
-   const un=e.target.closest('[data-unfavorite]');if(un){favs.delete(un.dataset.unfavorite);localStorage.setItem('shohin_lughat_favs',JSON.stringify([...favs]));showFavorites();return}
-   const ans=e.target.closest('[data-answer]');if(ans&&!quizLocked){quizLocked=true;const correct=quiz[quizIndex];const good=ans.dataset.answer===correct.en;if(good)quizScore++;$('studyContent').querySelectorAll('[data-answer]').forEach(b=>{b.disabled=true;if(b.dataset.answer===correct.en)b.classList.add('correct');else if(b===ans)b.classList.add('wrong')});$('quizFeedback').textContent=good?'Верно!':'Правильный ответ: '+correct.tg;$('nextQuestion').hidden=false;return}
-   if(e.target.id==='nextQuestion'){quizIndex++;quizLocked=false;renderQuestion()}
+  const nav=e.target.closest('[data-study-page]');if(nav){if(nav.dataset.studyPage==='mistakeCards'){startCards('errors');return}showPage(nav.dataset.studyPage);return}
+  const tc=e.target.closest('[data-test-count]');if(tc){startQuiz(Number(tc.dataset.testCount));return}
+  const card=e.target.closest('[data-card]');if(card){if(card.dataset.card==='flip'){cardFlipped=!cardFlipped;renderCard()}else if(card.dataset.card==='speak'){speakWord(deck[cardIndex].en)}else nextCard(card.dataset.card==='know');return}
+  const fs=e.target.closest('[data-fav-speak]');if(fs){speakWord(fs.dataset.favSpeak);return}
+  const qs=e.target.closest('[data-quiz-speak]');if(qs){speakWord(qs.dataset.quizSpeak);return}
+  const un=e.target.closest('[data-unfavorite]');if(un){favs.delete(un.dataset.unfavorite);localStorage.setItem('shohin_lugat_favs',JSON.stringify([...favs]));showFavorites();return}
+  const ans=e.target.closest('[data-answer]');if(ans&&!quizLocked){quizLocked=true;const correct=quiz[quizIndex],good=ans.dataset.answer===correct.en;if(good)quizScore++;else{quizWrong.push(correct.en);const old=progress.errors.find(x=>x.en===correct.en);if(old)old.count=(old.count||1)+1;else progress.errors.push({en:correct.en,count:1});save()}$('studyContent').querySelectorAll('[data-answer]').forEach(b=>{b.disabled=true;if(b.dataset.answer===correct.en)b.classList.add('correct');else if(b===ans)b.classList.add('wrong')});$('quizFeedback').textContent=good?'Верно!':'Правильный ответ: '+correct.tg;$('nextQuestion').hidden=false;return}
+  if(e.target.id==='nextQuestion'){quizIndex++;quizLocked=false;renderQuestion()}
  });
- $('studyOpen').addEventListener('click',()=>showPage('study'));
- $('cardsOpen').addEventListener('click',()=>showPage('cards'));
- $('favoritesOpen').addEventListener('click',()=>showPage('favorites'));
- $('testOpen').addEventListener('click',()=>showPage('test'));
- $('progressOpen').addEventListener('click',()=>showPage('progress'));
- $('studyContent').addEventListener('keydown',e=>{if((e.target.id==='flipCard')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();cardFlipped=!cardFlipped;renderCard()}});
+ $('studyContent').addEventListener('keydown',e=>{if(e.target.id==='flipCard'&&(e.key==='Enter'||e.key===' ')){e.preventDefault();cardFlipped=!cardFlipped;renderCard()}});
+ $('studyOpen').addEventListener('click',()=>showPage('study'));$('cardsOpen').addEventListener('click',()=>showPage('cards'));$('favoritesOpen').addEventListener('click',()=>showPage('favorites'));$('testOpen').addEventListener('click',()=>showPage('test'));$('progressOpen').addEventListener('click',()=>showPage('progress'));
+ const mistakesBtn=document.createElement('button');mistakesBtn.textContent='↻ Повторение ошибок';$('menuPanel').insertBefore(mistakesBtn,$('testOpen'));mistakesBtn.addEventListener('click',()=>showPage('mistakes'));
+ const historyBtn=document.createElement('button');historyBtn.textContent='▤ История тестов';$('menuPanel').insertBefore(historyBtn,$('progressOpen'));historyBtn.addEventListener('click',()=>showPage('testHistory'));
 })();
 </script></body></html>
