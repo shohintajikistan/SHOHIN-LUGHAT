@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'learning-tools.js'
+      - 'sw.js'
       - 'privacy.html'
       - 'dictionary/**'
       - '.github/workflows/pages.yml'
