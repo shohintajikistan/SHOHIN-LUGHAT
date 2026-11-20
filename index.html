@@ -54,31 +54,34 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 .builderFeedback.good{border-color:#08a56c;color:#baf05b}
 .builderFeedback.try{border-color:#9b7b3e;color:#f0d58f}@media(max-width:600px){.learningGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style></head>
 <body><main class="wrap">
-<header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Кушодани меню" aria-expanded="false" title="Менюи SHOHIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Саҳифаи асосӣ</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="phrasebookOpen">🗣️ Ибораҳои омода</button><button id="builderOpen">🧩 Сохтани ҷумла</button><button id="translateOpen">⇄ Тарҷумаи ҷумлаҳо</button><button id="numbersOpen">🔢 Рақамҳо ва санаҳо</button><button id="businessOpen">💼 Забони англисии корӣ</button><button id="termsOpen">▤ Қоидаҳои истифода</button><button id="privacyOpen">♧ Сиёсати махфият</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button><button id="lugatOpen">📖 Луғат</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">ТОҶИКИСТОН · ВОСИТАҲОИ ЗАБОНӢ</div></div><div class="brandEmblem" role="img" aria-label="Нишони SHOHIN: тоҷи шоҳонаи тиллоӣ ва ҳафт ситора"><svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Кушодани меню" aria-expanded="false" title="Менюи SHOHIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Саҳифаи асосӣ</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="phrasebookOpen">🗣️ Ибораҳои омода</button><button id="builderOpen">🧩 Сохтани ҷумла</button><button id="translateOpen">⇄ Тарҷумаи ҷумлаҳо</button><button id="numbersOpen">🔢 Рақамҳо ва санаҳо</button><button id="businessOpen">💼 Забони англисии корӣ</button><button id="termsOpen">▤ Қоидаҳои истифода</button><button id="privacyOpen">♧ Сиёсати махфият</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button><button id="lugatOpen">📖 Луғат</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">ТОҶИКИСТОН · ВОСИТАҲОИ ЗАБОНӢ</div></div><div class="brandEmblem" role="img" aria-label="Нишони SHOHIN: тоҷи шоҳонаи тиллоӣ ва ҳафт ситора"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 <defs>
- <linearGradient id="shGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0bd"/><stop offset=".28" stop-color="#e7c879"/><stop offset=".62" stop-color="#b98732"/><stop offset="1" stop-color="#f5dfa0"/></linearGradient>
- <linearGradient id="shGoldDark" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f6dfa0"/><stop offset="1" stop-color="#9b6c25"/></linearGradient>
- <filter id="shShadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur in="SourceAlpha" stdDeviation="1.8"/><feOffset dy="2"/><feComponentTransfer><feFuncA type="linear" slope=".35"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="shGold" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#fff8d9"/><stop offset=".22" stop-color="#f2d78f"/><stop offset=".48" stop-color="#c18b32"/><stop offset=".72" stop-color="#f8df9b"/><stop offset="1" stop-color="#95651f"/></linearGradient>
+ <linearGradient id="shGoldSide" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8b5b1d"/><stop offset=".22" stop-color="#f1d58b"/><stop offset=".5" stop-color="#b57b29"/><stop offset=".78" stop-color="#ffe9ac"/><stop offset="1" stop-color="#80521a"/></linearGradient>
+ <linearGradient id="shGem" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff9df"/><stop offset=".45" stop-color="#e7bd62"/><stop offset="1" stop-color="#9c6825"/></linearGradient>
+ <filter id="shShadow" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="2"/><feOffset dy="3"/><feComponentTransfer><feFuncA type="linear" slope=".42"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <path id="shStar" d="M0-5.2 1.5-1.7 5.2-1.5 2.3 1 .0 5.2-2.3 1-5.2-1.5-1.5-1.7z"/>
 </defs>
-<g fill="url(#shGold)" stroke="#fff0bd" stroke-width=".65">
- <path d="M17 19l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M34 10l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M51 5l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M69 5l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M86 10l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M103 19l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
- <path d="M60 23l2.2 4.7 5.1.6-3.8 3.4.9 5-4.4-2.4-4.4 2.4.9-5-3.8-3.4 5.1-.6z"/>
+<!-- Seven royal stars -->
+<g fill="url(#shGold)" stroke="#fff1c4" stroke-width=".65">
+ <use href="#shStar" transform="translate(22 20) scale(.82)"/><use href="#shStar" transform="translate(41 12) scale(.9)"/>
+ <use href="#shStar" transform="translate(61 7)"/><use href="#shStar" transform="translate(80 5) scale(1.12)"/>
+ <use href="#shStar" transform="translate(99 7)"/><use href="#shStar" transform="translate(119 12) scale(.9)"/>
+ <use href="#shStar" transform="translate(138 20) scale(.82)"/>
 </g>
-<g filter="url(#shShadow)" stroke="url(#shGoldDark)" stroke-linejoin="round">
- <path d="M25 48c7 4 14 4 21-1 5-4 9-10 14-16 5 6 9 12 14 16 7 5 14 5 21 1l-7 32c-17 8-39 8-56 0z" fill="url(#shGold)" stroke-width="2.2"/>
- <path d="M60 31c-5 7-10 14-17 19-7 5-14 4-20-1l7 31c9 4 19 6 30 6z" fill="#c3933d" opacity=".25" stroke="none"/>
- <path d="M60 31v55" fill="none" stroke="#fff0bd" stroke-width="1.1" opacity=".8"/>
- <path d="M31 51l7 24m51-24-7 24" fill="none" stroke="#fff0bd" stroke-width="1" opacity=".75"/>
- <path d="M23 77q37 13 74 0l-2 10q-35 12-70 0z" fill="url(#shGoldDark)" stroke-width="2"/>
- <path d="M27 80q33 10 66 0" fill="none" stroke="#fff0bd" stroke-width="1.1"/>
- <path d="M45 49q15-12 30 0" fill="none" stroke="#fff0bd" stroke-width="1.2"/>
- <path d="M60 38l3 5 5 .7-4 3.5 1 5-5-2.5-5 2.5 1-5-4-3.5 5-.7z" fill="#f9e7b0" stroke="#9b6c25" stroke-width=".8"/>
- <circle cx="39" cy="60" r="2.1" fill="#f3dfa2" stroke="#9b6c25"/><circle cx="81" cy="60" r="2.1" fill="#f3dfa2" stroke="#9b6c25"/>
+<g filter="url(#shShadow)" stroke-linejoin="round">
+ <!-- Crown silhouette -->
+ <path d="M27 49 43 64 58 34 80 57 102 34 117 64 133 49 124 91Q80 108 36 91Z" fill="url(#shGold)" stroke="#8c5d20" stroke-width="2.4"/>
+ <path d="M27 49 43 64 58 34 80 57 102 34 117 64 133 49" fill="none" stroke="#fff2c6" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+ <!-- inner facets -->
+ <path d="M43 65 58 44 80 67 102 44 117 65 111 86Q80 96 49 86Z" fill="#fff0b5" opacity=".22" stroke="none"/>
+ <path d="M58 44 67 88M102 44 93 88M80 57V96" fill="none" stroke="#fff4d1" stroke-width="1.25" opacity=".78"/>
+ <!-- jeweled crown band -->
+ <path d="M36 83Q80 99 124 83L121 98Q80 114 39 98Z" fill="url(#shGoldSide)" stroke="#87581d" stroke-width="2"/>
+ <path d="M41 88Q80 103 119 88" fill="none" stroke="#fff4d1" stroke-width="1.4"/>
+ <path d="M80 77 84 83 91 84 86 89 87 96 80 92 73 96 74 89 69 84 76 83Z" fill="url(#shGem)" stroke="#8d5d20" stroke-width="1"/>
+ <circle cx="52" cy="84" r="3" fill="#f9e7b0" stroke="#9b6c25"/><circle cx="108" cy="84" r="3" fill="#f9e7b0" stroke="#9b6c25"/>
+ <circle cx="80" cy="65" r="3.2" fill="#fff4d1" stroke="#a16e29" stroke-width="1"/>
 </g>
 </svg></div><div class="topSearch" id="topSearch"><input id="q" autocomplete="off" placeholder="Калимаи англисӣ ё тоҷикиро ҷустуҷӯ кунед..." aria-label="Ҷустуҷӯи калимаҳои англисӣ ва тоҷикӣ" hidden><button class="searchIcon" id="searchToggle" type="button" aria-label="Кушодани ҷустуҷӯ" title="Ҷустуҷӯ"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
 <section class="hero"><div><div class="eyebrow">ЛУҒАТ · АНГЛИСӢ ⇄ ТОҶИКӢ</div><h1>SHOHIN LUGHAT</h1><p>Луғати англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ. Ҷустуҷӯи калимаҳо ва тарҷумаҳо, рақамгузории калимаҳо ва рӯйхати мунтахаб.</p></div></section>
