@@ -94,7 +94,8 @@ function openPage(name){
  if(name==='translate'){translationDirection=0;renderTranslations()}
  if(name==='numbers')renderNumbers()
  if(name==='business'){businessIndex=-1;renderBusiness()}
- if(name==='quicktest')renderQuizHome();\n if(name==='lastlesson'){localStorage.setItem('shohin_lughat_last_lesson','present-simple');openLastLesson()}
+ if(name==='quicktest')renderQuizHome();
+ if(name==='lastlesson'){localStorage.setItem('shohin_lughat_last_lesson','present-simple');openLastLesson()}
 }
 function renderPhrases(){
  if(phraseIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Вазъиятро интихоб кунед. Дар ҳар бахш ибораҳои омода бо тарҷумаи тоҷикӣ мавҷуданд.</p><div class="learningGrid">'+phraseGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' ибора',i,'phrase-category')).join('')+'</div>';return}
@@ -145,7 +146,8 @@ $('builderOpen').addEventListener('click',()=>openPage('builder'));
 $('translateOpen').addEventListener('click',()=>openPage('translate'));
 $('numbersOpen').addEventListener('click',()=>openPage('numbers'));
 $('businessOpen').addEventListener('click',()=>openPage('business'));
-$('quickTestOpen').addEventListener('click',()=>openPage('quicktest'));\n$('lastLessonOpen').addEventListener('click',()=>openPage('lastlesson'));
+$('quickTestOpen').addEventListener('click',()=>openPage('quicktest'));
+$('lastLessonOpen').addEventListener('click',()=>openPage('lastlesson'));
 $('learningToolsBack').addEventListener('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
 content().addEventListener('click',e=>{
  let qb=e.target.closest('[data-quiz-set]');if(qb){openQuizSet(+qb.dataset.quizSet);return}
