@@ -53,7 +53,7 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 </section>
 <div class="section" id="dictionaryHeading" hidden><strong id="sectionTitle">Словарь</strong><span id="count">Загрузка…</span></div><section class="words" id="words" hidden><div class="state">Загружаем словарь…</div></section><section class="panel" id="conversationSection" hidden style="margin-top:18px">
 <div class="section" style="margin-top:0"><strong>Муошират · English ↔ Тоҷикӣ</strong><span id="conversationCount">24 мавзӯъ</span></div>
-<p style="color:var(--muted);line-height:1.7;margin:8px 0 16px">Мавзӯъро интихоб кунед. Ҳар як ҷумла бо тарҷумаи тоҷикӣ нишон дода мешавад.</p>
+<p id="conversationHint" style="color:var(--muted);line-height:1.7;margin:8px 0 16px">Мавзӯъро интихоб кунед. Ҳар як ҷумла бо тарҷумаи тоҷикӣ нишон дода мешавад.</p>
 <div id="conversationTopics" class="words" style="grid-template-columns:repeat(auto-fit,minmax(135px,1fr))"></div>
 <div id="conversationLesson" style="margin-top:18px"></div>
 </section>
@@ -158,15 +158,21 @@ $('storyReader').addEventListener('click',e=>{
 });
 
 function renderConversationTopics(){
+ $('conversationTopics').hidden=false;
+ $('conversationHint').hidden=false;
+ $('conversationLesson').hidden=true;
  $('conversationTopics').innerHTML=conversationData.map((t,i)=>'<button type="button" class="word" data-topic="'+i+'" style="aspect-ratio:auto;min-height:100px;cursor:pointer"><span class="en">'+esc(t.title)+'</span><span class="tj">'+esc(t.en)+'</span><span class="meta">'+t.items.length+' ҷумла</span></button>').join('');
- $('conversationLesson').innerHTML='<div class="state">Барои дидани ҷумлаҳо яке аз мавзӯъҳоро интихоб кунед.</div>';
 }
 function openConversationTopic(index){
  const t=conversationData[index];if(!t)return;
- $('conversationLesson').innerHTML='<div class="section"><strong>'+esc(t.title)+'</strong><span>'+esc(t.en)+'</span></div>'+t.items.map((p,i)=>'<article class="panel" style="margin:9px 0;padding:14px"><div class="meta">№ '+(i+1)+'</div><div class="en" style="font-size:17px">'+esc(p[0])+'</div><div class="tj" style="font-size:15px;margin-top:6px">'+esc(p[1])+'</div><div class="tools"><button type="button" data-conv-speak="'+i+'" data-topic-index="'+index+'">🔊 Шунидан</button><button type="button" data-conv-copy="'+index+'" data-phrase="'+i+'">Нусха гирифтан</button></div></article>').join('');
+ $('conversationTopics').hidden=true;
+ $('conversationHint').hidden=true;
+ $('conversationLesson').hidden=false;
+ $('conversationLesson').innerHTML='<button type="button" class="toolBtn" id="conversationBack" style="margin:0 0 16px;padding:11px 16px;border-radius:12px">← Бозгашт ба мавзӯъҳо</button><div class="section"><strong>'+esc(t.title)+'</strong><span>'+esc(t.en)+'</span></div>'+t.items.map((p,i)=>'<article class="panel" style="margin:9px 0;padding:14px"><div class="meta">№ '+(i+1)+'</div><div class="en" style="font-size:17px">'+esc(p[0])+'</div><div class="tj" style="font-size:15px;margin-top:6px">'+esc(p[1])+'</div><div class="tools"><button type="button" data-conv-speak="'+i+'" data-topic-index="'+index+'">🔊 Шунидан</button><button type="button" data-conv-copy="'+index+'" data-phrase="'+i+'">Нусха гирифтан</button></div></article>').join('');
 }
 $('conversationTopics').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(b)openConversationTopic(Number(b.dataset.topic))});
 $('conversationLesson').addEventListener('click',e=>{
+ if(e.target.closest('#conversationBack')){renderConversationTopics();return}
  const s=e.target.closest('[data-conv-speak]');if(s&&'speechSynthesis'in window){speechSynthesis.cancel();const phrase=conversationData[Number(s.dataset.topicIndex)].items[Number(s.dataset.convSpeak)][0];const u=new SpeechSynthesisUtterance(phrase);u.lang='en-US';speechSynthesis.speak(u)}
  const cp=e.target.closest('[data-conv-copy]');if(cp){const phrase=conversationData[Number(cp.dataset.convCopy)].items[Number(cp.dataset.phrase)];const value=phrase[0]+' — '+phrase[1];if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>cp.textContent='Нусхабардорӣ шуд').catch(()=>alert(value));else alert(value)}
 });
