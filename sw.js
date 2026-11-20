@@ -1,5 +1,5 @@
-const CACHE_NAME='shohin-lugat-v5';
-const CORE=['./','./index.html','./dictionary/words.json','./assets/stories/nightingale.svg','./assets/stories/devoted-friend.svg'];
+const CACHE_NAME='shohin-lugat-v6';
+const CORE=['./','./index.html','./learning-tools.js','./dictionary/words.json','./assets/stories/nightingale.svg','./assets/stories/devoted-friend.svg'];
 const REMOTE_IMAGES=["https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80","https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80"];
 self.addEventListener('install',event=>{
  event.waitUntil((async()=>{
