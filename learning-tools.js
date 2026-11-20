@@ -33,7 +33,7 @@ const businessGroups=[
 {title:'Резюме / CV',en:'CV and resume',items:[['Work experience','Таҷрибаи корӣ'],['Education','Маълумот / таҳсил'],['Skills','Малакаҳо'],['Languages','Забонҳо'],['References available upon request.','Маълумотномаҳо бо дархост пешниҳод мешаванд.'],['I have experience in customer service.','Ман дар хизматрасонӣ ба мизоҷон таҷриба дорам.']]},
 {title:'Почтаи корӣ',en:'Business email',items:[['Dear Hiring Manager,','Муҳтарам роҳбари шуъбаи кадрҳо,'],['I am writing to apply for the position.','Ман барои дархости ин вазифа мактуб менависам.'],['Please find my CV attached.','Лутфан, резюмеи маро дар замима бинед.'],['Thank you for your consideration.','Барои баррасии дархости ман ташаккур.'],['I look forward to hearing from you.','Интизори ҷавоби шумо ҳастам.'],['Kind regards,','Бо эҳтиром,']]}
 ];
-let page='',phraseIndex=-1,businessIndex=-1,exerciseIndex=0,tokenList=[],selected=[],translationDirection=0;
+let page='',phraseIndex=-1,businessIndex=-1,exerciseIndex=0,tokenList=[],selected=[],translationDirection=0,builderScore=0,builderCompleted=[];
 const content=()=> $('learningToolsContent');
 function speak(s){if(!('speechSynthesis'in window)){alert('Ин дастгоҳ имконияти шунидани овозро дастгирӣ намекунад.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(s);u.lang='en-US';speechSynthesis.speak(u)}
 function card(title,sub,index,attr){return '<button class="learningCard" type="button" data-'+attr+'="'+index+'"><strong>'+esc(title)+'</strong><span>'+esc(sub)+'</span></button>'}
@@ -47,7 +47,7 @@ function openPage(name){
  const titles={phrasebook:'Ибораҳои омода',builder:'Сохтани ҷумлаҳо',translate:'Тарҷумаи ҷумлаҳо',numbers:'Рақамҳо ва санаҳо',business:'Забони англисии корӣ'};
  $('learningToolsTitle').textContent=titles[name];
  if(name==='phrasebook'){phraseIndex=-1;renderPhrases()}
- if(name==='builder'){exerciseIndex=0;renderBuilder()}
+ if(name==='builder'){exerciseIndex=0;builderScore=0;builderCompleted=[];renderBuilder()}
  if(name==='translate'){translationDirection=0;renderTranslations()}
  if(name==='numbers')renderNumbers()
  if(name==='business'){businessIndex=-1;renderBusiness()}
@@ -61,10 +61,12 @@ function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor
 function norm(s){return String(s).toLowerCase().replace(/[.!?,;:’']/g,'').replace(/\s+/g,' ').trim()}
 function renderBuilder(){
  const p=exercises[exerciseIndex];tokenList=shuffle(p[0].split(' '));selected=[];
- content().innerHTML='<p style="color:var(--muted);line-height:1.7">Калимаҳоро бо тартиби дуруст интихоб карда, ҷумлаи англисӣ созед.</p><div class="meta">Машқи '+(exerciseIndex+1)+' из '+exercises.length+'</div><div class="panel" style="margin:12px 0"><strong style="color:var(--gold)">Тоҷикӣ</strong><p>'+esc(p[1])+'</p></div><strong>Ҷумлаи шумо</strong><div class="learningAnswer" id="builderAnswer"></div><div class="learningLine" id="builderTokens">'+tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'">'+esc(w)+'</button>').join('')+'</div><div class="learningLine"><button class="promoAction" type="button" data-check>Санҷидан</button><button class="learningToken" type="button" data-reset>Аз нав оғоз кардан</button><button class="learningToken" type="button" data-next>Машқи навбатӣ</button></div><div id="builderResult" aria-live="polite"></div>';
+ const progress=Math.round(builderCompleted.length/exercises.length*100);
+ content().innerHTML='<p style="color:var(--muted);line-height:1.7">Калимаҳоро бо тартиби дуруст интихоб кунед ва аз онҳо ҷумлаи англисӣ созед. Барои хориҷ кардани калима ба худи он дар қисми ҷавоб пахш кунед.</p><div class="builderTop"><span class="builderStat">Машқи '+(exerciseIndex+1)+' аз '+exercises.length+'</span><span class="builderStat">Ҷавобҳои дуруст: <b id="builderScore">'+builderScore+'</b></span></div><div class="builderProgress"><span id="builderProgressFill" style="width:'+progress+'%"></span></div><div class="panel" style="margin:12px 0"><strong style="color:var(--gold)">Тарҷума ба тоҷикӣ</strong><p class="builderPrompt">'+esc(p[1])+'</p></div><div class="builderTop"><strong>Ҷумлаи англисии шумо</strong><span class="builderStat" id="builderWordCount">0 аз '+tokenList.length+' калима</span></div><div class="learningAnswer" id="builderAnswer"><span class="builderStat">Калимаҳоро аз поён интихоб кунед…</span></div><div class="learningLine" id="builderTokens">'+tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'">'+esc(w)+'</button>').join('')+'</div><div class="builderActions"><button class="builderPrimary" type="button" data-check>Санҷидани ҷавоб</button><button class="learningToken" type="button" data-hint>Кӯмак</button><button class="learningToken" type="button" data-reset>Аз нав</button><button class="learningToken" type="button" data-next>Ҷумлаи навбатӣ →</button></div><div id="builderResult" aria-live="polite"></div>';
 }
 function updateBuilder(){
- $('builderAnswer').innerHTML=selected.map(i=>'<button class="learningToken" type="button" data-remove="'+i+'">'+esc(tokenList[i])+' ×</button>').join('');
+ $('builderAnswer').innerHTML=selected.length?selected.map(i=>'<button class="learningToken" type="button" data-remove="'+i+'" title="Барои хориҷ кардан пахш кунед">'+esc(tokenList[i])+' ×</button>').join(''):'<span class="builderStat">Калимаҳоро аз поён интихоб кунед…</span>';
+ $('builderWordCount').textContent=selected.length+' аз '+tokenList.length+' калима';
  const used=new Set(selected);
  $('builderTokens').innerHTML=tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'" '+(used.has(i)?'disabled':'')+'>'+esc(w)+'</button>').join('');
 }
@@ -109,7 +111,15 @@ content().addEventШуниданer('click',e=>{
  b=e.target.closest('[data-business-speak]');if(b){speak(businessGroups[businessIndex].items[+b.dataset.businessSpeak][0]);return}
  b=e.target.closest('[data-token]');if(b){const i=+b.dataset.token;if(!selected.includes(i)){selected.push(i);updateBuilder()}return}
  b=e.target.closest('[data-remove]');if(b){selected=selected.filter(i=>i!==+b.dataset.remove);updateBuilder();return}
- if(e.target.closest('[data-check]')){const answer=selected.map(i=>tokenList[i]).join(' '),correct=exercises[exerciseIndex][0];$('builderResult').innerHTML='<div class="learningResult">'+(norm(answer)===norm(correct)?'Офарин! Ҷумла дуруст тартиб дода шудааст.':'Ҳоло дуруст нест. Бори дигар кӯшиш кунед.')+'<br><b>Ҷавоби дуруст:</b> '+esc(correct)+'</div>';return}
+ if(e.target.closest('[data-check]')){
+ const answer=selected.map(i=>tokenList[i]).join(' '),correct=exercises[exerciseIndex][0],ok=norm(answer)===norm(correct);
+ if(ok&&!builderCompleted.includes(exerciseIndex)){builderCompleted.push(exerciseIndex);builderScore++}
+ $('builderScore').textContent=builderScore;
+ $('builderProgressFill').style.width=Math.round(builderCompleted.length/exercises.length*100)+'%';
+ $('builderResult').innerHTML='<div class="builderFeedback '+(ok?'good':'try')+'">'+(ok?'Офарин! Ҷумла дуруст сохта шуд.':'Ҳоло ҷавоб дуруст нест. Калимаҳоро аз нав тартиб диҳед ва кӯшиш кунед.')+(ok?'':'<br><b>Ҷавоби дуруст:</b> '+esc(correct))+'</div>';
+ return
+ }
+ if(e.target.closest('[data-hint]')){const correct=exercises[exerciseIndex][0].split(' '),used=new Set(selected);const next=correct.find(w=>{const idx=tokenList.findIndex((t,i)=>t===w&&!used.has(i));return idx>=0});if(next){const idx=tokenList.findIndex((t,i)=>t===next&&!used.has(i));selected.push(idx);updateBuilder()}return}
  if(e.target.closest('[data-reset]')){selected=[];updateBuilder();$('builderResult').innerHTML='';return}
  if(e.target.closest('[data-next]')){exerciseIndex=(exerciseIndex+1)%exercises.length;renderBuilder();return}
  b=e.target.closest('[data-direction]');if(b){translationDirection=+b.dataset.direction;updateTranslations();return}
