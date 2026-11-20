@@ -12,14 +12,14 @@ android {
         applicationId = "tj.shohin.lughat"
         minSdk = 23
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 4
+        versionName = "1.0.3"
     }
 
     buildTypes {
         getByName("release") {
             // Temporary signing for direct APK installation.
-            // Replace with a private, persistent release keystore before publishing updates.
+            // A persistent private release keystore is required for seamless future updates.
             signingConfig = signingConfigs.getByName("debug")
         }
     }
