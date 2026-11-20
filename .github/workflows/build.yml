@@ -16,6 +16,9 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
+      - name: Validate learning tools JavaScript
+        run: node --check learning-tools.js
+
       - name: Prepare complete offline dictionary
         run: python3 tools/prepare_dictionary.py
 
