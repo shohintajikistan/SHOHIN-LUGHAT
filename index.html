@@ -253,6 +253,7 @@ $('words').addEventListener('click',e=>{
  const sp=e.target.closest('button[data-speak]');if(sp&&'speechSynthesis'in window){speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(sp.dataset.speak);u.lang='en-US';speechSynthesis.speak(u)}
 });
 fetch('./dictionary/words.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(rows=>{if(!Array.isArray(rows))throw Error('Invalid dictionary');data=rows;render()}).catch(()=>{$('count').textContent='Ошибка';$('words').innerHTML='<div class="state">Не удалось загрузить словарь для веб-просмотра.</div>'});
+if('serviceWorker'in navigator&&location.protocol==='https:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script>
 <script>
 (function(){
