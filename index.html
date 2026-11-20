@@ -55,7 +55,7 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 .builderFeedback.try{border-color:#9b7b3e;color:#f0d58f}@media(max-width:600px){.learningGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}\n.settingsPanel{margin-top:14px}.learningCard[aria-pressed="true"]{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset}\n</style></head>
 <body><main class="wrap">
 <header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Кушодани меню" aria-expanded="false" title="Менюи SHOHIN"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Саҳифаи асосӣ</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="lugatOpen">📖 Луғатҳо</button><button id="phrasebookOpen">🗣️ Ибораҳои омода</button><button id="builderOpen">🧩 Сохтани ҷумла</button><button id="translateOpen">⇄ Тарҷумаи ҷумлаҳо</button><button id="numbersOpen">🔢 Рақамҳо ва санаҳо</button><button id="businessOpen">💼 Забони англисии корӣ</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">ТОҶИКИСТОН · ВОСИТАҲОИ ЗАБОНӢ</div></div><div class="brandEmblem" role="img" aria-label="Логотип SHOHIN — золотая корона и семь звёзд"><img src="assets/shohin-crown.png" alt="Золотая корона SHOHIN с семью звёздами"></div><div class="topSearch" id="topSearch"><input id="q" autocomplete="off" placeholder="Калимаи англисӣ ё тоҷикиро ҷустуҷӯ кунед..." aria-label="Ҷустуҷӯи калимаҳои англисӣ ва тоҷикӣ" hidden><button class="searchIcon" id="searchToggle" type="button" aria-label="Кушодани ҷустуҷӯ" title="Ҷустуҷӯ"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
-<section class="hero"><div><div class="eyebrow">ЛУҒАТ · АНГЛИСӢ ⇄ ТОҶИКӢ</div><h1>SHOHIN LUGHAT</h1><p>Луғати англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ. Ҷустуҷӯи калимаҳо ва тарҷумаҳо, рақамгузории калимаҳо ва рӯйхати мунтахаб.</p></div></section>
+
 <section class="panel" id="homeLearning" style="margin-top:18px"><div class="section" style="margin-top:0"><strong>Омӯзишро идома диҳед</strong><span>SHOHIN LUGHAT</span></div><div class="learningGrid"><button class="learningCard" type="button" id="quickTestOpen"><strong>✓ Санҷиши зуд</strong><span>Дониши худро санҷед</span></button><button class="learningCard" type="button" id="lastLessonOpen"><strong>▶ Дарси охирин</strong><span>Омӯзишро аз нав идома диҳед</span></button></div></section>
 <section class="homeStories" id="homeStories">
 <div class="section"><strong>Ҳикояҳои англисӣ</strong><span>English · Тоҷикӣ</span></div>
@@ -208,7 +208,39 @@ $('conversationLesson').addEventListener('click',e=>{
  const s=e.target.closest('[data-conv-speak]');if(s&&'speechSynthesis'in window){speechSynthesis.cancel();const phrase=conversationData[Number(s.dataset.topicIndex)].items[Number(s.dataset.convSpeak)][0];const u=new SpeechSynthesisUtterance(phrase);u.lang='en-US';speechSynthesis.speak(u)}
  const cp=e.target.closest('[data-conv-copy]');if(cp){const phrase=conversationData[Number(cp.dataset.convCopy)].items[Number(cp.dataset.phrase)];const value=phrase[0]+' — '+phrase[1];if(navigator.clipboard?.writeText)navigator.clipboard.writeText(value).then(()=>cp.textContent='Нусхабардорӣ шуд').catch(()=>alert(value));else alert(value)}
 });
-function showPage(page){currentPage=page;menuDone();$('menuToggle').setAttribute('aria-expanded','false');['conversationSection','storiesSection','myAppsSection','learningToolsSection'].forEach(id=>$(id).hidden=true);$('homeStories').hidden=page!=='home';const isDictionary=page==='lugat';$('words').hidden=!isDictionary;$('dictionaryHeading').hidden=!isDictionary;$('topSearch').hidden=!isDictionary;$('q').hidden=true;$('q').value='';if(page==='conversation'){$('conversationSection').hidden=false;renderConversationTopics();}if(page==='stories'){$('storiesSection').hidden=false;renderStories();}if(page==='apps')$('myAppsSection').hidden=false;showFavs=false;if(isDictionary){$('sectionTitle').textContent='Луғат';render()}else{$('words').innerHTML='';$('count').textContent=''}window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'})}
+function showPage(page){
+ currentPage=page;
+ menuDone();
+ $('menuToggle').setAttribute('aria-expanded','false');
+ $('homeLearning').hidden=page!=='home';
+ $('homeStories').hidden=page!=='home';
+ ['conversationSection','storiesSection','myAppsSection','learningToolsSection'].forEach(id=>$(id).hidden=true);
+ $('words').hidden=true;
+ $('dictionaryHeading').hidden=true;
+ $('topSearch').hidden=page!=='lugat';
+ $('q').hidden=true;
+ $('q').value='';
+ showFavs=false;
+ if(page==='conversation'){
+  $('conversationSection').hidden=false;
+  renderConversationTopics();
+ }
+ if(page==='stories'){
+  $('storiesSection').hidden=false;
+  renderStories();
+ }
+ if(page==='apps')$('myAppsSection').hidden=false;
+ if(page==='lugat'){
+  $('words').hidden=false;
+  $('dictionaryHeading').hidden=false;
+  $('sectionTitle').textContent='Луғат';
+  render();
+ }else{
+  $('words').innerHTML='';
+  $('count').textContent='';
+ }
+ window.scrollTo({top:0,behavior:motionOK?'smooth':'auto'});
+}
 $('homeOpen').addEventListener('click',()=>showPage('home'));
 $('lugatOpen').addEventListener('click',()=>showPage('lugat'));
 $('conversationOpen').addEventListener('click',()=>showPage('conversation'));
