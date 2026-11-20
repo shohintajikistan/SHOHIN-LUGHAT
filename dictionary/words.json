@@ -47237,5 +47237,26 @@
     "en": "comprehension passage question",
     "tg": "саволи матни фаҳмиш",
     "source": "SHOHIN editorial batch 014"
+  },
+  {
+    "en": "groceries",
+    "tg": "маҳсулоти хӯрокворӣ",
+    "category": "food",
+    "source": "SHOHIN editorial batch 009",
+    "number": 7316
+  },
+  {
+    "en": "vegetables",
+    "tg": "сабзавот",
+    "category": "food",
+    "source": "SHOHIN editorial batch 009",
+    "number": 7317
+  },
+  {
+    "en": "riverbank",
+    "tg": "соҳили дарё",
+    "category": "nature",
+    "source": "SHOHIN editorial batch 009",
+    "number": 7318
   }
 ]
