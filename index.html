@@ -248,17 +248,32 @@ $('privacyClose').addEventListener('click',()=> $('policyBackdrop').classList.re
 $('policyBackdrop').addEventListener('click',e=>{if(e.target.id==='policyBackdrop')e.currentTarget.classList.remove('open')});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function setDirection(d){dir=d;render()}
+let dictionaryRenderId=0;
 function render(){
  if(!$('conversationSection').hidden)return;
- if(currentPage!=='lugat'){$('words').hidden=true;$('dictionaryHeading').hidden=true;$('words').innerHTML='';return}
+ if(currentPage!=='lugat'){$('words').hidden=true;$('dictionaryHeading').hidden=true;$('words').innerHTML='';dictionaryRenderId++;return}
  $('words').hidden=false;$('dictionaryHeading').hidden=false;
- const rawQuery=$('q').value.trim();
- const q=rawQuery.toLocaleLowerCase();
+ const q=$('q').value.trim().toLocaleLowerCase();
  $('sectionTitle').textContent=showFavs?'Мунтахаб':'Луғат';
-  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
+ const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
  $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('tg-TJ')+' калима';
- $('words').innerHTML=list.length?list.map(x=>'<article class="word reveal"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Нусхабардорӣ</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Шунидан</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Мунтахаб">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ҳеҷ натиҷа ёфт нашуд. Калимаи дигарро ҷустуҷӯ кунед.</div>';
- revealWords();
+ const renderId=++dictionaryRenderId;
+ $('words').innerHTML='';
+ if(!list.length){$('words').innerHTML='<div class="state">Ҳеҷ натиҷа ёфт нашуд. Калимаи дигарро ҷустуҷӯ кунед.</div>';return}
+ let cursor=0;
+ const batchSize=180;
+ function appendBatch(){
+  if(renderId!==dictionaryRenderId||currentPage!=='lugat')return;
+  const batch=list.slice(cursor,cursor+batchSize);
+  const holder=document.createElement('div');
+  holder.innerHTML=batch.map(x=>'<article class="word"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Нусхабардорӣ</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Шунидан</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Мунтахаб">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join('');
+  const fragment=document.createDocumentFragment();
+  while(holder.firstChild)fragment.appendChild(holder.firstChild);
+  $('words').appendChild(fragment);
+  cursor+=batch.length;
+  if(cursor<list.length)requestAnimationFrame(appendBatch);
+ }
+ appendBatch();
 }
 $('q').addEventListener('input',render);renderHomeStories();$('topSearch').hidden=true;showPage('home');
 const clearSearch=$('clear');if(clearSearch)clearSearch.addEventListener('click',()=>{$('q').value='';showFavs=false;render()});
