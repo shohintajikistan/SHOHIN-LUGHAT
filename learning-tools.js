@@ -52,6 +52,24 @@ const quizSets=[
 {q:'Кадом ҷумлаҳо аз ҷиҳати грамматика дурустанд? Ҳамаи ҷавобҳои дурустро интихоб кунед.',type:'multi',opts:["She doesn't like coffee.","He don't play football.","We are watching TV.","They is happy."],a:[0,2],why:["Doesn't бо феъли асосии like дуруст аст.","Бо he шакли doesn't лозим аст.","Are watching шакли дурусти Present Continuous аст.","Бо they шакли are истифода мешавад."],hint:'Мувофиқати феълро бо ҷонишин санҷед.'},
 {q:'Дар ҷумлаи «I have never been to London», калимаи «never» маънои «ҳеҷ гоҳ»-ро дорад.',type:'tf',opts:['Дуруст','Нодуруст'],a:[0],why:['Never маънои ҳеҷ гоҳро дорад.','Never воқеан маънои ҳеҷ гоҳро дорад.'],hint:'Ин калима рух надодани амалро ифода мекунад.'},
 {q:'Дар ҷумлаи «She is more taller than her sister», шакли муқоисавӣ дуруст сохта шудааст.',type:'tf',opts:['Дуруст','Нодуруст'],a:[1],why:['More taller нодуруст аст; taller аллакай шакли муқоисавӣ мебошад.','Дуруст: «She is taller than her sister».'],hint:'More ва пасванди -er-ро якҷоя истифода накунед.'}
+]},
+{title:'Санҷиши 3 · Грамматика',questions:[
+{q:'Ҷойи холиро пур кунед: ___ you speak English?',type:'single',opts:['Do','Does','Are','Is'],a:[0],why:['Do бо you барои сохтани савол дар Present Simple истифода мешавад.','Does бо he, she, it меояд.','Are бо феъли асосии speak дар ин сохтор намеояд.','Is барои you истифода намешавад.'],hint:'Ба ҷонишини you ва замони Present Simple диққат диҳед.'},
+{q:'Шакли гузаштаи феъли «buy» кадом аст?',type:'single',opts:['Buyed','Bought','Buying','Buys'],a:[1],why:['Buyed шакли дурусти ин феъли бенизом нест.','Bought шакли Past Simple-и buy аст.','Buying шакли -ing мебошад.','Buys шакли Present Simple барои шахси сеюми танҳо аст.'],hint:'Ин феъл дар гурӯҳи феълҳои бенизом аст.'},
+{q:'Ҷойи холиро пур кунед: There ___ two books on the table.',type:'single',opts:['is','am','are','be'],a:[2],why:['Is бо исми танҳо истифода мешавад.','Am танҳо бо I меояд.','Two books ҷамъ аст, бинобар ин are дуруст аст.','Be дар ин ҷумла шакли мустақил нест.'],hint:'Ба шумораи books диққат диҳед.'},
+{q:'Кадом ибора барои гуфтани «соати ҳафт» дуруст аст?',type:'single',opts:['In seven o’clock','At seven o’clock','On seven o’clock','By seven o’clock'],a:[1],why:['In бо вақти дақиқи соат истифода намешавад.','At seven o’clock вақти дақиқро нишон медиҳад.','On одатан бо рӯз ва сана меояд.','By маънои то он вақтро дорад, на вақти дақиқи оғозро.'],hint:'Пешоянди маъмули вақти дақиқро ба ёд оред.'},
+{q:'Кадом ҷумлаҳо дурустанд? Ҳамаи ҷавобҳои дурустро интихоб кунед.',type:'multi',opts:['I went to school yesterday.','She can swims well.','They were at home.','He have a new phone.'],a:[0,2],why:['Went шакли гузаштаи go аст ва ҷумла дуруст аст.','Пас аз can феъли асосӣ бе -s меояд: swim.','Were бо they дуруст истифода шудааст.','Бо he шакли has лозим аст, на have.'],hint:'Ба замони феъл ва мувофиқати он бо ҷонишин нигоҳ кунед.'},
+{q:'Дар ҷумлаи «We are studying now», феъли ёрирасон «are» бо ҷонишини «we» мувофиқ аст.',type:'tf',opts:['Дуруст','Нодуруст'],a:[0],why:['Are бо we истифода мешавад ва шакли Present Continuous дуруст сохта шудааст.','Are бо we мувофиқ аст; бинобар ин ин изҳорот дуруст мебошад.'],hint:'Шаклҳои am, is ва are-ро бо ҷонишинҳо муқоиса кунед.'},
+{q:'Дар ҷумлаи «He doesn’t likes tea» феъли likes дуруст истифода шудааст.',type:'tf',opts:['Дуруст','Нодуруст'],a:[1],why:['Пас аз doesn’t феъли асосӣ бе -s меояд: He doesn’t like tea.','Шакли дуруст like аст, зеро does аллакай аломати шахси сеюми танҳо мебошад.'],hint:'Пас аз doesn’t ба шакли асосии феъл диққат диҳед.'}
+]},
+{title:'Санҷиши 4 · Луғат ва муошират',questions:[
+{q:'Калимаи «Borrow» чӣ маъно дорад?',type:'single',opts:['Қарз гирифтан','Қарз додан','Харидан','Фурӯхтан'],a:[0],why:['Borrow маънои муваққатан чизеро гирифтанро дорад.','Қарз додан — lend.','Харидан — buy.','Фурӯхтан — sell.'],hint:'Фарқи borrow ва lend-ро ба ёд оред.'},
+{q:'Ҷумлаи «Could you help me?» чӣ маъно дорад?',type:'single',opts:['Шумо маро мешиносед?','Метавонед ба ман ёрӣ диҳед?','Шумо куҷо меравед?','Оё ман метавонам равам?'],a:[1],why:['Ин савол дар бораи шинохтан нест.','Could you help me? дархости кӯмак аст.','Ин дар бораи самти ҳаракат нест.','Ин иҷозати рафтанро намепурсад.'],hint:'Ин ибора одатан ҳамчун дархости боадабона истифода мешавад.'},
+{q:'Кадом калима маънои «ҳамсоя»-ро дорад?',type:'single',opts:['Customer','Neighbour','Colleague','Passenger'],a:[1],why:['Customer — харидор ё муштарӣ.','Neighbour — шахсе, ки дар наздикии шумо зиндагӣ мекунад.','Colleague — ҳамкор.','Passenger — мусофир.'],hint:'Ин шахс дар хона ё бинои наздики шумо зиндагӣ мекунад.'},
+{q:'«I’m looking forward to meeting you» чӣ маъно дорад?',type:'single',opts:['Ман аз вохӯрӣ метарсам','Ман интизори вохӯрӣ бо шумо ҳастам','Ман шуморо аллакай дидам','Ман вохӯриро бекор мекунам'],a:[1],why:['Looking forward маънои интизори хушҳолона буданро дорад.','Ин ибора интизори вохӯрӣ буданро мефаҳмонад.','Ҷумла дар бораи вохӯрии гузашта нест.','Дар ҷумла бекор кардани вохӯрӣ гуфта нашудааст.'],hint:'Ибораи looking forward to эҳсоси интизории мусбатро мерасонад.'},
+{q:'Кадом калимаҳо ба мавзӯи ҷойҳои корӣ тааллуқ доранд? Ҳамаи ҷавобҳои дурустро интихоб кунед.',type:'multi',opts:['Salary','Interview','Pillow','Employer'],a:[0,1,3],why:['Salary маош аст ва ба кор вобаста мебошад.','Interview мусоҳиба аст, аз ҷумла мусоҳибаи корӣ.','Pillow болишт аст ва истилоҳи корӣ нест.','Employer корфармо мебошад.'],hint:'Калимаҳоеро интихоб кунед, ки ба кор ва муносибати корӣ дахл доранд.'},
+{q:'«Receipt» маънои расиди пардохтро дорад.',type:'tf',opts:['Дуруст','Нодуруст'],a:[0],why:['Receipt ҳуҷҷатест, ки пардохт ё харидро тасдиқ мекунад.','Receipt воқеан расиди пардохт ё харид аст.'],hint:'Одатан пас аз харид дар мағоза онро мегиред.'},
+{q:'Калимаи «Quiet» маънои «пурғавғо»-ро дорад.',type:'tf',opts:['Дуруст','Нодуруст'],a:[1],why:['Quiet маънои ором ё беғавғоро дорад; пурғавғо — noisy.','Quiet баръакси noisy аст ва маънои оромро дорад.'],hint:'Муқобили калимаи noisy-ро ба ёд оред.'}
 ]}
 ];
 let activeQuizSet=0,quizIndex=0,quizPicks=[],quizSubmitted=false,quizScore=0;
@@ -78,6 +96,12 @@ function openLastLesson(){
 
 let page='',phraseIndex=-1,businessIndex=-1,exerciseIndex=0,tokenList=[],selected=[],translationDirection=0,builderScore=0,builderCompleted=[];
 const content=()=> $('learningToolsContent');
+document.addEventListener('click',e=>{
+ const quick=e.target.closest('#quickTestOpen');
+ const lesson=e.target.closest('#lastLessonOpen');
+ if(quick){e.preventDefault();openPage('quicktest');}
+ else if(lesson){e.preventDefault();openPage('lastlesson');}
+},true);
 function speak(s){if(!('speechSynthesis'in window)){alert('Ин дастгоҳ имконияти шунидани овозро дастгирӣ намекунад.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(s);u.lang='en-US';speechSynthesis.speak(u)}
 function card(title,sub,index,attr){return '<button class="learningCard" type="button" data-'+attr+'="'+index+'"><strong>'+esc(title)+'</strong><span>'+esc(sub)+'</span></button>'}
 function openPage(name){
@@ -146,8 +170,7 @@ $('builderOpen').addEventListener('click',()=>openPage('builder'));
 $('translateOpen').addEventListener('click',()=>openPage('translate'));
 $('numbersOpen').addEventListener('click',()=>openPage('numbers'));
 $('businessOpen').addEventListener('click',()=>openPage('business'));
-$('quickTestOpen').addEventListener('click',()=>openPage('quicktest'));
-$('lastLessonOpen').addEventListener('click',()=>openPage('lastlesson'));
+
 $('learningToolsBack').addEventListener('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
 content().addEventListener('click',e=>{
  let qb=e.target.closest('[data-quiz-set]');if(qb){openQuizSet(+qb.dataset.quizSet);return}
