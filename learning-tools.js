@@ -35,7 +35,7 @@ const businessGroups=[
 ];
 let page='',phraseIndex=-1,businessIndex=-1,exerciseIndex=0,tokenList=[],selected=[],translationDirection=0;
 const content=()=> $('learningToolsContent');
-function speak(s){if(!('speechSynthesis'in window)){alert('Овоздиҳӣ дар ин дастгоҳ дастгирӣ намешавад.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(s);u.lang='en-US';speechSynthesis.speak(u)}
+function speak(s){if(!('speechSynthesis'in window)){alert('Ин дастгоҳ имконияти шунидани овозро дастгирӣ намекунад.');return}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(s);u.lang='en-US';speechSynthesis.speak(u)}
 function card(title,sub,index,attr){return '<button class="learningCard" type="button" data-'+attr+'="'+index+'"><strong>'+esc(title)+'</strong><span>'+esc(sub)+'</span></button>'}
 function openPage(name){
  if(typeof showPage==='function')showPage('home');
@@ -44,7 +44,7 @@ function openPage(name){
  $('words').hidden=true;$('dictionaryHeading').hidden=true;$('topSearch').hidden=true;
  $('learningToolsSection').hidden=false;
  page=name;
- const titles={phrasebook:'Фразовый справочник',builder:'Построение предложений',translate:'Перевод предложений',numbers:'Числа и даты',business:'Деловой английский'};
+ const titles={phrasebook:'Ибораҳои омода',builder:'Сохтани ҷумлаҳо',translate:'Тарҷумаи ҷумлаҳо',numbers:'Рақамҳо ва санаҳо',business:'Забони англисии корӣ'};
  $('learningToolsTitle').textContent=titles[name];
  if(name==='phrasebook'){phraseIndex=-1;renderPhrases()}
  if(name==='builder'){exerciseIndex=0;renderBuilder()}
@@ -53,15 +53,15 @@ function openPage(name){
  if(name==='business'){businessIndex=-1;renderBusiness()}
 }
 function renderPhrases(){
- if(phraseIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Выберите ситуацию. В каждом разделе есть готовые выражения с таджикским переводом.</p><div class="learningGrid">'+phraseGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' выражений',i,'phrase-category')).join('')+'</div>';return}
+ if(phraseIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Вазъиятро интихоб кунед. Дар ҳар бахш ибораҳои омода бо тарҷумаи тоҷикӣ мавҷуданд.</p><div class="learningGrid">'+phraseGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' ибора',i,'phrase-category')).join('')+'</div>';return}
  const g=phraseGroups[phraseIndex];
- content().innerHTML='<button class="learningToken" data-phrase-back type="button">← Все ситуации</button><div class="section"><strong>'+esc(g.title)+'</strong><span>'+esc(g.en)+'</span></div>'+g.items.map((p,i)=>'<div class="learningPhrase"><strong>'+esc(p[0])+'</strong><p>'+esc(p[1])+'</p><button class="learningToken" data-phrase-speak="'+i+'" type="button">🔊 Слушать</button></div>').join('');
+ content().innerHTML='<button class="learningToken" data-phrase-back type="button">← Ҳамаи вазъиятҳо</button><div class="section"><strong>'+esc(g.title)+'</strong><span>'+esc(g.en)+'</span></div>'+g.items.map((p,i)=>'<div class="learningPhrase"><strong>'+esc(p[0])+'</strong><p>'+esc(p[1])+'</p><button class="learningToken" data-phrase-speak="'+i+'" type="button">🔊 Шунидан</button></div>').join('');
 }
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function norm(s){return String(s).toLowerCase().replace(/[.!?,;:’']/g,'').replace(/\s+/g,' ').trim()}
 function renderBuilder(){
  const p=exercises[exerciseIndex];tokenList=shuffle(p[0].split(' '));selected=[];
- content().innerHTML='<p style="color:var(--muted);line-height:1.7">Выберите слова в правильном порядке, чтобы составить английское предложение.</p><div class="meta">Упражнение '+(exerciseIndex+1)+' из '+exercises.length+'</div><div class="panel" style="margin:12px 0"><strong style="color:var(--gold)">Тоҷикӣ</strong><p>'+esc(p[1])+'</p></div><strong>Ваше предложение</strong><div class="learningAnswer" id="builderAnswer"></div><div class="learningLine" id="builderTokens">'+tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'">'+esc(w)+'</button>').join('')+'</div><div class="learningLine"><button class="promoAction" type="button" data-check>Проверить</button><button class="learningToken" type="button" data-reset>Сбросить</button><button class="learningToken" type="button" data-next>Следующее</button></div><div id="builderResult" aria-live="polite"></div>';
+ content().innerHTML='<p style="color:var(--muted);line-height:1.7">Калимаҳоро бо тартиби дуруст интихоб карда, ҷумлаи англисӣ созед.</p><div class="meta">Машқи '+(exerciseIndex+1)+' из '+exercises.length+'</div><div class="panel" style="margin:12px 0"><strong style="color:var(--gold)">Тоҷикӣ</strong><p>'+esc(p[1])+'</p></div><strong>Ҷумлаи шумо</strong><div class="learningAnswer" id="builderAnswer"></div><div class="learningLine" id="builderTokens">'+tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'">'+esc(w)+'</button>').join('')+'</div><div class="learningLine"><button class="promoAction" type="button" data-check>Санҷидан</button><button class="learningToken" type="button" data-reset>Аз нав оғоз кардан</button><button class="learningToken" type="button" data-next>Машқи навбатӣ</button></div><div id="builderResult" aria-live="polite"></div>';
 }
 function updateBuilder(){
  $('builderAnswer').innerHTML=selected.map(i=>'<button class="learningToken" type="button" data-remove="'+i+'">'+esc(tokenList[i])+' ×</button>').join('');
@@ -69,13 +69,13 @@ function updateBuilder(){
  $('builderTokens').innerHTML=tokenList.map((w,i)=>'<button class="learningToken" type="button" data-token="'+i+'" '+(used.has(i)?'disabled':'')+'>'+esc(w)+'</button>').join('');
 }
 function renderTranslations(){
- content().innerHTML='<p style="color:var(--muted);line-height:1.7">Офлайн-подборка предложений. Ищите по английскому или таджикскому тексту; это не автоматический перевод любого произвольного текста.</p><input class="learningInput" id="translationSearch" placeholder="Поиск предложения / Ҷустуҷӯ..." autocomplete="off"><div class="learningLine"><button class="learningToken" data-direction="0" type="button">English → Тоҷикӣ</button><button class="learningToken" data-direction="1" type="button">Тоҷикӣ → English</button></div><div id="translationResults"></div>';
+ content().innerHTML='<p style="color:var(--muted);line-height:1.7">Маҷмӯаи офлайнии ҷумлаҳо. Ҷустуҷӯро бо матни англисӣ ё тоҷикӣ анҷом диҳед. Ин восита тарҷумаи худкори ҳар гуна матнро иҷро намекунад.</p><input class="learningInput" id="translationSearch" placeholder="Ҷустуҷӯи ҷумла..." autocomplete="off"><div class="learningLine"><button class="learningToken" data-direction="0" type="button">English → Тоҷикӣ</button><button class="learningToken" data-direction="1" type="button">Тоҷикӣ → English</button></div><div id="translationResults"></div>';
  updateTranslations();
 }
 function updateTranslations(){
  const q=($('translationSearch')?.value||'').trim().toLowerCase();
  const list=translations.filter(p=>!q||p[0].toLowerCase().includes(q)||p[1].toLowerCase().includes(q));
- $('translationResults').innerHTML=list.length?list.map(p=>'<div class="learningPhrase"><strong>'+esc(p[translationDirection])+'</strong><p>'+esc(p[1-translationDirection])+'</p><button class="learningToken" type="button" data-speak="'+esc(p[0])+'">🔊 Listen</button></div>').join(''):'<div class="state">Предложение не найдено. Попробуйте другой запрос.</div>';
+ $('translationResults').innerHTML=list.length?list.map(p=>'<div class="learningPhrase"><strong>'+esc(p[translationDirection])+'</strong><p>'+esc(p[1-translationDirection])+'</p><button class="learningToken" type="button" data-speak="'+esc(p[0])+'">🔊 Шунидан</button></div>').join(''):'<div class="state">Ҷумла ёфт нашуд. Калимаи дигарро ҷустуҷӯ кунед.</div>';
 }
 const ones=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
 const tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
@@ -83,24 +83,24 @@ function words(n){if(n<20)return ones[n];if(n<100)return tens[Math.floor(n/10)]+
 function renderNumbers(){
  const days=['Monday — Душанбе','Tuesday — Сешанбе','Wednesday — Чоршанбе','Thursday — Панҷшанбе','Friday — Ҷумъа','Saturday — Шанбе','Sunday — Якшанбе'];
  const months=['January — Январ','February — Феврал','March — Март','April — Апрел','May — Май','June — Июн','July — Июл','August — Август','September — Сентябр','October — Октябр','November — Ноябр','December — Декабр'];
- content().innerHTML='<p style="color:var(--muted);line-height:1.7">Введите число от 0 до 999999 или выберите время. Здесь также приведены дни недели и месяцы.</p><div class="panel"><label for="numberInput">Число / Number</label><input class="learningInput" id="numberInput" type="number" min="0" max="999999" placeholder="Например: 125"><div class="learningResult" id="numberResult">Результат появится здесь.</div></div><div class="panel" style="margin-top:12px"><label for="timeInput">Время / Time</label><input class="learningInput" id="timeInput" type="time" value="09:30"><div class="learningResult" id="timeResult"></div></div><div class="panel" style="margin-top:12px"><label for="dateInput">Дата / Date</label><input class="learningInput" id="dateInput" type="date"><div class="learningResult" id="dateResult">Выберите дату, чтобы увидеть её на английском.</div></div><div class="section"><strong>Дни недели / Days</strong></div><div class="learningGrid">'+days.map(x=>'<div class="learningCard"><span>'+esc(x)+'</span></div>').join('')+'</div><div class="section"><strong>Месяцы / Months</strong></div><div class="learningGrid">'+months.map(x=>'<div class="learningCard"><span>'+esc(x)+'</span></div>').join('')+'</div>';
+ content().innerHTML='<p style="color:var(--muted);line-height:1.7">Рақамеро аз 0 то 999999 ворид кунед ё вақтро интихоб намоед. Рӯзҳои ҳафта ва моҳҳои сол низ оварда шудаанд.</p><div class="panel"><label for="numberInput">Рақам / Number</label><input class="learningInput" id="numberInput" type="number" min="0" max="999999" placeholder="Масалан: 125"><div class="learningResult" id="numberResult">Натиҷа дар ин ҷо нишон дода мешавад.</div></div><div class="panel" style="margin-top:12px"><label for="timeInput">Вақт / Time</label><input class="learningInput" id="timeInput" type="time" value="09:30"><div class="learningResult" id="timeResult"></div></div><div class="panel" style="margin-top:12px"><label for="dateInput">Сана / Date</label><input class="learningInput" id="dateInput" type="date"><div class="learningResult" id="dateResult">Санаро интихоб кунед, то шакли англисии онро бинед.</div></div><div class="section"><strong>Рӯзҳои ҳафта / Days</strong></div><div class="learningGrid">'+days.map(x=>'<div class="learningCard"><span>'+esc(x)+'</span></div>').join('')+'</div><div class="section"><strong>Моҳҳои сол / Months</strong></div><div class="learningGrid">'+months.map(x=>'<div class="learningCard"><span>'+esc(x)+'</span></div>').join('')+'</div>';
  updateNumber();updateTime();
 }
 function ordinal(n){const o=['','first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth','sixteenth','seventeenth','eighteenth','nineteenth'];if(n<20)return o[n];if(n===20)return 'twentieth';if(n===30)return 'thirtieth';return words(Math.floor(n/10)*10)+'-'+ordinal(n%10)}
-function updateDate(){const el=$('dateInput');if(!el||!el.value)return;const d=new Date(el.value+'T12:00:00');if(Number.isNaN(d.getTime()))return;const months=['January','February','March','April','May','June','July','August','September','October','November','December'];const day=d.getDate(),year=d.getFullYear();$('dateResult').textContent='English: the '+ordinal(day)+' of '+months[d.getMonth()]+' '+words(year)+' · Тоҷикӣ: '+day+' '+months[d.getMonth()]+' '+year;}
-function updateNumber(){const el=$('numberInput');if(!el)return;const raw=el.value,n=Number(raw);$('numberResult').textContent=raw===''?'Результат появится здесь.':Number.isInteger(n)&&n>=0&&n<=999999?words(n):'Число должно быть от 0 до 999999.'}
+function updateDate(){const el=$('dateInput');if(!el||!el.value)return;const d=new Date(el.value+'T12:00:00');if(Number.isNaN(d.getTime()))return;const months=['January','February','March','April','May','June','July','August','September','October','November','December'];const day=d.getDate(),year=d.getFullYear();$('dateResult').textContent='Ба забони англисӣ: '+ordinal(day)+' of '+months[d.getMonth()]+' '+words(year)+' · Ба тоҷикӣ: '+day+' '+months[d.getMonth()]+' '+year;}
+function updateNumber(){const el=$('numberInput');if(!el)return;const raw=el.value,n=Number(raw);$('numberResult').textContent=raw===''?'Натиҷа дар ин ҷо нишон дода мешавад.':Number.isInteger(n)&&n>=0&&n<=999999?words(n):'Рақам бояд аз 0 то 999999 бошад.'}
 function updateTime(){const el=$('timeInput');if(!el)return;const a=el.value.split(':').map(Number);if(a.length!==2||a.some(Number.isNaN))return;const h=a[0],m=a[1],period=h<12?'a.m.':'p.m.',hour=h%12||12;let phrase=words(hour);if(m===15)phrase='quarter past '+words(hour);else if(m===30)phrase='half past '+words(hour);else if(m===45)phrase='quarter to '+words((hour%12)+1);else if(m>0&&m<30)phrase=words(m)+' past '+words(hour);else if(m>30)phrase=words(60-m)+' to '+words((hour%12)+1);else phrase+=" o'clock";$('timeResult').textContent=phrase+' '+period}
 function renderBusiness(){
- if(businessIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Фразы для общения на работе, собеседований, резюме и деловой переписки.</p><div class="learningGrid">'+businessGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' примеров',i,'business-category')).join('')+'</div>';return}
- const g=businessGroups[businessIndex];content().innerHTML='<button class="learningToken" type="button" data-business-back>← Все разделы</button><div class="section"><strong>'+esc(g.title)+'</strong><span>'+esc(g.en)+'</span></div>'+g.items.map((p,i)=>'<div class="learningPhrase"><strong>'+esc(p[0])+'</strong><p>'+esc(p[1])+'</p><button class="learningToken" type="button" data-business-speak="'+i+'">🔊 Слушать</button></div>').join('');
+ if(businessIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Ибораҳо барои муошират дар ҷойи кор, мусоҳибаи корӣ, тарҷумаи ҳол ва мукотибаи корӣ.</p><div class="learningGrid">'+businessGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' намуна',i,'business-category')).join('')+'</div>';return}
+ const g=businessGroups[businessIndex];content().innerHTML='<button class="learningToken" type="button" data-business-back>← Ҳамаи бахшҳо</button><div class="section"><strong>'+esc(g.title)+'</strong><span>'+esc(g.en)+'</span></div>'+g.items.map((p,i)=>'<div class="learningPhrase"><strong>'+esc(p[0])+'</strong><p>'+esc(p[1])+'</p><button class="learningToken" type="button" data-business-speak="'+i+'">🔊 Шунидан</button></div>').join('');
 }
-$('phrasebookOpen').addEventListener('click',()=>openPage('phrasebook'));
-$('builderOpen').addEventListener('click',()=>openPage('builder'));
-$('translateOpen').addEventListener('click',()=>openPage('translate'));
-$('numbersOpen').addEventListener('click',()=>openPage('numbers'));
-$('businessOpen').addEventListener('click',()=>openPage('business'));
-$('learningToolsBack').addEventListener('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
-content().addEventListener('click',e=>{
+$('phrasebookOpen').addEventШуниданer('click',()=>openPage('phrasebook'));
+$('builderOpen').addEventШуниданer('click',()=>openPage('builder'));
+$('translateOpen').addEventШуниданer('click',()=>openPage('translate'));
+$('numbersOpen').addEventШуниданer('click',()=>openPage('numbers'));
+$('businessOpen').addEventШуниданer('click',()=>openPage('business'));
+$('learningToolsBack').addEventШуниданer('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
+content().addEventШуниданer('click',e=>{
  let b=e.target.closest('[data-phrase-category]');if(b){phraseIndex=+b.dataset.phraseCategory;renderPhrases();return}
  if(e.target.closest('[data-phrase-back]')){phraseIndex=-1;renderPhrases();return}
  b=e.target.closest('[data-phrase-speak]');if(b){speak(phraseGroups[phraseIndex].items[+b.dataset.phraseSpeak][0]);return}
@@ -109,11 +109,11 @@ content().addEventListener('click',e=>{
  b=e.target.closest('[data-business-speak]');if(b){speak(businessGroups[businessIndex].items[+b.dataset.businessSpeak][0]);return}
  b=e.target.closest('[data-token]');if(b){const i=+b.dataset.token;if(!selected.includes(i)){selected.push(i);updateBuilder()}return}
  b=e.target.closest('[data-remove]');if(b){selected=selected.filter(i=>i!==+b.dataset.remove);updateBuilder();return}
- if(e.target.closest('[data-check]')){const answer=selected.map(i=>tokenList[i]).join(' '),correct=exercises[exerciseIndex][0];$('builderResult').innerHTML='<div class="learningResult">'+(norm(answer)===norm(correct)?'Верно! Предложение составлено правильно.':'Пока неверно. Попробуйте ещё раз.')+'<br><b>Правильный ответ:</b> '+esc(correct)+'</div>';return}
+ if(e.target.closest('[data-check]')){const answer=selected.map(i=>tokenList[i]).join(' '),correct=exercises[exerciseIndex][0];$('builderResult').innerHTML='<div class="learningResult">'+(norm(answer)===norm(correct)?'Офарин! Ҷумла дуруст тартиб дода шудааст.':'Ҳоло дуруст нест. Бори дигар кӯшиш кунед.')+'<br><b>Ҷавоби дуруст:</b> '+esc(correct)+'</div>';return}
  if(e.target.closest('[data-reset]')){selected=[];updateBuilder();$('builderResult').innerHTML='';return}
  if(e.target.closest('[data-next]')){exerciseIndex=(exerciseIndex+1)%exercises.length;renderBuilder();return}
  b=e.target.closest('[data-direction]');if(b){translationDirection=+b.dataset.direction;updateTranslations();return}
  b=e.target.closest('[data-speak]');if(b){speak(b.dataset.speak);return}
 });
-content().addEventListener('input',e=>{if(e.target.id==='translationSearch')updateTranslations();if(e.target.id==='numberInput')updateNumber();if(e.target.id==='timeInput')updateTime();if(e.target.id==='dateInput')updateDate()});
+content().addEventШуниданer('input',e=>{if(e.target.id==='translationSearch')updateTranslations();if(e.target.id==='numberInput')updateNumber();if(e.target.id==='timeInput')updateTime();if(e.target.id==='dateInput')updateDate()});
 })();
