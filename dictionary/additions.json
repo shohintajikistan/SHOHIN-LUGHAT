@@ -253,5 +253,131 @@
     "en": "marketplace",
     "tg": "бозор",
     "source": "A Basic Course in Tajik, Lesson Four"
+  },
+  {
+    "en": "groceries",
+    "tg": "маҳсулоти хӯрокворӣ",
+    "category": "food",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "vegetables",
+    "tg": "сабзавот",
+    "category": "food",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "receipt",
+    "tg": "расид; квитансия",
+    "category": "shopping",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "bus stop",
+    "tg": "истгоҳи автобус",
+    "category": "transport",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "train station",
+    "tg": "истгоҳи роҳи оҳан",
+    "category": "transport",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "traffic light",
+    "tg": "чароғак",
+    "category": "transport",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "appointment",
+    "tg": "вақти қабул; вохӯрии таъиншуда",
+    "category": "health",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "headache",
+    "tg": "дарди сар",
+    "category": "health",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "keyboard",
+    "tg": "клавиатура",
+    "category": "technology",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "charger",
+    "tg": "пуркунандаи барқ",
+    "category": "technology",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "password",
+    "tg": "рамзи махфӣ",
+    "category": "technology",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "engineer",
+    "tg": "муҳандис",
+    "category": "jobs",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "accountant",
+    "tg": "муҳосиб",
+    "category": "jobs",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "farmer",
+    "tg": "деҳқон",
+    "category": "jobs",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "forest",
+    "tg": "ҷангал",
+    "category": "nature",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "riverbank",
+    "tg": "соҳили дарё",
+    "category": "nature",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "customer",
+    "tg": "муштарӣ; харидор",
+    "category": "business",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "salary",
+    "tg": "маош",
+    "category": "business",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "luggage",
+    "tg": "бағоҷ",
+    "category": "travel",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "boarding pass",
+    "tg": "варақаи саворшавӣ",
+    "category": "travel",
+    "source": "SHOHIN editorial batch 009"
+  },
+  {
+    "en": "appointment letter",
+    "tg": "номаи таъинот",
+    "category": "work",
+    "source": "SHOHIN editorial batch 009"
   }
 ]
