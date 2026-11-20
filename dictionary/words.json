@@ -47241,22 +47241,79 @@
   {
     "en": "groceries",
     "tg": "маҳсулоти хӯрокворӣ",
-    "category": "food",
     "source": "SHOHIN editorial batch 009",
     "number": 7316
   },
   {
     "en": "vegetables",
     "tg": "сабзавот",
-    "category": "food",
     "source": "SHOHIN editorial batch 009",
     "number": 7317
   },
   {
     "en": "riverbank",
     "tg": "соҳили дарё",
-    "category": "nature",
     "source": "SHOHIN editorial batch 009",
     "number": 7318
+  },
+  {
+    "en": "boarding gate",
+    "tg": "дарвозаи саворшавӣ",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7319
+  },
+  {
+    "en": "railway carriage",
+    "tg": "вагони қатора",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7320
+  },
+  {
+    "en": "sore throat",
+    "tg": "дарди гулӯ",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7321
+  },
+  {
+    "en": "screenshot",
+    "tg": "акс аз экран",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7322
+  },
+  {
+    "en": "seedling",
+    "tg": "ниҳол",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7323
+  },
+  {
+    "en": "harvest",
+    "tg": "ҳосил; ҷамъоварии ҳосил",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7324
+  },
+  {
+    "en": "wholesale",
+    "tg": "яклухт",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7325
+  },
+  {
+    "en": "retail",
+    "tg": "чакана",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7326
+  },
+  {
+    "en": "itinerary",
+    "tg": "нақшаи сафар",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7327
+  },
+  {
+    "en": "customs officer",
+    "tg": "корманди гумрук",
+    "source": "SHOHIN editorial batch 010",
+    "number": 7328
   }
 ]
