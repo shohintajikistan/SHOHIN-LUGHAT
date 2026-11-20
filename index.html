@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="ru">
+<html lang="tg">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071c16"><meta name="description" content="SHOHIN LUGHAT — офлайн англо-таджикский и таджикско-английский словарь.">
+<meta name="theme-color" content="#071c16"><meta name="description" content="SHOHIN LUGHAT — луғати офлайнии англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ.">
 <title>SHOHIN LUGHAT</title>
 <style>
 :root{--bg:#071c16;--panel:#0d3024;--green:#08a56c;--gold:#d9b45b;--ivory:#f4f0e5;--muted:#9eb8aa;--line:#234b38}
@@ -44,14 +44,14 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 .homeStories{margin:26px 0 10px}.storyRail{display:flex;gap:13px;overflow-x:auto;overflow-y:hidden;padding:4px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--gold) #102b21}.storyCard{flex:0 0 225px;min-height:142px;scroll-snap-align:start;text-align:left;display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:17px;background:linear-gradient(145deg,#123e2c,#0a251c);border:1px solid #8b713d;border-radius:18px;color:var(--ivory);cursor:pointer;transition:transform .2s,border-color .2s}.storyCard:hover{transform:translateY(-3px);border-color:var(--gold)}.storyCard strong{font-size:16px;line-height:1.3}.storyCard span{color:#c3d7ca;font-size:12px}.storyCard small{color:var(--gold);font-size:11px}
 @media(max-width:600px){.storyCard{flex-basis:205px}}.storyCard{padding:0;overflow:hidden;min-height:225px}.storyCard img{display:block;width:100%;height:118px;object-fit:cover;margin:0 0 10px;border-radius:17px 17px 0 0}.storyCard strong,.storyCard span,.storyCard small{margin-left:14px;margin-right:14px}.storyCard small{margin-bottom:14px}.storyCover{display:block;width:100%;height:120px;object-fit:cover;border-radius:12px;margin:0 0 10px}.storyReaderImage{display:block;width:100%;max-height:260px;object-fit:cover;border-radius:15px;margin:0 0 16px}.learningGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.learningCard{background:linear-gradient(145deg,#103728,#0a251c);border:1px solid #315541;border-radius:15px;padding:14px;color:var(--ivory);text-align:left;cursor:pointer;min-width:0}.learningCard strong{display:block;color:var(--gold);margin-bottom:6px}.learningCard span{display:block;color:#c3d7ca;font-size:12px;line-height:1.5}.learningLine{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}.learningInput{width:100%;min-width:0;background:#071c16;border:1px solid #315541;border-radius:12px;padding:12px;color:white;font:inherit;outline:none}.learningInput:focus{border-color:var(--gold)}.learningPhrase{padding:13px 0;border-bottom:1px solid #315541}.learningPhrase strong{display:block;font-size:16px}.learningPhrase p{color:#c3d7ca;line-height:1.6;margin:5px 0}.learningToken{border:1px solid #9b7b3e;background:#102b21;color:var(--ivory);border-radius:10px;padding:9px 11px;cursor:pointer}.learningToken:disabled{opacity:.35}.learningAnswer{min-height:52px;padding:12px;border:1px dashed #9b7b3e;border-radius:13px;margin:12px 0;display:flex;gap:7px;flex-wrap:wrap}.learningResult{padding:12px;border-radius:12px;background:#102b21;color:#d5e8dc;margin-top:12px;line-height:1.6}@media(max-width:600px){.learningGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}</style></head>
 <body><main class="wrap">
-<header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Открыть меню" title="Меню SHOHIN"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 5a22 22 0 1 0 21 31A19 19 0 0 1 38 5Z" fill="#f1ce79" stroke="#f7df9d" stroke-width="1.5"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Главное</button><button id="lugatOpen">📖 Луғат</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="phrasebookOpen">🗣️ Фразовый справочник</button><button id="builderOpen">🧩 Построение предложений</button><button id="translateOpen">⇄ Перевод предложений</button><button id="numbersOpen">🔢 Числа и даты</button><button id="businessOpen">💼 Деловой английский</button><button id="termsOpen">▤ Политика использования</button><button id="privacyOpen">♧ Политика конфиденциальности</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div><div class="topSearch" id="topSearch"><input id="q" autocomplete="off" placeholder="Ҷустуҷӯи калима / Поиск слова..." aria-label="Поиск по английским и таджикским словам" hidden><button class="searchIcon" id="searchToggle" type="button" aria-label="Открыть поиск" title="Поиск"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
-<section class="hero"><div><div class="eyebrow">DICTIONARY · ENGLISH ⇄ TAJIK</div><h1>SHOHIN LUGHAT</h1><p>Англо-таджикский и таджикско-английский словарь. Поиск по словам и переводам, нумерация каждого слова и избранное.</p></div></section>
+<header class="top"><div class="menuWrap"><button class="menuBtn" id="menuToggle" aria-label="Кушодани меню" title="Менюи SHOHIN"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 5a22 22 0 1 0 21 31A19 19 0 0 1 38 5Z" fill="#f1ce79" stroke="#f7df9d" stroke-width="1.5"/></svg></button><div class="menuPanel" id="menuPanel"><button id="homeOpen">⌂ Саҳифаи асосӣ</button><button id="lugatOpen">📖 Луғат</button><button id="conversationOpen">💬 Муошират</button><button id="storiesOpen">📚 Ҳикояҳо</button><button id="phrasebookOpen">🗣️ Ибораҳои омода</button><button id="builderOpen">🧩 Сохтани ҷумла</button><button id="translateOpen">⇄ Тарҷумаи ҷумлаҳо</button><button id="numbersOpen">🔢 Рақамҳо ва санаҳо</button><button id="businessOpen">💼 Забони англисии корӣ</button><button id="termsOpen">▤ Қоидаҳои истифода</button><button id="privacyOpen">♧ Сиёсати махфият</button><button id="myAppsOpen">✦ БАРНОМАИ МО</button></div><div hidden><button id="randomWord"></button><button id="quizOpen"></button><button id="favoritesToggle"></button><button id="historyOpen"></button><button id="dailyOpen"></button><button id="copyAll"></button><button id="shareApp"></button><button id="fontPlus"></button><button id="fontMinus"></button><button id="aboutOpen"></button></div></div><div><div class="brand">SHOHIN</div><div class="sub">TAJIKISTAN · LANGUAGE TOOLS</div></div><div class="topSearch" id="topSearch"><input id="q" autocomplete="off" placeholder="Калимаи англисӣ ё тоҷикиро ҷустуҷӯ кунед..." aria-label="Ҷустуҷӯи калимаҳои англисӣ ва тоҷикӣ" hidden><button class="searchIcon" id="searchToggle" type="button" aria-label="Кушодани ҷустуҷӯ" title="Ҷустуҷӯ"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
+<section class="hero"><div><div class="eyebrow">DICTIONARY · ENGLISH ⇄ TAJIK</div><h1>SHOHIN LUGHAT</h1><p>Луғати англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ. Ҷустуҷӯи калимаҳо ва тарҷумаҳо, рақамгузории калимаҳо ва рӯйхати мунтахаб.</p></div></section>
 <section class="homeStories" id="homeStories">
 <div class="section"><strong>Ҳикояҳои англисӣ</strong><span>English · Тоҷикӣ</span></div>
 <div class="storyRail" id="homeStoryRail"></div>
 <div id="homeStoryReader"></div>
 </section>
-<div class="section" id="dictionaryHeading" hidden><strong id="sectionTitle">Словарь</strong><span id="count">Загрузка…</span></div><section class="words" id="words" hidden><div class="state">Загружаем словарь…</div></section><section class="panel" id="conversationSection" hidden style="margin-top:18px">
+<div class="section" id="dictionaryHeading" hidden><strong id="sectionTitle">Луғат</strong><span id="count">Бор шуда истодааст…</span></div><section class="words" id="words" hidden><div class="state">Луғат бор шуда истодааст…</div></section><section class="panel" id="conversationSection" hidden style="margin-top:18px">
 <div class="section" style="margin-top:0"><strong>Муошират · English ↔ Тоҷикӣ</strong><span id="conversationCount">24 мавзӯъ</span></div>
 <p id="conversationHint" style="color:var(--muted);line-height:1.7;margin:8px 0 16px">Мавзӯъро интихоб кунед. Ҳар як ҷумла бо тарҷумаи тоҷикӣ нишон дода мешавад.</p>
 <div id="conversationTopics" class="words" style="grid-template-columns:repeat(auto-fit,minmax(135px,1fr))"></div>
@@ -65,40 +65,40 @@ html{scroll-behavior:smooth;scroll-padding-top:18px}
 </section>
 <section class="panel" id="myAppsSection" hidden style="margin-top:18px"><div class="section" style="margin-top:0"><strong>БАРНОМАИ МО</strong><span>SHOHIN TAJIKISTAN</span></div><p style="color:var(--muted);line-height:1.8"><b style="color:var(--ivory)">SHOHIN LUGHAT</b> — барномаи омӯзиши забонҳои англисӣ ва тоҷикӣ мебошад. Он барои ҷустуҷӯи калимаҳо, дидани тарҷумаҳо ва беҳтар кардани муошират пешбинӣ шудааст.</p><p style="color:var(--muted);line-height:1.8">SHOHIN TAJIKISTAN лоиҳаҳои рақамиро таҳия мекунад. Дар оянда дар ин бахш дигар барномаҳои мо низ муаррифӣ мешаванд. Ин саҳифа тадриҷан бо маълумот ва пайвандҳои барномаҳои нави SHOHIN пур карда мешавад.</p><div class="daily" style="margin-top:14px"><small>SHOHIN TAJIKISTAN</small><strong>Як бренд — якчанд барномаи муфид</strong><span>Барномаҳои мо барои омӯзиш, кор ва истифодаи ҳаррӯза.</span></div></section>
 <section class="panel" id="learningToolsSection" hidden style="margin-top:18px">
- <div class="section" style="margin-top:0"><strong id="learningToolsTitle">Учебные инструменты</strong><span>English ↔ Тоҷикӣ</span></div>
+ <div class="section" style="margin-top:0"><strong id="learningToolsTitle">Воситаҳои омӯзишӣ</strong><span>English ↔ Тоҷикӣ</span></div>
  <button type="button" id="learningToolsBack" class="toolBtn" style="margin:0 0 14px;padding:10px 14px;border-radius:11px">← Ба меню</button>
  <div id="learningToolsContent"></div>
 </section>
-<p class="note">Предварительная веб-версия. Android-приложение содержит словарь внутри APK и работает без интернета.</p>
+<p class="note"></p>
 </main>
-<button id="backTop" type="button" aria-label="Наверх" title="Наверх">↑</button>
+<button id="backTop" type="button" aria-label="Ба боло" title="Ба боло">↑</button>
 
 <div class="policyBackdrop" id="policyBackdrop" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
  <article class="policyBox">
-  <button class="policyClose" id="privacyClose">Закрыть ✕</button>
-  <h2 id="policyTitle">Политика конфиденциальности</h2>
-  <p><b>SHOHIN LUGHAT</b> — офлайн-словарь английского и таджикского языков. Веб-версия загружает словарь из файлов проекта, а Android-приложение хранит словарь внутри приложения. Поиск выполняется на устройстве.</p>
-  <h3>Сбор данных</h3><p>Приложение не собирает и не отправляет разработчику персональные данные, контакты или местоположение. Поисковые запросы и история поиска не отправляются на сервер.</p>
-  <h3>Локальное хранение</h3><p>Избранные слова и недавняя история поиска сохраняются локально на устройстве (в браузере — в localStorage, в Android-приложении — в локальных настройках приложения). Эти данные не передаются разработчику. Резервное копирование Android может зависеть от настроек устройства и системы.</p>
-  <h3>Сторонние сервисы и реклама</h3><p>В текущей версии нет регистрации, рекламы, аналитики или сторонних сервисов сбора данных.</p>
-  <h3>Удаление данных</h3><p>Избранные слова можно удалить из приложения или очистить данные приложения/браузера. Удаление приложения также удаляет локальные данные в соответствии с правилами Android.</p>
-  <h3>Изменения политики</h3><p>Если функции приложения или правила обработки данных изменятся, эта политика будет обновлена.</p>
-  <p><b>Разработчик:</b> SHOHIN TAJIKISTAN</p>
+  <button class="policyClose" id="privacyClose">Пӯшидан ✕</button>
+  <h2 id="policyTitle">Сиёсати махфият</h2>
+  <p><b>SHOHIN LUGHAT</b> — луғати офлайнии забонҳои англисӣ ва тоҷикӣ мебошад. Дар нусхаи веб луғат аз файлҳои лоиҳа бор карда мешавад, дар барномаи Android бошад, луғат дар дохили барнома нигоҳ дошта мешавад. Ҷустуҷӯи калимаҳо дар худи дастгоҳ иҷро мегардад.</p>
+  <h3>Ҷамъоварии маълумот</h3><p>Барнома маълумоти шахсӣ, рақамҳои тамос ё ҷойгиршавии корбарро ҷамъоварӣ ва ба таҳиягар намефиристад. Дархостҳои ҷустуҷӯ ва таърихи ҷустуҷӯ ба сервер фиристода намешаванд.</p>
+  <h3>Нигоҳдории маълумот дар дастгоҳ</h3><p>Калимаҳои мунтахаб ва таърихи охирини ҷустуҷӯ танҳо дар дастгоҳи корбар нигоҳ дошта мешаванд (дар браузер — дар localStorage, дар Android — дар танзимоти маҳаллии барнома). Ин маълумот ба таҳиягар фиристода намешавад. Нусхабардории эҳтиётии Android метавонад аз танзимоти дастгоҳ ва низом вобаста бошад.</p>
+  <h3>Хизматрасониҳои беруна ва таблиғ</h3><p>Дар нусхаи ҷорӣ бақайдгирӣ, таблиғ, таҳлили оморӣ ё хизматрасониҳои беруна барои ҷамъоварии маълумот истифода намешаванд.</p>
+  <h3>Нест кардани маълумот</h3><p>Калимаҳои мунтахабро аз дохили барнома нест кардан мумкин аст. Ҳамчунин метавонед маълумоти барнома ё браузерро пок кунед. Ҳангоми нест кардани барнома маълумоти маҳаллӣ низ мувофиқи қоидаҳои Android нест карда мешавад.</p>
+  <h3>Тағйирот ба сиёсат</h3><p>Агар вазифаҳои барнома ё тартиби коркарди маълумот тағйир ёбанд, ин сиёсат низ нав карда мешавад.</p>
+  <p><b>Таҳиягар:</b> SHOHIN TAJIKISTAN</p>
  </article>
 </div>
 <div class="policyBackdrop" id="termsBackdrop" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
  <article class="policyBox">
-  <button class="policyClose" id="termsClose">Закрыть ✕</button>
-  <h2 id="termsTitle">Политика использования</h2>
-  <p><b>SHOHIN LUGHAT</b> предназначен для изучения английского и таджикского языков. Пользователь может искать слова, просматривать переводы и использовать учебные материалы приложения.</p>
-  <h3>Правила использования</h3><p>Не используйте приложение для незаконных действий. Не копируйте и не распространяйте приложение или его материалы под чужим именем.</p>
-  <h3>Точность переводов</h3><p>Переводы предоставляются в учебных целях. Значение слова может зависеть от контекста, поэтому важные переводы следует проверять по дополнительным источникам.</p>
-  <h3>Доступность</h3><p>Функции и содержание приложения могут обновляться, дополняться или изменяться.</p>
-  <h3>Контакты и разработчик</h3><p>Разработчик: SHOHIN TAJIKISTAN.</p>
+  <button class="policyClose" id="termsClose">Пӯшидан ✕</button>
+  <h2 id="termsTitle">Қоидаҳои истифода</h2>
+  <p><b>SHOHIN LUGHAT</b> барои омӯзиши забонҳои англисӣ ва тоҷикӣ пешбинӣ шудааст. Истифодабаранда метавонад калимаҳоро ҷустуҷӯ кунад, тарҷумаҳоро бинад ва аз маводи таълимии барнома истифода барад.</p>
+  <h3>Тартиби истифода</h3><p>Барномаро барои амалҳои ғайриқонунӣ истифода набаред. Барнома ё маводи онро бо номи шахси дигар нусхабардорӣ ва паҳн накунед.</p>
+  <h3>Дурустии тарҷумаҳо</h3><p>Тарҷумаҳо барои мақсадҳои омӯзишӣ пешниҳод мешаванд. Маънои калима метавонад аз матн ва вазъият вобаста бошад. Аз ин рӯ, тарҷумаҳои муҳимро бо манбаъҳои иловагӣ санҷед.</p>
+  <h3>Дастрасӣ</h3><p>Имкониятҳо ва муҳтавои барнома метавонанд нав карда, пурра ё тағйир дода шаванд.</p>
+  <h3>Таҳиягар</h3><p>SHOHIN TAJIKISTAN.</p>
  </article>
 </div>
 <div class="policyBackdrop" id="historyBackdrop" role="dialog" aria-modal="true">
- <article class="policyBox"><button class="policyClose" id="historyClose">Закрыть ✕</button><h2>История поиска</h2><div class="histList" id="historyItems"></div><button class="tools" id="historyClear">Очистить историю</button></article>
+ <article class="policyBox"><button class="policyClose" id="historyClose">Пӯшидан ✕</button><h2>Таърихи ҷустуҷӯ</h2><div class="histList" id="historyItems"></div><button class="tools" id="historyClear">Пок кардани таърих</button></article>
 </div>
 
 <script>
@@ -190,13 +190,13 @@ $('conversationOpen').addEventListener('click',()=>showPage('conversation'));
 $('storiesOpen').addEventListener('click',()=>showPage('stories'));
 $('myAppsOpen').addEventListener('click',()=>showPage('apps'));
 $('randomWord').addEventListener('click',()=>{menuDone();if(!data.length)return;const w=data[Math.floor(Math.random()*data.length)];$('q').value=w.en;showFavs=false;setDirection('en');$('words').scrollIntoView({behavior:'smooth'})});
-$('quizOpen').addEventListener('click',()=>{menuDone();if(!data.length)return;const w=data[Math.floor(Math.random()*data.length)];const answer=prompt('Как переводится слово: '+w.en+' ?');if(answer!==null)alert(answer.trim().toLowerCase()===w.tg.trim().toLowerCase()?'Верно!':'Правильный перевод: '+w.tg)});
+$('quizOpen').addEventListener('click',()=>{menuDone();if(!data.length)return;const w=data[Math.floor(Math.random()*data.length)];const answer=prompt('Калимаи зерин чӣ тарҷума дорад: '+w.en+' ?');if(answer!==null)alert(answer.trim().toLowerCase()===w.tg.trim().toLowerCase()?'Дуруст!':'Тарҷумаи дуруст: '+w.tg)});
 
-$('copyAll').addEventListener('click',()=>{menuDone();const q=$('q').value.trim();const w=data.find(x=>x.en.toLowerCase()===q.toLowerCase()||x.tg.toLowerCase()===q.toLowerCase());if(!w){alert('Сначала найдите точное слово в словаре.');return}const t=w.en+' — '+w.tg;navigator.clipboard?.writeText(t).then(()=>alert('Перевод скопирован')).catch(()=>alert(t))});
-$('shareApp').addEventListener('click',()=>{menuDone();const d={title:'SHOHIN LUGHAT',text:'Англо-таджикский и таджикско-английский словарь SHOHIN LUGHAT',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(d.text+' '+d.url).then(()=>alert('Ссылка скопирована'))});
+$('copyAll').addEventListener('click',()=>{menuDone();const q=$('q').value.trim();const w=data.find(x=>x.en.toLowerCase()===q.toLowerCase()||x.tg.toLowerCase()===q.toLowerCase());if(!w){alert('Аввал калимаро дар луғат ҷустуҷӯ кунед.');return}const t=w.en+' — '+w.tg;navigator.clipboard?.writeText(t).then(()=>alert('Тарҷума нусхабардорӣ шуд')).catch(()=>alert(t))});
+$('shareApp').addEventListener('click',()=>{menuDone();const d={title:'SHOHIN LUGHAT',text:'Луғати англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ SHOHIN LUGHAT',url:location.href};if(navigator.share)navigator.share(d).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(d.text+' '+d.url).then(()=>alert('Пайванд нусхабардорӣ шуд'))});
 $('fontPlus').addEventListener('click',()=>{menuDone();document.documentElement.style.setProperty('--word-size',((parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--word-size'))||16)+1)+'px');document.querySelectorAll('.en').forEach(x=>x.style.fontSize='calc(1em + 1px)')});
 $('fontMinus').addEventListener('click',()=>{menuDone();document.querySelectorAll('.en').forEach(x=>x.style.fontSize='14px')});
-$('aboutOpen').addEventListener('click',()=>{menuDone();alert('SHOHIN LUGHAT\\nАнгло-таджикский и таджикско-английский словарь. Избранное, история, поиск, произношение и слово дня. Разработчик: SHOHIN TAJIKISTAN.')});
+$('aboutOpen').addEventListener('click',()=>{menuDone();alert('SHOHIN LUGHAT\\nЛуғати англисӣ-тоҷикӣ ва тоҷикӣ-англисӣ. Калимаҳои мунтахаб, таърихи ҷустуҷӯ, ҷустуҷӯ, талаффуз ва калимаи рӯз. Таҳиягар: SHOHIN TAJIKISTAN.')});
 $('privacyOpen').addEventListener('click',()=>{$('menuPanel').classList.remove('open');$('policyBackdrop').classList.add('open')});
 $('termsOpen').addEventListener('click',()=>{$('menuPanel').classList.remove('open');$('termsBackdrop').classList.add('open')});
 $('termsClose').addEventListener('click',()=> $('termsBackdrop').classList.remove('open'));
@@ -218,14 +218,14 @@ function render(){
  $('words').hidden=false;$('dictionaryHeading').hidden=false;
  const rawQuery=$('q').value.trim();
  const q=rawQuery.toLocaleLowerCase();
- $('sectionTitle').textContent=showFavs?'Избранное':'Словарь';
+ $('sectionTitle').textContent=showFavs?'Мунтахаб':'Луғат';
  if(!q && !showFavs){
-   $('count').textContent=data.length.toLocaleString('ru-RU')+' слов';
+   $('count').textContent=data.length.toLocaleString('tg-TJ')+' калима';
    $('words').innerHTML='<div class="state">Введите английское или таджикское слово в поиске, чтобы увидеть перевод.</div>';
    return;
  }
  const list=data.filter(x=>(!showFavs||favs.has(x.en))&&(!q||x.en.toLocaleLowerCase().includes(q)||x.tg.toLocaleLowerCase().includes(q)));
- $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('ru-RU')+' слов';
+ $('count').textContent=list.length.toLocaleString('ru-RU')+' / '+data.length.toLocaleString('tg-TJ')+' калима';
  $('words').innerHTML=list.length?list.slice(0,500).map(x=>'<article class="word reveal"><div><div class="meta">№ '+esc(x.number)+'</div><div class="en">'+esc(dir==='en'?x.en:x.tg)+'</div><div class="tj">'+esc(dir==='en'?x.tg:x.en)+'</div>'+(x.example?'<div class="meta">'+esc(x.example)+'</div>':'')+'<div class="tools"><button type="button" data-copy="'+esc(x.en)+'">Копировать</button><button type="button" data-speak="'+esc(x.en)+'">🔊 Слушать</button></div></div><button class="star" type="button" data-word="'+esc(x.en)+'" aria-label="Избранное">'+(favs.has(x.en)?'★':'☆')+'</button></article>').join(''):'<div class="state">Ничего не найдено. Попробуйте другое слово.</div>';
  revealWords();
 }
