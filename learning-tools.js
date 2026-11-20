@@ -96,13 +96,13 @@ function renderBusiness(){
  if(businessIndex<0){content().innerHTML='<p style="color:var(--muted);line-height:1.7">Ибораҳо барои муошират дар ҷойи кор, мусоҳибаи корӣ, тарҷумаи ҳол ва мукотибаи корӣ.</p><div class="learningGrid">'+businessGroups.map((g,i)=>card(g.title,g.en+' · '+g.items.length+' намуна',i,'business-category')).join('')+'</div>';return}
  const g=businessGroups[businessIndex];content().innerHTML='<button class="learningToken" type="button" data-business-back>← Ҳамаи бахшҳо</button><div class="section"><strong>'+esc(g.title)+'</strong><span>'+esc(g.en)+'</span></div>'+g.items.map((p,i)=>'<div class="learningPhrase"><strong>'+esc(p[0])+'</strong><p>'+esc(p[1])+'</p><button class="learningToken" type="button" data-business-speak="'+i+'">🔊 Шунидан</button></div>').join('');
 }
-$('phrasebookOpen').addEventШуниданer('click',()=>openPage('phrasebook'));
-$('builderOpen').addEventШуниданer('click',()=>openPage('builder'));
-$('translateOpen').addEventШуниданer('click',()=>openPage('translate'));
-$('numbersOpen').addEventШуниданer('click',()=>openPage('numbers'));
-$('businessOpen').addEventШуниданer('click',()=>openPage('business'));
-$('learningToolsBack').addEventШуниданer('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
-content().addEventШуниданer('click',e=>{
+$('phrasebookOpen').addEventListener('click',()=>openPage('phrasebook'));
+$('builderOpen').addEventListener('click',()=>openPage('builder'));
+$('translateOpen').addEventListener('click',()=>openPage('translate'));
+$('numbersOpen').addEventListener('click',()=>openPage('numbers'));
+$('businessOpen').addEventListener('click',()=>openPage('business'));
+$('learningToolsBack').addEventListener('click',()=>{if(typeof showPage==='function')showPage('home');$('learningToolsSection').hidden=true;$('homeStories').hidden=false;page=''});
+content().addEventListener('click',e=>{
  let b=e.target.closest('[data-phrase-category]');if(b){phraseIndex=+b.dataset.phraseCategory;renderPhrases();return}
  if(e.target.closest('[data-phrase-back]')){phraseIndex=-1;renderPhrases();return}
  b=e.target.closest('[data-phrase-speak]');if(b){speak(phraseGroups[phraseIndex].items[+b.dataset.phraseSpeak][0]);return}
@@ -125,5 +125,5 @@ content().addEventШуниданer('click',e=>{
  b=e.target.closest('[data-direction]');if(b){translationDirection=+b.dataset.direction;updateTranslations();return}
  b=e.target.closest('[data-speak]');if(b){speak(b.dataset.speak);return}
 });
-content().addEventШуниданer('input',e=>{if(e.target.id==='translationSearch')updateTranslations();if(e.target.id==='numberInput')updateNumber();if(e.target.id==='timeInput')updateTime();if(e.target.id==='dateInput')updateDate()});
+content().addEventListener('input',e=>{if(e.target.id==='translationSearch')updateTranslations();if(e.target.id==='numberInput')updateNumber();if(e.target.id==='timeInput')updateTime();if(e.target.id==='dateInput')updateDate()});
 })();
