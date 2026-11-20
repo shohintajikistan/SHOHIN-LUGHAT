@@ -8,6 +8,14 @@
 - The app is designed to work without an account, server, or API key.
 - A signed Release APK will be prepared only after the content and app behavior have been checked. A permanent private release keystore is required for stable updates.
 
+## Added learning sections
+- Phrasebook: eight practical situations with English–Tajik expressions.
+- Sentence builder: ten offline word-order exercises.
+- Sentence translation: thirty prepared English–Tajik sentence pairs, searchable in both languages.
+- Numbers and dates: English number names through 999,999, spoken time, weekdays, and months.
+- Business English: workplace communication, interviews, CV terms, and business email phrases.
+- The five sections are bundled for offline use and do not replace the dictionary or existing conversation/story sections.
+
 ## Dictionary target and quality
 - Target: 20,000 reviewed English–Tajik headwords and useful expressions.
 - Current assembled dataset: 7,315 unique English headwords and expressions.
